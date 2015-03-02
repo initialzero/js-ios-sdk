@@ -1,0 +1,2412 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>JSRESTBase Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">JaspersoftSDK </a></h1>
+				<a id="developerHome" href="../index.html">TIBCO Jaspersoft</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">JSRESTBase Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/serverProfile">&nbsp;&nbsp;&nbsp;&nbsp;serverProfile</option>
+	
+	<option value="//api/name/timeoutInterval">&nbsp;&nbsp;&nbsp;&nbsp;timeoutInterval</option>
+	
+	<option value="//api/name/cookies">&nbsp;&nbsp;&nbsp;&nbsp;cookies</option>
+	
+	<option value="//api/name/restKitObjectManager">&nbsp;&nbsp;&nbsp;&nbsp;restKitObjectManager</option>
+	
+	<option value="//api/name/keepSession">&nbsp;&nbsp;&nbsp;&nbsp;keepSession</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithServerProfile:keepLogged:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithServerProfile:keepLogged:</option>
+	
+	<option value="//api/name/sendRequest:">&nbsp;&nbsp;&nbsp;&nbsp;- sendRequest:</option>
+	
+	<option value="//api/name/sendRequest:additionalHTTPHeaderFields:">&nbsp;&nbsp;&nbsp;&nbsp;- sendRequest:additionalHTTPHeaderFields:</option>
+	
+	<option value="//api/name/serverInfo">&nbsp;&nbsp;&nbsp;&nbsp;- serverInfo</option>
+	
+	<option value="//api/name/isNetworkReachable">&nbsp;&nbsp;&nbsp;&nbsp;- isNetworkReachable</option>
+	
+	<option value="//api/name/cancelAllRequests">&nbsp;&nbsp;&nbsp;&nbsp;- cancelAllRequests</option>
+	
+	<option value="//api/name/isRequestPoolEmpty">&nbsp;&nbsp;&nbsp;&nbsp;- isRequestPoolEmpty</option>
+	
+	<option value="//api/name/isSessionAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;- isSessionAuthorized</option>
+	
+	<option value="//api/name/generateReportUrl:page:format:">&nbsp;&nbsp;&nbsp;&nbsp;- generateReportUrl:page:format:</option>
+	
+	<option value="//api/name/generateReportUrl:reportParams:page:format:">&nbsp;&nbsp;&nbsp;&nbsp;- generateReportUrl:reportParams:page:format:</option>
+	
+	<option value="//api/name/inputControlsForReport:ids:selectedValues:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- inputControlsForReport:ids:selectedValues:completionBlock:</option>
+	
+	<option value="//api/name/updatedInputControlsValues:ids:selectedValues:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- updatedInputControlsValues:ids:selectedValues:completionBlock:</option>
+	
+	<option value="//api/name/runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:</option>
+	
+	<option value="//api/name/cancelReportExecution:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- cancelReportExecution:completionBlock:</option>
+	
+	<option value="//api/name/runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:</option>
+	
+	<option value="//api/name/generateReportOutputUrl:exportOutput:">&nbsp;&nbsp;&nbsp;&nbsp;- generateReportOutputUrl:exportOutput:</option>
+	
+	<option value="//api/name/reportExecutionMetadataForRequestId:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- reportExecutionMetadataForRequestId:completionBlock:</option>
+	
+	<option value="//api/name/reportExecutionStatusForRequestId:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- reportExecutionStatusForRequestId:completionBlock:</option>
+	
+	<option value="//api/name/loadReportOutput:exportOutput:loadForSaving:path:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- loadReportOutput:exportOutput:loadForSaving:path:completionBlock:</option>
+	
+	<option value="//api/name/saveReportAttachment:exportOutput:attachmentName:path:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- saveReportAttachment:exportOutput:attachmentName:path:completionBlock:</option>
+	
+	<option value="//api/name/createResource:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- createResource:completionBlock:</option>
+	
+	<option value="//api/name/modifyResource:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- modifyResource:completionBlock:</option>
+	
+	<option value="//api/name/deleteResource:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- deleteResource:completionBlock:</option>
+	
+	<option value="//api/name/resourceLookupForURI:resourceType:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- resourceLookupForURI:resourceType:completionBlock:</option>
+	
+	<option value="//api/name/resourceLookups:query:types:recursive:offset:limit:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- resourceLookups:query:types:recursive:offset:limit:completionBlock:</option>
+	
+	<option value="//api/name/resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_JSRESTSession Methods">JSRESTSession Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_JSRESTReport Methods">JSRESTReport Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_JSRESTResource Methods">JSRESTResource Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/serverProfile">serverProfile</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timeoutInterval">timeoutInterval</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cookies">cookies</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/restKitObjectManager">restKitObjectManager</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/keepSession">keepSession</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithServerProfile:keepLogged:">initWithServerProfile:keepLogged:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendRequest:">sendRequest:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendRequest:additionalHTTPHeaderFields:">sendRequest:additionalHTTPHeaderFields:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/serverInfo">serverInfo</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isNetworkReachable">isNetworkReachable</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelAllRequests">cancelAllRequests</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRequestPoolEmpty">isRequestPoolEmpty</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isSessionAuthorized">isSessionAuthorized</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generateReportUrl:page:format:">generateReportUrl:page:format:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generateReportUrl:reportParams:page:format:">generateReportUrl:reportParams:page:format:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/inputControlsForReport:ids:selectedValues:completionBlock:">inputControlsForReport:ids:selectedValues:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updatedInputControlsValues:ids:selectedValues:completionBlock:">updatedInputControlsValues:ids:selectedValues:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:">runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelReportExecution:completionBlock:">cancelReportExecution:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:">runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/generateReportOutputUrl:exportOutput:">generateReportOutputUrl:exportOutput:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reportExecutionMetadataForRequestId:completionBlock:">reportExecutionMetadataForRequestId:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reportExecutionStatusForRequestId:completionBlock:">reportExecutionStatusForRequestId:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadReportOutput:exportOutput:loadForSaving:path:completionBlock:">loadReportOutput:exportOutput:loadForSaving:path:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveReportAttachment:exportOutput:attachmentName:path:completionBlock:">saveReportAttachment:exportOutput:attachmentName:path:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createResource:completionBlock:">createResource:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/modifyResource:completionBlock:">modifyResource:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteResource:completionBlock:">deleteResource:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resourceLookupForURI:resourceType:completionBlock:">resourceLookupForURI:resourceType:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resourceLookups:query:types:recursive:offset:limit:completionBlock:">resourceLookups:query:types:recursive:offset:limit:completionBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:">resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="JSRESTBase Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">JSRESTBase Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSSecureCoding</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">JSRESTBase.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Provides methods which interacts with the JasperReports Server REST API. The
+object puts at disposal a set of methods for sending JSRequests for different
+API parts, different types of cancel request(s). To send a proper request to
+server <a href="../Classes/JSRequest.html">JSRequest</a> instance should be configured. For this purposes JSRESTResource,
+JSRESTReport helper classes was provided which do all this configuration in easier
+way for specific API parts (i.e. repository, reports etc.)
+@todo Provide helper classes for job and administration services</p>
+
+<p>@author Vlad Zavadskii vzavadskii@jaspersoft.com
+@author Ivan Gadzhega  igadzhega@jaspersoft.com
+@author Alexey Gubarev ogubarie@tibco.com</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/serverProfile">&nbsp;&nbsp;serverProfile</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/timeoutInterval">&nbsp;&nbsp;timeoutInterval</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cookies">&nbsp;&nbsp;cookies</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/restKitObjectManager">&nbsp;&nbsp;restKitObjectManager</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/keepSession">&nbsp;&nbsp;keepSession</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithServerProfile:keepLogged:">&ndash;&nbsp;initWithServerProfile:keepLogged:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendRequest:">&ndash;&nbsp;sendRequest:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendRequest:additionalHTTPHeaderFields:">&ndash;&nbsp;sendRequest:additionalHTTPHeaderFields:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/serverInfo">&ndash;&nbsp;serverInfo</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isNetworkReachable">&ndash;&nbsp;isNetworkReachable</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancelAllRequests">&ndash;&nbsp;cancelAllRequests</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRequestPoolEmpty">&ndash;&nbsp;isRequestPoolEmpty</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="JSRESTSession Methods" name="task_JSRESTSession Methods"></a>
+						<h3 class="subsubtitle task-title">JSRESTSession Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isSessionAuthorized">&ndash;&nbsp;isSessionAuthorized</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="JSRESTReport Methods" name="task_JSRESTReport Methods"></a>
+						<h3 class="subsubtitle task-title">JSRESTReport Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generateReportUrl:page:format:">&ndash;&nbsp;generateReportUrl:page:format:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generateReportUrl:reportParams:page:format:">&ndash;&nbsp;generateReportUrl:reportParams:page:format:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/inputControlsForReport:ids:selectedValues:completionBlock:">&ndash;&nbsp;inputControlsForReport:ids:selectedValues:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updatedInputControlsValues:ids:selectedValues:completionBlock:">&ndash;&nbsp;updatedInputControlsValues:ids:selectedValues:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:">&ndash;&nbsp;runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancelReportExecution:completionBlock:">&ndash;&nbsp;cancelReportExecution:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:">&ndash;&nbsp;runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/generateReportOutputUrl:exportOutput:">&ndash;&nbsp;generateReportOutputUrl:exportOutput:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reportExecutionMetadataForRequestId:completionBlock:">&ndash;&nbsp;reportExecutionMetadataForRequestId:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reportExecutionStatusForRequestId:completionBlock:">&ndash;&nbsp;reportExecutionStatusForRequestId:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadReportOutput:exportOutput:loadForSaving:path:completionBlock:">&ndash;&nbsp;loadReportOutput:exportOutput:loadForSaving:path:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/saveReportAttachment:exportOutput:attachmentName:path:completionBlock:">&ndash;&nbsp;saveReportAttachment:exportOutput:attachmentName:path:completionBlock:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="JSRESTResource Methods" name="task_JSRESTResource Methods"></a>
+						<h3 class="subsubtitle task-title">JSRESTResource Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createResource:completionBlock:">&ndash;&nbsp;createResource:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/modifyResource:completionBlock:">&ndash;&nbsp;modifyResource:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deleteResource:completionBlock:">&ndash;&nbsp;deleteResource:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resourceLookupForURI:resourceType:completionBlock:">&ndash;&nbsp;resourceLookupForURI:resourceType:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resourceLookups:query:types:recursive:offset:limit:completionBlock:">&ndash;&nbsp;resourceLookups:query:types:recursive:offset:limit:completionBlock:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:">&ndash;&nbsp;resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/serverProfile" title="serverProfile"></a>
+	<h3 class="subsubtitle method-title">serverProfile</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The server profile instance contains connection details for
+JasperReports server</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) JSProfile *serverProfile</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/timeoutInterval" title="timeoutInterval"></a>
+	<h3 class="subsubtitle method-title">timeoutInterval</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The timeout interval which will be used as default value for all requests if
+they does not provide its own timeout interval</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSTimeInterval timeoutInterval</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p><strong>Default</strong>: 120.0 seconds</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cookies" title="cookies"></a>
+	<h3 class="subsubtitle method-title">cookies</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>An NSArray of NSHTTPCookie objects</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *cookies</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.8</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/restKitObjectManager" title="restKitObjectManager"></a>
+	<h3 class="subsubtitle method-title">restKitObjectManager</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>RestKit&rsquo;s RKObjectManager instance for mapping response (in JSON, XML and other formats) directly to object</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKObjectManager *restKitObjectManager</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/keepSession" title="keepSession"></a>
+	<h3 class="subsubtitle method-title">keepSession</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If YES REST Client will try to recreate HTTP session.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL keepSession</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithServerProfile:keepLogged:" title="initWithServerProfile:keepLogged:"></a>
+	<h3 class="subsubtitle method-title">initWithServerProfile:keepLogged:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a rest base instance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithServerProfile:(JSProfile *)<em>serverProfile</em> keepLogged:(BOOL)<em>keepLogged</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>serverProfile</em></dt>
+			<dd><p>The server profile instance contains connection details for JasperReports server</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>keepLogged</em></dt>
+			<dd><p>If YES REST Client will try to recreate HTTP session</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A fully configured JSRESTBase instance</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendRequest:" title="sendRequest:"></a>
+	<h3 class="subsubtitle method-title">sendRequest:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sends asynchronous request. Result will be passed as <code>JSOperationResult</code>
+instance to completionBlock provided in
+<code>JSRequest</code> object</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendRequest:(JSRequest *)<em>request</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>request</em></dt>
+			<dd><p>Models the request portion of an HTTP request/response cycle.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendRequest:additionalHTTPHeaderFields:" title="sendRequest:additionalHTTPHeaderFields:"></a>
+	<h3 class="subsubtitle method-title">sendRequest:additionalHTTPHeaderFields:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sends asynchronous request. Result will be passed as <code>JSOperationResult</code>
+instance to completionBlock provided in
+<code>JSRequest</code> object</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendRequest:(JSRequest *)<em>jsRequest</em> additionalHTTPHeaderFields:(NSDictionary *)<em>headerFields</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>jsRequest</em></dt>
+			<dd><p>Models the request portion of an HTTP request/response cycle.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>headerFields</em></dt>
+			<dd><p>Additional HTTP header fields for sending request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/serverInfo" title="serverInfo"></a>
+	<h3 class="subsubtitle method-title">serverInfo</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets server information details</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (JSServerInfo *)serverInfo</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the ServerInfo value</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.4</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isNetworkReachable" title="isNetworkReachable"></a>
+	<h3 class="subsubtitle method-title">isNetworkReachable</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Checks if network is available</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isNetworkReachable</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A boolean value represents network is availability</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cancelAllRequests" title="cancelAllRequests"></a>
+	<h3 class="subsubtitle method-title">cancelAllRequests</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancels all requests</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)cancelAllRequests</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRequestPoolEmpty" title="isRequestPoolEmpty"></a>
+	<h3 class="subsubtitle method-title">isRequestPoolEmpty</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Check if request pool is empty (no any active request exists)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isRequestPoolEmpty</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if request pool is empty, otherwise returns NO</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isSessionAuthorized" title="isSessionAuthorized"></a>
+	<h3 class="subsubtitle method-title">isSessionAuthorized</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Checks if session is authorized</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isSessionAuthorized</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A boolean value represents session is authorized</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTSession.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generateReportUrl:page:format:" title="generateReportUrl:page:format:"></a>
+	<h3 class="subsubtitle method-title">generateReportUrl:page:format:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates the report url according to specified parameters. The new v2/reports
+service allows clients to receive report output in a single request-response
+using this url.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)generateReportUrl:(JSResourceDescriptor *)<em>resourceDescriptor</em> page:(NSInteger)<em>page</em> format:(NSString *)<em>format</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceDescriptor</em></dt>
+			<dd><p>resource descriptor of this report with included list of
+report parameter/input control values (list of <a href="../Classes/JSResourceParameter.html">JSResourceParameter</a> inside descriptor)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>page</em></dt>
+			<dd><p>a positive integer value used to output a specific page or 0 to output all pages</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>format</em></dt>
+			<dd><p>the format of the report output. Possible values: PDF, HTML, XLS, RTF, CSV, XML.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the report url</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.4</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generateReportUrl:reportParams:page:format:" title="generateReportUrl:reportParams:page:format:"></a>
+	<h3 class="subsubtitle method-title">generateReportUrl:reportParams:page:format:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates the report url to receive all pages report output in HTML format.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)generateReportUrl:(NSString *)<em>uri</em> reportParams:(NSDictionary *)<em>reportParams</em> page:(NSInteger)<em>page</em> format:(NSString *)<em>format</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>uri</em></dt>
+			<dd><p>The resource descriptor uri</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>reportParams</em></dt>
+			<dd><p>list of report parameter/input control values</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>page</em></dt>
+			<dd><p>a positive integer value used to output a specific page or 0 to output all pages</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>format</em></dt>
+			<dd><p>the format of the report output. Possible values: PDF, HTML, XLS, RTF, CSV, XML.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the report url</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.4</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/inputControlsForReport:ids:selectedValues:completionBlock:" title="inputControlsForReport:ids:selectedValues:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">inputControlsForReport:ids:selectedValues:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the list of states of input controls with specified IDs for the report with specified URI and according to selected values</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)inputControlsForReport:(NSString *)<em>reportUri</em> ids:(NSArray *)<em>ids</em> selectedValues:(NSArray *)<em>selectedValues</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>reportUri</em></dt>
+			<dd><p>repository URI of the report</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ids</em></dt>
+			<dd><p>list of input controls IDs</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selectedValues</em></dt>
+			<dd><p>list of input controls selected values</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.6</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updatedInputControlsValues:ids:selectedValues:completionBlock:" title="updatedInputControlsValues:ids:selectedValues:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">updatedInputControlsValues:ids:selectedValues:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the states with updated values for input controls with specified IDs and according to selected values</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updatedInputControlsValues:(NSString *)<em>reportUri</em> ids:(NSArray *)<em>ids</em> selectedValues:(NSArray *)<em>selectedValues</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>reportUri</em></dt>
+			<dd><p>repository URI of the report</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ids</em></dt>
+			<dd><p>list of input controls IDs</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>selectedValues</em></dt>
+			<dd><p>list of input controls selected values</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.4</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:" title="runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">runReportExecution:async:outputFormat:interactive:freshData:saveDataSnapshot:ignorePagination:transformerKey:pages:attachmentsPrefix:parameters:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Executes report</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)runReportExecution:(NSString *)<em>reportUnitUri</em> async:(BOOL)<em>async</em> outputFormat:(NSString *)<em>outputFormat</em> interactive:(BOOL)<em>interactive</em> freshData:(BOOL)<em>freshData</em> saveDataSnapshot:(BOOL)<em>saveDataSnapshot</em> ignorePagination:(BOOL)<em>ignorePagination</em> transformerKey:(NSString *)<em>transformerKey</em> pages:(NSString *)<em>pages</em> attachmentsPrefix:(NSString *)<em>attachmentsPrefix</em> parameters:(NSArray *)<em>parameters</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>reportUnitUri</em></dt>
+			<dd><p>URI of the report to run</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>async</em></dt>
+			<dd><p>If false, then response is send, when report generation/export is complete, else, response is send immediately, without waiting for completeness</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>outputFormat</em></dt>
+			<dd><p>Report output format (e.g. html, pdf etc.)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interactive</em></dt>
+			<dd><p>If true, then highcharts are present, then they are generated using JavaScript, else image with chart is generated</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>freshData</em></dt>
+			<dd><p>Used to specify whether the report should use a previously saved data snapshot (if any) or fetch fresh data from the data source.  By default, if a saved data snapshot exists for the report it will be used when running the report</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>saveDataSnapshot</em></dt>
+			<dd><p>Used to instruct JRS to fetch fresh data for the report and save it as a data snapshot.  Note that data snapshot persistence must be enabled on the JRS instance in order for this parameter to be effective</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>ignorePagination</em></dt>
+			<dd><p>If true, then single long page is generated</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>transformerKey</em></dt>
+			<dd><p>Used when requesting a report as a JasperPrint object.  The parameter allows JRS web services to leverage JR generic print element transformers (net.sf.jasperreports.engine.export.GenericElementTransformer).  Such transformers are pluggable as JR extensions</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pages</em></dt>
+			<dd><p>Single page number of pages range in a format &ldquo;{startPageNumber}-{endPageNumber}&rdquo;</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attachmentsPrefix</em></dt>
+			<dd><p>URL prefix for report attachments. This parameter matter for HTML output only. Placeholders {contextPath}, {reportExecutionId} and {exportOptions} can be used. They are replaced in runtime by corresponding values</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>parameters</em></dt>
+			<dd><p>List of input control parameters</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.8</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cancelReportExecution:completionBlock:" title="cancelReportExecution:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">cancelReportExecution:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancel Report Execution</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)cancelReportExecution:(NSString *)<em>requestId</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>requestId</em></dt>
+			<dd><p>A <b>requestId</b> parameter of the report execution response</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:" title="runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">runExportExecution:outputFormat:pages:attachmentsPrefix:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Run Export Execution</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)runExportExecution:(NSString *)<em>requestId</em> outputFormat:(NSString *)<em>outputFormat</em> pages:(NSString *)<em>pages</em> attachmentsPrefix:(NSString *)<em>attachmentsPrefix</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>requestId</em></dt>
+			<dd><p>A <b>requestId</b> parameter of the report execution response</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>outputFormat</em></dt>
+			<dd><p>Report output format (e.g. html, pdf etc.)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pages</em></dt>
+			<dd><p>Single page number of pages range in a format &ldquo;{startPageNumber}-{endPageNumber}&rdquo;</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attachmentsPrefix</em></dt>
+			<dd><p>URL prefix for report attachments. This parameter matter for HTML output only. Placeholders {contextPath}, {reportExecutionId} and {exportOptions} can be used. They are replaced in runtime by corresponding values</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/generateReportOutputUrl:exportOutput:" title="generateReportOutputUrl:exportOutput:"></a>
+	<h3 class="subsubtitle method-title">generateReportOutputUrl:exportOutput:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Generates the report output url</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)generateReportOutputUrl:(NSString *)<em>requestId</em> exportOutput:(NSString *)<em>exportOutput</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>requestId</em></dt>
+			<dd><p>A <b>requestId</b> parameter of the report execution response</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>exportOutput</em></dt>
+			<dd><p>Export parameters as string in the correct format: {reportFormat};pages={pageOrPagesRange};attachmentsPrefix={attachmentsPrefixUrlEncodedValue}</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A generated report output url</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.8</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reportExecutionMetadataForRequestId:completionBlock:" title="reportExecutionMetadataForRequestId:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">reportExecutionMetadataForRequestId:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets report execution metadata by request id</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reportExecutionMetadataForRequestId:(NSString *)<em>requestId</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>requestId</em></dt>
+			<dd><p>A <b>requestId</b> parameter of the report execution response</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.8</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reportExecutionStatusForRequestId:completionBlock:" title="reportExecutionStatusForRequestId:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">reportExecutionStatusForRequestId:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets report execution status by request id</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reportExecutionStatusForRequestId:(NSString *)<em>requestId</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>requestId</em></dt>
+			<dd><p>A <b>requestId</b> parameter of the report execution response</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.8</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadReportOutput:exportOutput:loadForSaving:path:completionBlock:" title="loadReportOutput:exportOutput:loadForSaving:path:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">loadReportOutput:exportOutput:loadForSaving:path:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads report output and saves it by specified path if needed</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)loadReportOutput:(NSString *)<em>requestId</em> exportOutput:(NSString *)<em>exportOutput</em> loadForSaving:(BOOL)<em>loadForSaving</em> path:(NSString *)<em>path</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>requestId</em></dt>
+			<dd><p>A <b>requestId</b> parameter of the report execution response</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>exportOutput</em></dt>
+			<dd><p>Export parameters as string:
+    - for JRS version smaller 5.6.0 it should be in the follow format: {reportFormat};pages={pageOrPagesRange};attachmentsPrefix={attachmentsPrefixUrlEncodedValue};
+    - for JRS version 5.6.0 and greater it should be GUID string; @param loadForSaving If TRUE, report output will be saved by path</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>loadForSaving</em></dt>
+			<dd><p>If TRUE, report output will be saved by path</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>The path where the report output will be saved. Ignored, if loadForSaving is FALSE.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/saveReportAttachment:exportOutput:attachmentName:path:completionBlock:" title="saveReportAttachment:exportOutput:attachmentName:path:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">saveReportAttachment:exportOutput:attachmentName:path:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Downloads report attachment and saves it by specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)saveReportAttachment:(NSString *)<em>requestId</em> exportOutput:(NSString *)<em>exportOutput</em> attachmentName:(NSString *)<em>attachmentName</em> path:(NSString *)<em>path</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>requestId</em></dt>
+			<dd><p>A <b>requestId</b> parameter of the report execution response</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>exportOutput</em></dt>
+			<dd><p>Export parameters as string in the correct format: {reportFormat};pages={pageOrPagesRange};attachmentsPrefix={attachmentsPrefixUrlEncodedValue}</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attachmentName</em></dt>
+			<dd><p>A name of report attachment</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>The path where the report output will be saved</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.8</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTReport.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createResource:completionBlock:" title="createResource:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">createResource:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates the resource with specified <a href="../Classes/JSResourceDescriptor.html">JSResourceDescriptor</a></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)createResource:(JSResourceDescriptor *)<em>resource</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resource</em></dt>
+			<dd><p><a href="../Classes/JSResourceDescriptor.html">JSResourceDescriptor</a> of resource being modified</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTResource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/modifyResource:completionBlock:" title="modifyResource:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">modifyResource:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Modifies the resource with specified <a href="../Classes/JSResourceDescriptor.html">JSResourceDescriptor</a></p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)modifyResource:(JSResourceDescriptor *)<em>resource</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resource</em></dt>
+			<dd><p><a href="../Classes/JSResourceDescriptor.html">JSResourceDescriptor</a> of resource being modified</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTResource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deleteResource:completionBlock:" title="deleteResource:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">deleteResource:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deletes the resource with the specified URI</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)deleteResource:(NSString *)<em>uri</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>uri</em></dt>
+			<dd><p>The repository URI (i.e. /reports/samples/)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTResource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resourceLookupForURI:resourceType:completionBlock:" title="resourceLookupForURI:resourceType:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">resourceLookupForURI:resourceType:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets resource lookup for resource.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resourceLookupForURI:(NSString *)<em>resourceURI</em> resourceType:(NSString *)<em>resourceType</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceURI</em></dt>
+			<dd><p>The repository URI (i.e. /reports/samples/)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceType</em></dt>
+			<dd><p>Type of required resource</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.9</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTResource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resourceLookups:query:types:recursive:offset:limit:completionBlock:" title="resourceLookups:query:types:recursive:offset:limit:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">resourceLookups:query:types:recursive:offset:limit:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the list of resource lookups for the resources available in the specified
+folder and matching the specified parameters</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resourceLookups:(NSString *)<em>folderUri</em> query:(NSString *)<em>query</em> types:(NSArray *)<em>types</em> recursive:(BOOL)<em>recursive</em> offset:(NSInteger)<em>offset</em> limit:(NSInteger)<em>limit</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>folderUri</em></dt>
+			<dd><p>The repository URI (i.e. /reports/samples/)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>query</em></dt>
+			<dd><p>Match only resources having the specified text in the name or
+description (can be <code>nil</code>)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>types</em></dt>
+			<dd><p>Match only resources of the given types (can be <code>nil</code>)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>recursive</em></dt>
+			<dd><p>Get the resources recursively (can be <code>nil</code>)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>Start index for requested page</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>limit</em></dt>
+			<dd><p>The maximum number of items returned to the client. The default
+is 0 (can be <code>nil</code>), meaning no limit</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.7</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTResource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:" title="resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">resourceLookups:query:types:sortBy:recursive:offset:limit:completionBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets the list of resource lookups for the resources available in the specified
+folder and matching the specified parameters</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resourceLookups:(NSString *)<em>folderUri</em> query:(NSString *)<em>query</em> types:(NSArray *)<em>types</em> sortBy:(NSString *)<em>sortBy</em> recursive:(BOOL)<em>recursive</em> offset:(NSInteger)<em>offset</em> limit:(NSInteger)<em>limit</em> completionBlock:(JSRequestCompletionBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>folderUri</em></dt>
+			<dd><p>The repository URI (i.e. /reports/samples/)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>query</em></dt>
+			<dd><p>Match only resources having the specified text in the name or
+description (can be <code>nil</code>)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>types</em></dt>
+			<dd><p>Match only resources of the given types (can be <code>nil</code>)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sortBy</em></dt>
+			<dd><p>Represents a field in the results to sort by: uri, label, description,
+type, creationDate, updateDate, accessTime, or popularity (based on access events).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>recursive</em></dt>
+			<dd><p>Get the resources recursively (can be <code>nil</code>)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>offset</em></dt>
+			<dd><p>Start index for requested page</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>limit</em></dt>
+			<dd><p>The maximum number of items returned to the client. The default
+is 0 (can be <code>nil</code>), meaning no limit</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to inform of the results</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>1.8</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">JSRESTBase+JSRESTResource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+                    
+                    
+
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 TIBCO Jaspersoft. All rights reserved. (Last updated: 2015-03-02)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
