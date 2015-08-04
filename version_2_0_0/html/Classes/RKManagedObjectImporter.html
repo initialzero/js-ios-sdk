@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKManagedObjectImporter Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/managedObjectCache">managedObjectCache</option>
+		
+		<option value="//api/name/managedObjectContext">managedObjectContext</option>
+		
+		<option value="//api/name/managedObjectModel">managedObjectModel</option>
+		
+		<option value="//api/name/persistentStore">persistentStore</option>
+		
+		<option value="//api/name/resetsStoreBeforeImporting">resetsStoreBeforeImporting</option>
+		
+		<option value="//api/name/storePath">storePath</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/finishImporting:">- finishImporting:</option>
+		
+		<option value="//api/name/importObjectsFromItemAtPath:withMapping:keyPath:error:">- importObjectsFromItemAtPath:withMapping:keyPath:error:</option>
+		
+		<option value="//api/name/initWithManagedObjectModel:storePath:">- initWithManagedObjectModel:storePath:</option>
+		
+		<option value="//api/name/initWithPersistentStore:">- initWithPersistentStore:</option>
+		
+		<option value="//api/name/logSeedingInfo">- logSeedingInfo</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKManagedObjectImporter Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKManagedObjectImporter.h<br />RKManagedObjectImporter.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Instances of <code>RKManagedObjectImporter</code> perform bulk imports of managed objects into a persistent store from source files (typically in JSON or XML format) using object mappings. The importer provides functionality for updating an existing persistent store or creating a seed database that can be used to bootstrap a new persistent store with an initial data set.</p>
+
+<p>The importer requires that the source files have a MIME type that is identifiable by file extension and be parsable using a parser registered with the shared parser registry.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Initializing an Importer" name="task_Initializing an Importer"></a>
+						<h2 class="task-title">Initializing an Importer</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithManagedObjectModel:storePath:" title="initWithManagedObjectModel:storePath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithManagedObjectModel:storePath:">&ndash;&nbsp;initWithManagedObjectModel:storePath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver with a given managed object model and a path at which a SQLite persistent store
+should be created to persist imported managed objects.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithManagedObjectModel:(NSManagedObjectModel *)<em>managedObjectModel</em> storePath:(NSString *)<em>storePath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>managedObjectModel</code></th>
+						<td><p>A Core Data manage object model with which to initialize the receiver.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>storePath</code></th>
+						<td><p>The path at which to create a SQLite persistent store to persist the imported managed objects.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given managed object model and a complete Core Data persistence
+    stack with a SQLite persistent store at the given store path.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When initialized with a managed object model and store path, the receiver will construct an internal
+persistent store coordinator, SQLite persistent store, and managed object context with the private queue
+concurrency type with which to perform the importing.</p><div class="warning"><p><strong>Warning:</strong> As this initialization code path is typical for generating seed databases, the value of
+    <a href="#//api/name/resetsStoreBeforeImporting"><code>resetsStoreBeforeImporting</code></a> is initialized to <strong>YES</strong>.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithPersistentStore:" title="initWithPersistentStore:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithPersistentStore:">&ndash;&nbsp;initWithPersistentStore:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver with a given persistent store in which to persist imported managed objects.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithPersistentStore:(NSPersistentStore *)<em>persistentStore</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>persistentStore</code></th>
+						<td><p>A Core Data persistent store with which to initialize the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given persistent store. The persistent store coordinator and
+    managed object model are determined from the given persistent store and a new managed object context with
+    the private queue concurrency type is constructed.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When initialized with a persistent store, the receiver will construct a managed object context with the
+private queue concurrency type and the persistent store coordinator of the given persistent store. This
+prepares the receiver for importing content into an existing Core Data persistence stack.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resetsStoreBeforeImporting" title="resetsStoreBeforeImporting"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resetsStoreBeforeImporting">&nbsp;&nbsp;resetsStoreBeforeImporting</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean value indicating whether existing managed objects in the persistent store should
+be deleted before import.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL resetsStoreBeforeImporting</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The default value of this property is YES if the receiver was initialized with a
+managed object model and store path, else NO.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing Core Data Details" name="task_Accessing Core Data Details"></a>
+						<h2 class="task-title">Accessing Core Data Details</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/persistentStore" title="persistentStore"></a>
+	<h3 class="method-title"><code><a href="#//api/name/persistentStore">&nbsp;&nbsp;persistentStore</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The persistent store in which imported managed objects will be persisted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSPersistentStore *persistentStore</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/managedObjectModel" title="managedObjectModel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/managedObjectModel">&nbsp;&nbsp;managedObjectModel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The managed object model containing entities that may be imported by the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/managedObjectContext" title="managedObjectContext"></a>
+	<h3 class="method-title"><code><a href="#//api/name/managedObjectContext">&nbsp;&nbsp;managedObjectContext</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A managed object context with the NSPrivateQueueConcurrencyType concurrency type
+used to perform the import.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/storePath" title="storePath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/storePath">&nbsp;&nbsp;storePath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A convenience accessor for retrieving the complete filesystem path to the persistent
+store in which the receiver will persist imported managed objects.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *storePath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Equivalent to executing the following example code:</p>
+
+<pre><code>NSURL *URL = [importer.persistentStore.persistentStoreCoordinator URLForPersistentStore:importer.persistentStore];
+return [URL path];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/managedObjectCache" title="managedObjectCache"></a>
+	<h3 class="method-title"><code><a href="#//api/name/managedObjectCache">&nbsp;&nbsp;managedObjectCache</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A class that conforms to the <a href="../Protocols/RKManagedObjectCaching.html"><code>RKManagedObjectCaching</code></a> protocol that should be used when performing the import.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id&lt;RKManagedObjectCaching&gt; managedObjectCache</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><strong>Default</strong>: An instance of <a href="../Classes/RKInMemoryManagedObjectCache.html"><code>RKInMemoryManagedObjectCache</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Importing Managed Objects" name="task_Importing Managed Objects"></a>
+						<h2 class="task-title">Importing Managed Objects</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/importObjectsFromItemAtPath:withMapping:keyPath:error:" title="importObjectsFromItemAtPath:withMapping:keyPath:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/importObjectsFromItemAtPath:withMapping:keyPath:error:">&ndash;&nbsp;importObjectsFromItemAtPath:withMapping:keyPath:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Imports managed objects from the file or directory at the given path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSUInteger)importObjectsFromItemAtPath:(NSString *)<em>path</em> withMapping:(RKMapping *)<em>mapping</em> keyPath:(NSString *)<em>keyPath</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>The path to the file or directory you wish to import. This parameter must not be nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>The entity or dynamic mapping you wish to use for importing content at the given path.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>An optional key path to be evaluated against the results of parsing the content read at the given path. If the
+    mappable content is not contained in a nesting attribute, the key path should be specified as nil.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>On input, a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing
+    the error information. You may specify nil for this parameter if you do not want the error information.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A count of the number of managed object imported from the given path or NSNotFound if an error occurred during import.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/finishImporting:" title="finishImporting:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/finishImporting:">&ndash;&nbsp;finishImporting:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Finishes the import process by saving the managed object context to the persistent store, ensuring all
+imported managed objects are written to disk.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)finishImporting:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>On input, a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing
+the error information. You may specify nil for this parameter if you do not want the error information.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>YES if the save to the persistent store was successful, else NO.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Obtaining Seeding Info" name="task_Obtaining Seeding Info"></a>
+						<h2 class="task-title">Obtaining Seeding Info</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/logSeedingInfo" title="logSeedingInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/logSeedingInfo">&ndash;&nbsp;logSeedingInfo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Logs information about where on the filesystem to access the SQLite database for the persistent
+store in which the imported managed objects were persisted.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)logSeedingInfo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-08-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

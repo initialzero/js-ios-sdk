@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKURLEncodedSerialization.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKURLEncodedSerialization</TokenIdentifier>
+			<Abstract type="html">The RKURLEncodedSerialization class conforms to the RKSerialization protocol and provides support for the serialization and deserialization of URL encoded data. URL encoding is used to replace certain characters in a string with equivalent percent escape sequences. The list of characters replaced by the implementation are designed as illegal URL characters by RFC 3986. URL encoded data is used for the submission of HTML forms with the MIME Type application/x-www-form-urlencoded.</Abstract>
+			<DeclaredIn>RKURLEncodedSerialization.h</DeclaredIn>
+            
+			
+			<NodeRef refid="101"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKURLEncodedSerialization/objectFromData:error:</TokenIdentifier>
+			<Abstract type="html">Deserializes and returns the given data in the format supported by the receiver (i.e. JSON, XML, etc) as a Foundation object representation.</Abstract>
+			<DeclaredIn>RKURLEncodedSerialization.m</DeclaredIn>
+			
+			<Declaration>+ (id)objectFromData:(NSData *)data error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The UTF-8 encoded data representation of the object to be deserialized.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">A pointer to an NSError object.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A Foundation object from the serialized data in data, or nil if an error occurs.</Abstract></ReturnValue>
+			<Anchor>//api/name/objectFromData:error:</Anchor>
+            <NodeRef refid="101"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKURLEncodedSerialization/dataFromObject:error:</TokenIdentifier>
+			<Abstract type="html">Serializes and returns a UTF-8 encoded data representation of the given Foundation object in the format supported by the receiver (i.e. JSON, XML, etc).</Abstract>
+			<DeclaredIn>RKURLEncodedSerialization.m</DeclaredIn>
+			
+			<Declaration>+ (NSData *)dataFromObject:(id)object error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to be serialized.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">A pointer to an NSError object.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A data representation of the given object in UTF-8 encoding, or nil if an error occurred.</Abstract></ReturnValue>
+			<Anchor>//api/name/dataFromObject:error:</Anchor>
+            <NodeRef refid="101"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/JSResourceProperty.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/JSResourceProperty</TokenIdentifier>
+			<Abstract type="html">Represents a resource property entity for convenient XML serialization process.</Abstract>
+			<DeclaredIn>JSResourceProperty.h</DeclaredIn>
+            <Availability type="html"></Availability>
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSResourceProperty/rkRequestDescriptorsForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns an array of RKRequestDescriptor objects to be added to the manager
+for mapping objects of the class to request.</Abstract>
+			<DeclaredIn>JSResourceProperty.m</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)rkRequestDescriptorsForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of RKRequestDescriptor objects to be added to the manager.</Abstract></ReturnValue>
+			<Anchor>//api/name/rkRequestDescriptorsForServerProfile:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSResourceProperty/classMappingForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns RKObjectMapping object for added it as relation referencesß
+for mapping objects from response.</Abstract>
+			<DeclaredIn>JSResourceProperty.m</DeclaredIn>
+			
+			<Declaration>+ (RKObjectMapping *)classMappingForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns RKObjectMapping object for added it as relation references</Abstract></ReturnValue>
+			<Anchor>//api/name/classMappingForServerProfile:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

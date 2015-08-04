@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKInMemoryManagedObjectCache.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKInMemoryManagedObjectCache</TokenIdentifier>
+			<Abstract type="html">Provides a fast managed object cache where-in object instances are retained in memory to avoid hitting the Core Data persistent store. Performance is greatly increased over fetch request based strategy at the expense of memory consumption.</Abstract>
+			<DeclaredIn>RKInMemoryManagedObjectCache.h</DeclaredIn>
+            
+			
+			<NodeRef refid="51"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKInMemoryManagedObjectCache/initWithManagedObjectContext:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver with a managed object context that is to be observed and used to populate the in memory cache. The receiver may then be used to fulfill cache requests for child contexts of the given managed object context.</Abstract>
+			<DeclaredIn>RKInMemoryManagedObjectCache.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>managedObjectContext</Name>
+					<Abstract type="html">The managed object context with which to initialize the receiver.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver, initialized with the given managed object context.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithManagedObjectContext:</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKInMemoryManagedObjectCache/managedObjectsWithEntity:attributeValues:inManagedObjectContext:</TokenIdentifier>
+			<Abstract type="html">Returns all managed objects for a given entity with attributes whose names and values match the given dictionary in a given context.</Abstract>
+			<DeclaredIn>RKInMemoryManagedObjectCache.m</DeclaredIn>
+			
+			<Declaration>- (NSSet *)managedObjectsWithEntity:(NSEntityDescription *)entity attributeValues:(NSDictionary *)attributeValues inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entity</Name>
+					<Abstract type="html">The entity to retrieve managed objects for.</Abstract>
+				</Parameter><Parameter>
+					<Name>attributeValues</Name>
+					<Abstract type="html">A dictionary specifying the attribute criteria for retrieving managed objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>managedObjectContext</Name>
+					<Abstract type="html">The context to fetch the matching objects in.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/managedObjectsWithEntity:attributeValues:inManagedObjectContext:</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKInMemoryManagedObjectCache/didFetchObject:</TokenIdentifier>
+			<Abstract type="html">Invoked to inform the receiver that an object was fetched and should be added to the cache.</Abstract>
+			<DeclaredIn>RKInMemoryManagedObjectCache.m</DeclaredIn>
+			
+			<Declaration>- (void)didFetchObject:(NSManagedObject *)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object that was fetched from a managed object context.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/didFetchObject:</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKInMemoryManagedObjectCache/didCreateObject:</TokenIdentifier>
+			<Abstract type="html">Invoked to inform the receiver that an object was created and should be added to the cache.</Abstract>
+			<DeclaredIn>RKInMemoryManagedObjectCache.m</DeclaredIn>
+			
+			<Declaration>- (void)didCreateObject:(NSManagedObject *)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object that was created in a managed object context.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/didCreateObject:</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKInMemoryManagedObjectCache/didDeleteObject:</TokenIdentifier>
+			<Abstract type="html">Invoked to inform the receiver that an object was deleted and should be removed to the cache.</Abstract>
+			<DeclaredIn>RKInMemoryManagedObjectCache.m</DeclaredIn>
+			
+			<Declaration>- (void)didDeleteObject:(NSManagedObject *)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object that was deleted from a managed object context.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/didDeleteObject:</Anchor>
+            <NodeRef refid="51"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKDynamicMapping Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/matchers">matchers</option>
+		
+		<option value="//api/name/objectMappings">objectMappings</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addMatcher:">- addMatcher:</option>
+		
+		<option value="//api/name/isEqualToMapping:">- isEqualToMapping:</option>
+		
+		<option value="//api/name/objectMappingForRepresentation:">- objectMappingForRepresentation:</option>
+		
+		<option value="//api/name/removeMatcher:">- removeMatcher:</option>
+		
+		<option value="//api/name/setObjectMappingForRepresentationBlock:">- setObjectMappingForRepresentationBlock:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKDynamicMapping Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/RKMapping.html">RKMapping</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKDynamicMapping.h<br />RKDynamicMapping.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>RKDynamicMapping</code> class is an <a href="../Classes/RKMapping.html"><code>RKMapping</code></a> subclass that provides an interface for deferring the decision about how a given object representation is to be mapped until run time. This enables many interesting mapping strategies, such as mapping similarly structured data differently and constructing object mappings at run time by examining the data being mapped.</p>
+
+<h2>Configuring Mapping Selection</h2>
+
+<p>Dynamic mappings support the selection of the concrete object mapping in one of two ways:</p>
+
+<ol>
+<li>Through the use of a mapping selection block configured by <a href="#//api/name/objectMappingForRepresentationBlock"><code>setObjectMappingForRepresentationBlock:</code></a>. When configured, the block is called with a reference to the current object representation being mapped and is expected to return an <a href="../Classes/RKObjectMapping.html"><code>RKObjectMapping</code></a> object. Returning <code>nil</code> declines the mapping of the representation.</li>
+<li>Through the configuration of one of more <a href="../Classes/RKObjectMappingMatcher.html"><code>RKObjectMappingMatcher</code></a> objects. The <a href="#//api/name/matchers">matchers</a> are consulted in registration order and the first matcher to return an object mapping is used to map the matched representation.</li>
+</ol>
+
+
+<p>When both a mapping selection block and <a href="#//api/name/matchers">matchers</a> are configured on a <code>RKDynamicMapping</code> object, the matcher objects are consulted first and if none match, the selection block is invoked.</p>
+
+<h2>Using Matcher Objects</h2>
+
+<p>The <a href="../Classes/RKObjectMappingMatcher.html"><code>RKObjectMappingMatcher</code></a> class provides an interface for evaluating a key path or predicate based match and returning an appropriate object mapping. Matchers can be added to the <code>RKDynamicMapping</code> objects to declaratively describe a particular mapping strategy.</p>
+
+<p>For example, suppose that we have a JSON fragment for a person that we want to map differently based on the gender of the person. When the gender is &lsquo;male&rsquo;, we want to use the Boy class and when then the gender is &lsquo;female&rsquo; we want to use the Girl class. The JSON might look something like this:</p>
+
+<pre><code>[ { "name": "Blake", "gender": "male" }, { "name": "Sarah", "gender": "female" } ]
+</code></pre>
+
+<p>We might define configure the dynamic mapping like so:</p>
+
+<pre><code>RKDynamicMapping *mapping = [RKDynamicMapping new];
+RKObjectMapping *boyMapping = [RKObjectMapping mappingForClass:[Boy class]];
+RKObjectMapping *girlMapping = [RKObjectMapping mappingForClass:[Girl class]];
+[mapping addMatcher:[RKObjectMappingMatcher matcherWithKeyPath:@"gender" expectedValue:@"male" objectMapping:boyMapping]];
+[mapping addMatcher:[RKObjectMappingMatcher matcherWithKeyPath:@"gender" expectedValue:@"female" objectMapping:girlMapping]];
+</code></pre>
+
+<p>When evaluated, the <a href="#//api/name/matchers">matchers</a> will invoke <code>valueForKeyPath:@"gender"</code> against each dictionary in the array of object representations and apply the appropriate object mapping for each representation. This would return a mapping result containing an array of two objects, one an instance of the <code>Boy</code> class and the other an instance of the <code>Girl</code> class.</p>
+
+<h2>HTTP Integration</h2>
+
+<p>Dynamic mappings can be used to map HTTP requests and responses by adding them to an <a href="../Classes/RKRequestDescriptor.html"><code>RKRequestDescriptor</code></a> or <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Configuring Block Mapping Selection" name="task_Configuring Block Mapping Selection"></a>
+						<h2 class="task-title">Configuring Block Mapping Selection</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setObjectMappingForRepresentationBlock:" title="setObjectMappingForRepresentationBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setObjectMappingForRepresentationBlock:">&ndash;&nbsp;setObjectMappingForRepresentationBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets a block to be invoked to determine the appropriate concrete object mapping with which to map an object representation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setObjectMappingForRepresentationBlock:(RKObjectMapping *( ^ ) ( id representation ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The block object to invoke to select the object mapping with which to map the given object representation. The block returns an object mapping and accepts a single parameter: the object representation being mapped.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKDynamicMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchers" title="matchers"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchers">&nbsp;&nbsp;matchers</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the array of matchers objects added to the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *matchers</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKDynamicMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addMatcher:" title="addMatcher:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addMatcher:">&ndash;&nbsp;addMatcher:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds a matcher to the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addMatcher:(RKObjectMappingMatcher *)<em>matcher</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>matcher</code></th>
+						<td><p>The matcher to add to the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If the matcher has already been added to the receiver, then adding it again moves it to the top of the matcher stack.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKDynamicMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeMatcher:" title="removeMatcher:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeMatcher:">&ndash;&nbsp;removeMatcher:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes a matcher from the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeMatcher:(RKObjectMappingMatcher *)<em>matcher</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>matcher</code></th>
+						<td><p>The matcher to remove from the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If the matcher has already been added to the receiver, then adding it again moves it to the top of the matcher stack.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKDynamicMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/objectMappings" title="objectMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/objectMappings">&nbsp;&nbsp;objectMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an array of object mappings that have been registered with the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *objectMappings</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <a href="../Classes/RKObjectMapping.html"><code>RKObjectMapping</code></a> objects registered with the receiver.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKDynamicMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Retrieving the Object Mapping for an Object Representation" name="task_Retrieving the Object Mapping for an Object Representation"></a>
+						<h2 class="task-title">Retrieving the Object Mapping for an Object Representation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/objectMappingForRepresentation:" title="objectMappingForRepresentation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/objectMappingForRepresentation:">&ndash;&nbsp;objectMappingForRepresentation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Invoked by the <a href="../Classes/RKMapperOperation.html"><code>RKMapperOperation</code></a> and <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> to determine the appropriate <a href="../Classes/RKObjectMapping.html"><code>RKObjectMapping</code></a> to use when mapping the given object representation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (RKObjectMapping *)objectMappingForRepresentation:(id)<em>representation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>representation</code></th>
+						<td><p>The object representation that being mapped dynamically for which to determine the appropriate concrete mapping.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The object mapping to be used to map the given object representation.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method searches the stack of registered <a href="#//api/name/matchers">matchers</a> and then executes the block, if any, set by <a href="#//api/name/objectMappingForRepresentationBlock"><code>setObjectMappingForRepresentationBlock:</code></a>. If <code>nil</code> is returned, then mapping for the representation is declined and it will not be mapped.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKDynamicMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isEqualToMapping:" title="isEqualToMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isEqualToMapping:">&ndash;&nbsp;isEqualToMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns <code>YES</code> if the receiver and the specified mapping are considered equivalent.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToMapping:(RKMapping *)<em>otherMapping</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><strong>NOTE</strong>: Must be implemented in subclass.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-08-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

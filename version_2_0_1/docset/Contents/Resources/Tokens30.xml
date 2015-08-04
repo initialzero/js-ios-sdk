@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/JSResourceDescriptor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/JSResourceDescriptor</TokenIdentifier>
+			<Abstract type="html">Represents a resource descriptor entity for convenient XML serialization process.</Abstract>
+			<DeclaredIn>JSResourceDescriptor.h</DeclaredIn>
+            <Availability type="html"></Availability>
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSResourceDescriptor/isDataSource</TokenIdentifier>
+			<Abstract type="html">Looks the wsType of the resource descriptor and return YES
+if it is one of the following: datasource, jdbc, jndi, bean, custom.</Abstract>
+			<DeclaredIn>JSResourceDescriptor.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isDataSource</Declaration>
+			
+			<ReturnValue><Abstract type="html">&lt;code&gt;YES&lt;/code&gt; if it is data source, &lt;code&gt;NO&lt;/code&gt; otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/isDataSource</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSResourceDescriptor/resourceDescriptorDataSource</TokenIdentifier>
+			<Abstract type="html">Gets a valid data source resource from a resource descriptor</Abstract>
+			<DeclaredIn>JSResourceDescriptor.h</DeclaredIn>
+			
+			<Declaration>- (JSResourceDescriptor *)resourceDescriptorDataSource</Declaration>
+			
+			<ReturnValue><Abstract type="html">The data source resource, or &lt;code&gt;nil&lt;/code&gt; if no data source is found.</Abstract></ReturnValue>
+			<Anchor>//api/name/resourceDescriptorDataSource</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSResourceDescriptor/resourceDescriptorDataSourceURI:</TokenIdentifier>
+			<Abstract type="html">Gets a valid data source uri from a resource descriptor</Abstract>
+			<DeclaredIn>JSResourceDescriptor.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)resourceDescriptorDataSourceURI:(JSResourceDescriptor *)dataSource</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>dataSource</Name>
+					<Abstract type="html">Data source resource</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The data source uri, or &lt;code&gt;nil&lt;/code&gt; if no data source is found.</Abstract></ReturnValue>
+			<Anchor>//api/name/resourceDescriptorDataSourceURI:</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSResourceDescriptor/propertyByName:</TokenIdentifier>
+			<Abstract type="html">Gets the property with the specified name</Abstract>
+			<DeclaredIn>JSResourceDescriptor.h</DeclaredIn>
+			
+			<Declaration>- (JSResourceProperty *)propertyByName:(NSString *)name</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The property name</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Property with the specified name, or &lt;code&gt;nil&lt;/code&gt; if the property is not found</Abstract></ReturnValue>
+			<Anchor>//api/name/propertyByName:</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSResourceDescriptor/inputControlQueryData</TokenIdentifier>
+			<Abstract type="html">Gets the query data of a query-based input control</Abstract>
+			<DeclaredIn>JSResourceDescriptor.h</DeclaredIn>
+			
+			<Declaration>- (NSArray *)inputControlQueryData</Declaration>
+			
+			<ReturnValue><Abstract type="html">The query data as list of JSResourceProperty objects</Abstract></ReturnValue>
+			<Anchor>//api/name/inputControlQueryData</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSResourceDescriptor/rkRequestDescriptorsForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns an array of RKRequestDescriptor objects to be added to the manager
+for mapping objects of the class to request.</Abstract>
+			<DeclaredIn>JSResourceDescriptor.m</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)rkRequestDescriptorsForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of RKRequestDescriptor objects to be added to the manager.</Abstract></ReturnValue>
+			<Anchor>//api/name/rkRequestDescriptorsForServerProfile:</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSResourceDescriptor/rkResponseDescriptorsForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns an array of RKResponseDescriptor objects to be added to the manager
+for mapping objects of the class from response.</Abstract>
+			<DeclaredIn>JSResourceDescriptor.m</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)rkResponseDescriptorsForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of RKResponseDescriptor objects to be added to the manager.</Abstract></ReturnValue>
+			<Anchor>//api/name/rkResponseDescriptorsForServerProfile:</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSResourceDescriptor/classMappingForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns RKObjectMapping object for added it as relation referencesß
+for mapping objects from response.</Abstract>
+			<DeclaredIn>JSResourceDescriptor.m</DeclaredIn>
+			
+			<Declaration>+ (RKObjectMapping *)classMappingForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns RKObjectMapping object for added it as relation references</Abstract></ReturnValue>
+			<Anchor>//api/name/classMappingForServerProfile:</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

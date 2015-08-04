@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/RKValueTransforming.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/RKValueTransforming</TokenIdentifier>
+			<Abstract type="html">Objects wish to perform transformation on values as part of a RestKit object mapping operation much adopt the RKValueTransforming protocol. Value transformers must introspect a given input value to determine if they are capable of performing a transformation and if so, perform the transformation and assign the new value to the given pointer to an output value and return YES or else construct an error describing the failure and return NO. Value transformers may also optionally implement a validation method that enables callers to determine if a given value transformer object is capable of performing a transformation on an input value.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+            
+			
+			<NodeRef refid="122"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/RKValueTransforming/transformValue:toValue:ofClass:error:</TokenIdentifier>
+			<Abstract type="html">Transforms a given value into a new representation.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)transformValue:(id)inputValue toValue:(id *)outputValue ofClass:(Class)outputValueClass error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>inputValue</Name>
+					<Abstract type="html">The value to be transformed.</Abstract>
+				</Parameter><Parameter>
+					<Name>outputValue</Name>
+					<Abstract type="html">A pointer to an id object that will be assigned to the transformed representation. May be assigned to nil if that is the result of the transformation.</Abstract>
+				</Parameter><Parameter>
+					<Name>outputValueClass</Name>
+					<Abstract type="html">The class of the outputValue variable. Specifies the expected type of a successful transformation. May be nil to indicate that the type is unknown or unimportant.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">A pointer to an NSError object that must be assigned to a newly constructed NSError object if the transformation cannot be performed.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A Boolean value indicating if the transformation was successful. This is used to determine whether another transformer should be given an opportunity to attempt a transformation.</Abstract></ReturnValue>
+			<Anchor>//api/name/transformValue:toValue:ofClass:error:</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/RKValueTransforming/validateTransformationFromClass:toClass:</TokenIdentifier>
+			<Abstract type="html">Asks the transformer if it is capable of performing a transformation from a given class into a new representation of another given class.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)validateTransformationFromClass:(Class)inputValueClass toClass:(Class)outputValueClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>inputValueClass</Name>
+					<Abstract type="html">The Class of an input value being inspected.</Abstract>
+				</Parameter><Parameter>
+					<Name>outputValueClass</Name>
+					<Abstract type="html">The Class of an output value being inspected.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the receiver can perform a transformation between the given source and destination classes.</Abstract></ReturnValue>
+			<Anchor>//api/name/validateTransformationFromClass:toClass:</Anchor>
+            <NodeRef refid="122"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

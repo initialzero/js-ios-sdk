@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/RKAssignmentPolicy.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/RKAssignmentPolicy</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKRelationshipMapping.h</DeclaredIn>
+            
+			
+			<NodeRef refid="125"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/RKAssignmentPolicySet</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>RKAssignmentPolicySet</Declaration>
+            
+            <DeclaredIn>RKRelationshipMapping.h</DeclaredIn>
+            
+            <NodeRef refid="125"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/RKAssignmentPolicyReplace</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>RKAssignmentPolicyReplace</Declaration>
+            
+            <DeclaredIn>RKRelationshipMapping.h</DeclaredIn>
+            
+            <NodeRef refid="125"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/RKAssignmentPolicyUnion</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>RKAssignmentPolicyUnion</Declaration>
+            
+            <DeclaredIn>RKRelationshipMapping.h</DeclaredIn>
+            
+            <NodeRef refid="125"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/RKSetAssignmentPolicy</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>RKSetAssignmentPolicy</Declaration>
+            
+            <DeclaredIn>RKRelationshipMapping.h</DeclaredIn>
+            
+            <NodeRef refid="125"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/RKReplaceAssignmentPolicy</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>RKReplaceAssignmentPolicy</Declaration>
+            
+            <DeclaredIn>RKRelationshipMapping.h</DeclaredIn>
+            
+            <NodeRef refid="125"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/RKUnionAssignmentPolicy</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>RKUnionAssignmentPolicy</Declaration>
+            
+            <DeclaredIn>RKRelationshipMapping.h</DeclaredIn>
+            
+            <NodeRef refid="125"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

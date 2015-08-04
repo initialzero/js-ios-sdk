@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TKTransition.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TKTransition</TokenIdentifier>
+			<Abstract type="html">The TKTransition class models a state change in response to an event firing within a state machine. It encapsulates all details about the change and is yielded as an argument to all block callbacks within TransitionKit. The optional dictionary of userInfo can be used to broadcast arbitrary data across callbacks.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+            
+			
+			<NodeRef refid="108"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TKTransition/transitionForEvent:fromState:inStateMachine:userInfo:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a new transition object describing a state change occuring within a state machine in response to the firing of an event.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)transitionForEvent:(TKEvent *)event fromState:(TKState *)sourceState inStateMachine:(TKStateMachine *)stateMachine userInfo:(NSDictionary *)userInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">The event being fired that is causing the transition to occur.</Abstract>
+				</Parameter><Parameter>
+					<Name>sourceState</Name>
+					<Abstract type="html">The state of the machine when the event was fired.</Abstract>
+				</Parameter><Parameter>
+					<Name>stateMachine</Name>
+					<Abstract type="html">The state machine in which the transition is occurirng.</Abstract>
+				</Parameter><Parameter>
+					<Name>userInfo</Name>
+					<Abstract type="html">An optional dictionary of user info supplied with the event when it was fired.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/transitionForEvent:fromState:inStateMachine:userInfo:</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/setEvent:</TokenIdentifier>
+			<Abstract type="html">The event that was fired, causing the transition to occur.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKEvent *event</Declaration>
+			
+			
+			<Anchor>//api/name/event</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/event</TokenIdentifier>
+			<Abstract type="html">The event that was fired, causing the transition to occur.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKEvent *event</Declaration>
+			
+			
+			<Anchor>//api/name/event</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TKTransition/event</TokenIdentifier>
+			<Abstract type="html">The event that was fired, causing the transition to occur.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKEvent *event</Declaration>
+			
+			
+			<Anchor>//api/name/event</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/setSourceState:</TokenIdentifier>
+			<Abstract type="html">The state of the state machine when the transition starts.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKState *sourceState</Declaration>
+			
+			
+			<Anchor>//api/name/sourceState</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/sourceState</TokenIdentifier>
+			<Abstract type="html">The state of the state machine when the transition starts.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKState *sourceState</Declaration>
+			
+			
+			<Anchor>//api/name/sourceState</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TKTransition/sourceState</TokenIdentifier>
+			<Abstract type="html">The state of the state machine when the transition starts.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKState *sourceState</Declaration>
+			
+			
+			<Anchor>//api/name/sourceState</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/setDestinationState:</TokenIdentifier>
+			<Abstract type="html">The state of the state machine after the transition finishes.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKState *destinationState</Declaration>
+			
+			
+			<Anchor>//api/name/destinationState</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/destinationState</TokenIdentifier>
+			<Abstract type="html">The state of the state machine after the transition finishes.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKState *destinationState</Declaration>
+			
+			
+			<Anchor>//api/name/destinationState</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TKTransition/destinationState</TokenIdentifier>
+			<Abstract type="html">The state of the state machine after the transition finishes.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKState *destinationState</Declaration>
+			
+			
+			<Anchor>//api/name/destinationState</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/setStateMachine:</TokenIdentifier>
+			<Abstract type="html">The state machine in which the transition is occurring.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKStateMachine *stateMachine</Declaration>
+			
+			
+			<Anchor>//api/name/stateMachine</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/stateMachine</TokenIdentifier>
+			<Abstract type="html">The state machine in which the transition is occurring.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKStateMachine *stateMachine</Declaration>
+			
+			
+			<Anchor>//api/name/stateMachine</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TKTransition/stateMachine</TokenIdentifier>
+			<Abstract type="html">The state machine in which the transition is occurring.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TKStateMachine *stateMachine</Declaration>
+			
+			
+			<Anchor>//api/name/stateMachine</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/setUserInfo:</TokenIdentifier>
+			<Abstract type="html">An optional dictionary of user info supplied with the event when fired.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TKTransition/userInfo</TokenIdentifier>
+			<Abstract type="html">An optional dictionary of user info supplied with the event when fired.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TKTransition/userInfo</TokenIdentifier>
+			<Abstract type="html">An optional dictionary of user info supplied with the event when fired.</Abstract>
+			<DeclaredIn>TKTransition.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *userInfo</Declaration>
+			
+			
+			<Anchor>//api/name/userInfo</Anchor>
+            <NodeRef refid="108"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

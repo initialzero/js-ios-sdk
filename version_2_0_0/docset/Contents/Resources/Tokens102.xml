@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKValueTransformer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKValueTransformer</TokenIdentifier>
+			<Abstract type="html">The RKValueTransformer class is an abstract base class for implementing a value transformer that conforms to the RKValueTransforming protocol. The class is provided to enable third-party extensions of the value transformer to be implemented through subclassing. The default implementation contains no behavior and will raise an exception if an implementation of transformValue:toValue:ofClass:error: is not provided by the subclass. RKValueTransformer also exposes accessors for the default value transformer implementations that are provided with the library.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+            
+			
+			<NodeRef refid="102"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/identityValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer that will return the input value if it is already of the desired output class.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)identityValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/identityValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/stringToURLValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSString and NSURL representations.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)stringToURLValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/stringToURLValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/numberToStringValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSNumber and NSString representations.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)numberToStringValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/numberToStringValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/arrayToOrderedSetValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSArray and NSOrderedSet representations.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)arrayToOrderedSetValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/arrayToOrderedSetValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/arrayToSetValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSArray and NSSet representations.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)arrayToSetValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/arrayToSetValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/decimalNumberToNumberValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSDecimalNumber and NSNumber representations.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)decimalNumberToNumberValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/decimalNumberToNumberValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/decimalNumberToStringValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSDecimalNumber and NSString representations.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)decimalNumberToStringValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/decimalNumberToStringValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/nullValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming from [NSNull null] to nil representations.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)nullValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/nullValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/keyedArchivingValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between objects that conform to the NSCoding protocol and NSData representations by using an NSKeyedArchiver/NSKeyedUnarchiver to serialize as a property list.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)keyedArchivingValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/keyedArchivingValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/timeIntervalSince1970ToDateValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSNumber or NSString and NSDate representations by evaluating the input value as a time interval since the UNIX epoch (1 January 1970, GMT).</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)timeIntervalSince1970ToDateValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/timeIntervalSince1970ToDateValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/iso8601TimestampToDateValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming between NSDate and NSString representations in which the string encodes date and time information in the ISO 8601 timestamp format.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)iso8601TimestampToDateValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/iso8601TimestampToDateValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/stringValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming any NSObject that implements the stringValue method into an NSString representation.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)stringValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/stringValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/objectToCollectionValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of enclosing any singular NSObject into a collection type such as NSArray, NSSet, or NSOrderedSet (and its mutable descendents).</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)objectToCollectionValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/objectToCollectionValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/keyOfDictionaryValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming any object that conforms to the NSCopying protocol into a dictionary representation keyed by the transformed object.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)keyOfDictionaryValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/keyOfDictionaryValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/mutableValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns a transformer capable of transforming any object conforming to the NSMutableCopying protocol into a mutable representation of itself.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)mutableValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/mutableValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/defaultValueTransformer</TokenIdentifier>
+			<Abstract type="html">Returns the singleton instance of the default value transformer. The default transformer is a compound transformer that includes all the individual value transformers implemented on the RKValueTransformer base class as well as NSDateFormatter instances for the following date format strings:</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (RKCompoundValueTransformer *)defaultValueTransformer</Declaration>
+			
+			
+			<Anchor>//api/name/defaultValueTransformer</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RKValueTransformer/setDefaultValueTransformer:</TokenIdentifier>
+			<Abstract type="html">Sets the default value transformer to a new instance. Setting the default transformer to nil will result in a new singleton instance with the default configuration being rebuilt.</Abstract>
+			<DeclaredIn>RKValueTransformers.h</DeclaredIn>
+			
+			<Declaration>+ (void)setDefaultValueTransformer:(RKCompoundValueTransformer *)compoundValueTransformer</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>compoundValueTransformer</Name>
+					<Abstract type="html">The new default compound transformer. Passing nil will reset the transformer to the default configuration.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultValueTransformer:</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKValueTransformer/transformValue:toValue:ofClass:error:</TokenIdentifier>
+			<Abstract type="html">Transforms a given value into a new representation.</Abstract>
+			<DeclaredIn>RKValueTransformers.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)transformValue:(id)inputValue toValue:(__autoreleasing id *)outputValue ofClass:(Class)outputValueClass error:(NSError *__autoreleasing *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>inputValue</Name>
+					<Abstract type="html">The value to be transformed.</Abstract>
+				</Parameter><Parameter>
+					<Name>outputValue</Name>
+					<Abstract type="html">A pointer to an id object that will be assigned to the transformed representation. May be assigned to nil if that is the result of the transformation.</Abstract>
+				</Parameter><Parameter>
+					<Name>outputValueClass</Name>
+					<Abstract type="html">The class of the outputValue variable. Specifies the expected type of a successful transformation. May be nil to indicate that the type is unknown or unimportant.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">A pointer to an NSError object that must be assigned to a newly constructed NSError object if the transformation cannot be performed.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A Boolean value indicating if the transformation was successful. This is used to determine whether another transformer should be given an opportunity to attempt a transformation.</Abstract></ReturnValue>
+			<Anchor>//api/name/transformValue:toValue:ofClass:error:</Anchor>
+            <NodeRef refid="102"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

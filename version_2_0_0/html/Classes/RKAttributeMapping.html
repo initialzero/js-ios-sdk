@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKAttributeMapping Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/attributeMappingFromKeyPath:toKeyPath:">+ attributeMappingFromKeyPath:toKeyPath:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKAttributeMapping Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/RKPropertyMapping.html">RKPropertyMapping</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKAttributeMapping.h<br />RKAttributeMapping.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Instances of <code>RKAttributeMapping</code> define a transformation of data between an attribute value on source object and an attribute value on a destination object within an object mapping.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/attributeMappingFromKeyPath:toKeyPath:" title="attributeMappingFromKeyPath:toKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attributeMappingFromKeyPath:toKeyPath:">+&nbsp;attributeMappingFromKeyPath:toKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new attribute mapping specifying that data is to be read from a given key path on a source object
+and set to a given key path on a destination object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)attributeMappingFromKeyPath:(NSString *)<em>sourceKeyPath</em> toKeyPath:(NSString *)<em>destinationKeyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sourceKeyPath</code></th>
+						<td><p>The key path on the source object from which to read the data being mapped. If <code>nil</code>, then the entire source object representation is mapped to the specified destination attribute.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>destinationKeyPath</code></th>
+						<td><p>The key path on the destination object on which to set the mapped data.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A newly created attribute mapping object that is ready to be added to an object mapping.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Attribute mappings define transformation between key paths in the source and destination object beings mapped. In the simplest
+case, an attribute mapping may simply specify that data from one object is to be copied to another. A common example of this
+type of transformation is copying the <code>name</code> key from a JSON payload onto a local object. In this case, the source and
+destination key paths are identical, as are the source and destination types (<code>NSString</code>), so a simple get and set operation
+has been defined.</p>
+
+<p>The next most common use-case is the transformation of identical data between two different key paths in the
+source and destination objects. This is typically encountered when you wish to transform inbound data to conform with the naming
+conventions of the platform or the data model of your application. An example of this type of transformation would be from the
+source key path of <code>first_name</code> to the destination key path of <code>firstName</code>. In this transformation, the key paths have diverged
+but both sides of the mapping correspond to NSString properties.</p>
+
+<p>The final type of transformation to be specified via an attribute mapping involves the transformation between types in the mapping.
+By far, the most common example of this use-case is the transformation of a inbound string or numeric property into a date on
+the target object. For example, consider a backend system that returns the creation date of a piece of content in a JSON payload.
+This data might be returned in JSON as <code>{"created_on": "2012-08-27"}</code>. In a given application, the developer may wish to model this
+data as an NSDate <code>createdOn</code> property on the target object. An attribute mapping to support this mapping would specify a source
+key path of <code>created_on</code> and a destination key path of <code>createdOn</code>. On the destination object, the <code>createdOn</code> property would be defined
+as <code>@property (nonatomic, strong) NSDate *createdOn;</code>. At mapping time, the mapping operation inspects the type of the content being
+mapped and attempts to transform the source content into the type of the desination property specified by the mapping. In this case,
+an NSDateFormatter object would be used to process the inbound <code>NSString</code> into an outbound <code>NSDate</code> object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKAttributeMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-08-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

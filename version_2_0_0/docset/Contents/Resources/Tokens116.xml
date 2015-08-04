@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/RKLogging.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/RKLogging</TokenIdentifier>
+			<Abstract type="html">Protocol which classes can implement to determine how RestKit log messages actually get handled.
+There is a single &quot;current&quot; logging class installed, which all log messages will flow
+through.</Abstract>
+			<DeclaredIn>RKLog.h</DeclaredIn>
+            
+			
+			<NodeRef refid="116"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKMappingOperationDataSource Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/commitChangesForMappingOperation:error:">- commitChangesForMappingOperation:error:</option>
+		
+		<option value="//api/name/mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:">- mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:</option>
+		
+		<option value="//api/name/mappingOperation:targetObjectForMapping:inRelationship:">- mappingOperation:targetObjectForMapping:inRelationship:</option>
+		
+		<option value="//api/name/mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:">- mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:</option>
+		
+		<option value="//api/name/mappingOperationShouldCollectMappingInfo:">- mappingOperationShouldCollectMappingInfo:</option>
+		
+		<option value="//api/name/mappingOperationShouldSetUnchangedValues:">- mappingOperationShouldSetUnchangedValues:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKMappingOperationDataSource Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKMappingOperationDataSource.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An object that adopts the <code>RKMappingOperationDataSource</code> protocol is responsible for the retrieval or creation of target objects within an <a href="../Classes/RKMapperOperation.html"><code>RKMapperOperation</code></a> or <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a>. A data source is responsible for meeting the requirements of the underlying data store implementation and must return a key-value coding compliant object instance that can be used as the target object of a mapping operation. It is also responsible for commiting any changes necessary to the underlying data store once a mapping operation has completed its work.</p>
+
+<p>At a minimum, a data source must implement the <code>mappingOperation:targetObjectForRepresentation:withMapping:</code> method. This method is responsible for finding an existing object instance to be updated or creating a new object if no existing object could be found or the underlying data store does not support persistence. Object mapping operations which target <code>NSObject</code> derived classes will always result in mapping to new transient objects, while persistent data stores such as Core Data can be queried to retrieve existing objects for update.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:" title="mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:">&ndash;&nbsp;mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the data source for the target object for an object mapping operation given an <code>NSDictionary</code> representation of the object&rsquo;s properties and the mapping object that will be used to perform the mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)mappingOperation:(RKMappingOperation *)<em>mappingOperation</em> targetObjectForRepresentation:(NSDictionary *)<em>representation</em> withMapping:(RKObjectMapping *)<em>mapping</em> inRelationship:(RKRelationshipMapping *)<em>relationshipMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation requesting the target object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>representation</code></th>
+						<td><p>A dictionary representation of the properties to be mapped onto the retrieved target object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>The object mapping to be used to perform a mapping from the representation to the target object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A key-value coding compliant object to perform the mapping on to.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The <code>representation</code> value is a fragment of content from a deserialized response that has been identified as containing content that is mappable using the given mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMappingOperationDataSource.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingOperation:targetObjectForMapping:inRelationship:" title="mappingOperation:targetObjectForMapping:inRelationship:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingOperation:targetObjectForMapping:inRelationship:">&ndash;&nbsp;mappingOperation:targetObjectForMapping:inRelationship:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the data source for the target object for an object mapping operation the mapping object that will be used to perform the mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)mappingOperation:(RKMappingOperation *)<em>mappingOperation</em> targetObjectForMapping:(RKObjectMapping *)<em>mapping</em> inRelationship:(RKRelationshipMapping *)<em>relationshipMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation requesting the target object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>representation</code></th>
+						<td><p>A dictionary representation of the properties to be mapped onto the retrieved target object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>The object mapping to be used to perform a mapping from the representation to the target object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A key-value coding compliant object to perform the mapping on to.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If not implemented or it returns nil, then the
+  <a href="../Protocols/RKMappingOperationDataSource.html#//api/name/mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:"><code>mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:</code></a> method will be called to determine the target.</p>
+
+<p>It is preferable to implement this method if the <code>representation</code> is not needed to determine the target object,
+as obtaining that value is somewhat expensive.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMappingOperationDataSource.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/commitChangesForMappingOperation:error:" title="commitChangesForMappingOperation:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/commitChangesForMappingOperation:error:">&ndash;&nbsp;commitChangesForMappingOperation:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the data source to commit any changes to the underlying data store.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)commitChangesForMappingOperation:(RKMappingOperation *)<em>mappingOperation</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation that has completed its work.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A pointer to an error to be set in the event that the mapping operation could not be committed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A Boolean value indicating if the changes for the mapping operation were committed successfully.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMappingOperationDataSource.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:" title="mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:">&ndash;&nbsp;mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the data source to delete the existing value for a relationship that has been mapped with an assignment policy of <code>RKReplaceAssignmentPolicy</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)mappingOperation:(RKMappingOperation *)<em>mappingOperation</em> deleteExistingValueOfRelationshipWithMapping:(RKRelationshipMapping *)<em>relationshipMapping</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation that is executing.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>relationshipMapping</code></th>
+						<td><p>The relationship mapping for which the existing value is being replaced.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A pointer to an error to be set in the event that the deletion operation could not be completed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A Boolean value indicating if the existing objects for the relationship were successfully deleted.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMappingOperationDataSource.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingOperationShouldSetUnchangedValues:" title="mappingOperationShouldSetUnchangedValues:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingOperationShouldSetUnchangedValues:">&ndash;&nbsp;mappingOperationShouldSetUnchangedValues:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the data source if it should set values for properties without checking that the value has been changed. This method can result in a performance improvement during mapping as the mapping operation will not attempt to assess the change state of the property being mapped.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)mappingOperationShouldSetUnchangedValues:(RKMappingOperation *)<em>mappingOperation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation that is querying the data source.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the mapping operation should disregard property change status, else <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If this method is not implemented by the data source, then the mapping operation defaults to <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMappingOperationDataSource.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingOperationShouldCollectMappingInfo:" title="mappingOperationShouldCollectMappingInfo:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingOperationShouldCollectMappingInfo:">&ndash;&nbsp;mappingOperationShouldCollectMappingInfo:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Asks the data source if the mapping operation should collect <a href="../Classes/RKMappingInfo.html"><code>RKMappingInfo</code></a> information during the mapping
+(stored in the <code>mappingInfo</code> property).  If not needed, it can be a substantially faster to skip it.  The
+<code>mappingInfo</code> property will be nil if not collected.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)mappingOperationShouldCollectMappingInfo:(RKMappingOperation *)<em>mappingOperation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation that is querying the data source.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the mapping operation should collect mapping information, else <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If this method is not implemented by the data source, then the mapping operation defaults to <code>YES</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMappingOperationDataSource.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-08-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

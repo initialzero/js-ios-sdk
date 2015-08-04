@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKFetchRequestManagedObjectCache.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKFetchRequestManagedObjectCache</TokenIdentifier>
+			<Abstract type="html">Provides a simple managed object cache strategy in which every request for an object
+is satisfied by dispatching an NSFetchRequest against the Core Data persistent store.
+Performance can be disappointing for data sets with a large amount of redundant data
+being mapped and connected together, but the memory footprint stays flat.</Abstract>
+			<DeclaredIn>RKFetchRequestManagedObjectCache.h</DeclaredIn>
+            
+			
+			<NodeRef refid="47"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKFetchRequestManagedObjectCache/managedObjectsWithEntity:attributeValues:inManagedObjectContext:</TokenIdentifier>
+			<Abstract type="html">Returns all managed objects for a given entity with attributes whose names and values match the given dictionary in a given context.</Abstract>
+			<DeclaredIn>RKFetchRequestManagedObjectCache.m</DeclaredIn>
+			
+			<Declaration>- (NSSet *)managedObjectsWithEntity:(NSEntityDescription *)entity attributeValues:(NSDictionary *)attributeValues inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entity</Name>
+					<Abstract type="html">The entity to retrieve managed objects for.</Abstract>
+				</Parameter><Parameter>
+					<Name>attributeValues</Name>
+					<Abstract type="html">A dictionary specifying the attribute criteria for retrieving managed objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>managedObjectContext</Name>
+					<Abstract type="html">The context to fetch the matching objects in.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/managedObjectsWithEntity:attributeValues:inManagedObjectContext:</Anchor>
+            <NodeRef refid="47"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

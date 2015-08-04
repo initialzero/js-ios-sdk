@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKKeyPathValueMapObjectMappingMatcher.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKKeyPathValueMapObjectMappingMatcher</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKObjectMappingMatcher.m</DeclaredIn>
+            
+			
+			<NodeRef refid="56"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKKeyPathValueMapObjectMappingMatcher/possibleObjectMappings</TokenIdentifier>
+			<Abstract type="html">Returns the list of all known RKObjectMapping instances which could be returned from this matcher.  This is called when added to or removed from an RKDynamicMapping, and is used to populate the objectMappings property there.  The default implementation returns the single value set in the objectMapping property, so if that is the only possibility then this method does not need to be overridden.</Abstract>
+			<DeclaredIn>RKObjectMappingMatcher.m</DeclaredIn>
+			
+			<Declaration>- (NSArray *)possibleObjectMappings</Declaration>
+			
+			
+			<Anchor>//api/name/possibleObjectMappings</Anchor>
+            <NodeRef refid="56"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKKeyPathValueMapObjectMappingMatcher/matches:</TokenIdentifier>
+			<Abstract type="html">Returns a Boolean value that indicates if the given object matches the expectations of the receiver.</Abstract>
+			<DeclaredIn>RKObjectMappingMatcher.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)matches:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to be evaluated.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the object matches the expectations of the receiver, else NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/matches:</Anchor>
+            <NodeRef refid="56"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

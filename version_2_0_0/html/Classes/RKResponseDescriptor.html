@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKResponseDescriptor Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/baseURL">baseURL</option>
+		
+		<option value="//api/name/keyPath">keyPath</option>
+		
+		<option value="//api/name/mapping">mapping</option>
+		
+		<option value="//api/name/method">method</option>
+		
+		<option value="//api/name/pathPattern">pathPattern</option>
+		
+		<option value="//api/name/statusCodes">statusCodes</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/responseDescriptorWithMapping:method:pathPattern:keyPath:statusCodes:">+ responseDescriptorWithMapping:method:pathPattern:keyPath:statusCodes:</option>
+		
+		<option value="//api/name/responseDescriptorWithMapping:pathPattern:keyPath:statusCodes:">+ responseDescriptorWithMapping:pathPattern:keyPath:statusCodes:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/isEqualToResponseDescriptor:">- isEqualToResponseDescriptor:</option>
+		
+		<option value="//api/name/matchesPath:">- matchesPath:</option>
+		
+		<option value="//api/name/matchesResponse:">- matchesResponse:</option>
+		
+		<option value="//api/name/matchesURL:">- matchesURL:</option>
+		
+		<option value="//api/name/parsedArgumentsFromResponse:">- parsedArgumentsFromResponse:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKResponseDescriptor Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKResponseDescriptor.h<br />RKResponseDescriptor.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An <code>RKResponseDescriptor</code> object describes an object <a href="#//api/name/mapping">mapping</a> configuration that is applicable to an HTTP response. Response descriptors are defined by specifying the <a href="../Classes/RKMapping.html"><code>RKMapping</code></a> object that is to be used when performing object <a href="#//api/name/mapping">mapping</a> on the deserialized response body and the URL path pattern, key path, and status codes for which the <a href="#//api/name/mapping">mapping</a> is appropriate. The path pattern is a SOCKit <a href="../Classes/SOCPattern.html"><code>SOCPattern</code></a> string that will be matched against the URL of the request that loaded the response being mapped. If the path pattern is nil, the response descriptor is considered to be appropriate for a response loaded from any URL. The key path specifies the location of data within the deserialized response body for which the <a href="#//api/name/mapping">mapping</a> is appropriate. If nil, the <a href="#//api/name/mapping">mapping</a> is considered to apply to the entire response body.  The status codes specify a set of HTTP response status codes for which the <a href="#//api/name/mapping">mapping</a> is appropriate. It is common to constrain a response descriptor to the HTTP Successful status code class (status codes in the 200-299 range). Object <a href="#//api/name/mapping">mapping</a> for error responses can be configured by configuring a response descriptor to handle the Client Error status code class (status codes in the 400-499 range). Instances of <code>RKResponseDescriptor</code> are immutable.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Creating a Response Descriptor" name="task_Creating a Response Descriptor"></a>
+						<h2 class="task-title">Creating a Response Descriptor</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/responseDescriptorWithMapping:pathPattern:keyPath:statusCodes:" title="responseDescriptorWithMapping:pathPattern:keyPath:statusCodes:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseDescriptorWithMapping:pathPattern:keyPath:statusCodes:">+&nbsp;responseDescriptorWithMapping:pathPattern:keyPath:statusCodes:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new <code>RKResponseDescriptor</code> object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)responseDescriptorWithMapping:(RKMapping *)<em>mapping</em> pathPattern:(NSString *)<em>pathPattern</em> keyPath:(NSString *)<em>keyPath</em> statusCodes:(NSIndexSet *)<em>statusCodes</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>The <a href="#//api/name/mapping">mapping</a> for the response descriptor.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pathPattern</code></th>
+						<td><p>A path pattern that matches against URLs for which the <a href="#//api/name/mapping">mapping</a> should be used.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>A key path specifying the subset of the parsed response for which the <a href="#//api/name/mapping">mapping</a> is to be used.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>statusCodes</code></th>
+						<td><p>A set of HTTP status codes for which the <a href="#//api/name/mapping">mapping</a> is to be used.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new <code>RKResponseDescriptor</code> object.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This <a href="#//api/name/method">method</a> is deprecated. Use <code>+ (instancetype)responseDescriptorWithMapping:(</code>RKMapping<code> *)</code>mapping<code>
+method:(</code>RKRequestMethod<code>)</code>method<code>
+pathPattern:(NSString *)</code>pathPattern<code>
+keyPath:(NSString *)</code>keyPath<code>
+statusCodes:(NSIndexSet *)</code>statusCodes<code></code> instead.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/responseDescriptorWithMapping:method:pathPattern:keyPath:statusCodes:" title="responseDescriptorWithMapping:method:pathPattern:keyPath:statusCodes:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseDescriptorWithMapping:method:pathPattern:keyPath:statusCodes:">+&nbsp;responseDescriptorWithMapping:method:pathPattern:keyPath:statusCodes:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a new <code>RKResponseDescriptor</code> object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)responseDescriptorWithMapping:(RKMapping *)<em>mapping</em> method:(RKRequestMethod)<em>method</em> pathPattern:(NSString *)<em>pathPattern</em> keyPath:(NSString *)<em>keyPath</em> statusCodes:(NSIndexSet *)<em>statusCodes</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>The <a href="#//api/name/mapping">mapping</a> for the response descriptor.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>method</code></th>
+						<td><p>The HTTP <a href="#//api/name/method">method</a>(s) for which the <a href="#//api/name/mapping">mapping</a> is to be used.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pathPattern</code></th>
+						<td><p>A path pattern that matches against URLs for which the <a href="#//api/name/mapping">mapping</a> should be used.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>A key path specifying the subset of the parsed response for which the <a href="#//api/name/mapping">mapping</a> is to be used.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>statusCodes</code></th>
+						<td><p>A set of HTTP status codes for which the <a href="#//api/name/mapping">mapping</a> is to be used.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new <code>RKResponseDescriptor</code> object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting Information About a Response Descriptor" name="task_Getting Information About a Response Descriptor"></a>
+						<h2 class="task-title">Getting Information About a Response Descriptor</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mapping" title="mapping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapping">&nbsp;&nbsp;mapping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The mapping to be used when object mapping the deserialized HTTP response body. Cannot be nil.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKMapping *mapping</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/method" title="method"></a>
+	<h3 class="method-title"><code><a href="#//api/name/method">&nbsp;&nbsp;method</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The HTTP method(s) for which the <a href="#//api/name/mapping">mapping</a> is to be used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) RKRequestMethod method</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pathPattern" title="pathPattern"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pathPattern">&nbsp;&nbsp;pathPattern</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The path pattern to match against the request URL. If nil, the response descriptor matches any URL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *pathPattern</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/keyPath" title="keyPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/keyPath">&nbsp;&nbsp;keyPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The key path to match against the deserialized response body. If nil, the response descriptor matches the entire response body.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *keyPath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When evaluating a key path match, the Foundation object parsed from the response body is sent <code>valueForKeyPath:</code> with the keyPath of the receiver. If the value returned is non-nil, object <a href="#//api/name/mapping">mapping</a> is performed using the response descriptor&rsquo;s <a href="#//api/name/mapping">mapping</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/statusCodes" title="statusCodes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/statusCodes">&nbsp;&nbsp;statusCodes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The set of status codes for which response descriptor matches. If nil, the the response descriptor matches any status code.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSIndexSet *statusCodes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Constants/RKStatusCodeClass.html">RKStatusCodeClass</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Setting the Base URL" name="task_Setting the Base URL"></a>
+						<h2 class="task-title">Setting the Base URL</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/baseURL" title="baseURL"></a>
+	<h3 class="method-title"><code><a href="#//api/name/baseURL">&nbsp;&nbsp;baseURL</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The base URL that the <a href="#//api/name/pathPattern"><code>pathPattern</code></a> is to be evaluated relative to.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSURL *baseURL</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The base URL is set to the base URL of the object manager when a response descriptor is added to an object manager.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Using Response Descriptors" name="task_Using Response Descriptors"></a>
+						<h2 class="task-title">Using Response Descriptors</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/matchesPath:" title="matchesPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchesPath:">&ndash;&nbsp;matchesPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a Boolean value that indicates if the receiver&rsquo;s path pattern matches the given path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)matchesPath:(NSString *)<em>path</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>path</code></th>
+						<td><p>The path to compare with the path pattern of the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the path matches the receiver&rsquo;s pattern, else <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Path matching is performed using an <a href="../Classes/RKPathMatcher.html"><code>RKPathMatcher</code></a> object. If the receiver has a <code>nil</code> path pattern or the given path is <code>nil</code>, <code>YES</code> is returned.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchesURL:" title="matchesURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchesURL:">&ndash;&nbsp;matchesURL:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a Boolean value that indicates if the given URL object matches the base URL and path pattern of the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)matchesURL:(NSURL *)<em>URL</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>URL</code></th>
+						<td><p>The URL to compare with the base URL and path pattern of the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the URL matches the base URL and path pattern of the receiver, else <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This <a href="#//api/name/method">method</a> considers both the <a href="#//api/name/baseURL"><code>baseURL</code></a> and <a href="#//api/name/pathPattern"><code>pathPattern</code></a> of the receiver when evaluating the given URL object. The results evaluate in the following ways:</p>
+
+<ol>
+<li>If the <a href="#//api/name/baseURL"><code>baseURL</code></a> and <a href="#//api/name/pathPattern"><code>pathPattern</code></a> of the receiver are both <code>nil</code>, then <code>YES</code> is returned.</li>
+<li>If the <a href="#//api/name/baseURL"><code>baseURL</code></a> of the receiver is <code>nil</code>, but the path pattern is not, then the entire path and query string of the given URL will be evaluated against the path pattern of the receiver using <a href="#//api/name/matchesPath:"><code>matchesPath:</code></a>.</li>
+<li>If the <a href="#//api/name/baseURL"><code>baseURL</code></a> and the <a href="#//api/name/pathPattern"><code>pathPattern</code></a> are both non-nil, then the given URL is first checked to verify that it is relative to the base URL using a string prefix comparison. If the absolute string value of the given URL is prefixed with the string value of the base URL, then the URL is considered relative. If the given URL is found not to be relative to the receiver&rsquo;s <a href="#//api/name/baseURL">baseURL</a>, then <code>NO</code> is returned. If the URL is found to be relative to the base URL, then the path and query string of the URL are evaluated against the path pattern of the receiver using <a href="#//api/name/matchesPath:"><code>matchesPath:</code></a>.</li>
+</ol>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchesResponse:" title="matchesResponse:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchesResponse:">&ndash;&nbsp;matchesResponse:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a Boolean value that indicates if the given URL response object matches the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)matchesResponse:(NSHTTPURLResponse *)<em>response</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>response</code></th>
+						<td><p>The HTTP response object to compare with the base URL, path pattern, and status codes set of the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the response matches the base URL, path pattern, and status codes set of the receiver, else <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The match is evaluated by checking if the URL of the response matches the base URL and path pattern of the receiver via the <a href="#//api/name/matchesURL:"><code>matchesURL:</code></a> <a href="#//api/name/method">method</a>. If the URL is found to match, then the status code of the response is checked for inclusion in the receiver&rsquo;s set of status codes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parsedArgumentsFromResponse:" title="parsedArgumentsFromResponse:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parsedArgumentsFromResponse:">&ndash;&nbsp;parsedArgumentsFromResponse:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a dictionary of parsed arguments extracted from the URL of the given response object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSDictionary *)parsedArgumentsFromResponse:(NSHTTPURLResponse *)<em>response</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>response</code></th>
+						<td><p>The HTTP response object to compare with the base URL, path pattern, and status codes set of the receiver.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A dictionary of parsed arguments if the response matches the base URL, path pattern, and status codes set of the receiver, else <code>nil</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Comparing Response Descriptors" name="task_Comparing Response Descriptors"></a>
+						<h2 class="task-title">Comparing Response Descriptors</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isEqualToResponseDescriptor:" title="isEqualToResponseDescriptor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isEqualToResponseDescriptor:">&ndash;&nbsp;isEqualToResponseDescriptor:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns <code>YES</code> if the receiver and the specified response descriptor are considered equivalent.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToResponseDescriptor:(RKResponseDescriptor *)<em>otherDescriptor</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-08-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

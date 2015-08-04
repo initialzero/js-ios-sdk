@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/JSErrorDescriptor.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/JSErrorDescriptor</TokenIdentifier>
+			<Abstract type="html">Represents an error descriptor for convenient XML serialization process</Abstract>
+			<DeclaredIn>JSErrorDescriptor.h</DeclaredIn>
+            <Availability type="html"></Availability>
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSErrorDescriptor/rkResponseDescriptorsForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns an array of RKResponseDescriptor objects to be added to the manager
+for mapping objects of the class from response.</Abstract>
+			<DeclaredIn>JSErrorDescriptor.m</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)rkResponseDescriptorsForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of RKResponseDescriptor objects to be added to the manager.</Abstract></ReturnValue>
+			<Anchor>//api/name/rkResponseDescriptorsForServerProfile:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSErrorDescriptor/classMappingForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns RKObjectMapping object for added it as relation referencesß
+for mapping objects from response.</Abstract>
+			<DeclaredIn>JSErrorDescriptor.m</DeclaredIn>
+			
+			<Declaration>+ (RKObjectMapping *)classMappingForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns RKObjectMapping object for added it as relation references</Abstract></ReturnValue>
+			<Anchor>//api/name/classMappingForServerProfile:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
