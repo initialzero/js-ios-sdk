@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/aleksandrdakhno/Library/Developer/Shared/Documentation/DocSets/com.Jaspersoft.TIBCO.JaspersoftSDK.docset
-Time: 2015-08-04 12:48:55 +0000
