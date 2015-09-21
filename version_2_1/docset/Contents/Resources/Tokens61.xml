@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKManagedObjectMappingOperationDataSource.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKManagedObjectMappingOperationDataSource</TokenIdentifier>
+			<Abstract type="html">The RKManagedObjectMappingOperationDataSource class provides support for performing object mapping operations where the mapped objects exist within a Core Data managed object context. The class is responsible for finding exist managed object instances by the identification attributes, instantiating new managed objects, and connecting relationships for mapped objects.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+            
+			
+			<NodeRef refid="61"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/initWithManagedObjectContext:cache:</TokenIdentifier>
+			<Abstract type="html">Initializes the receiver with a given managed object context and managed object cache.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext cache:(id&lt;RKManagedObjectCaching&gt;)managedObjectCache</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>managedObjectContext</Name>
+					<Abstract type="html">The managed object context with which to associate the receiver. Cannot be nil.</Abstract>
+				</Parameter><Parameter>
+					<Name>managedObjectCache</Name>
+					<Abstract type="html">The managed object cache used by the receiver to find existing object instances by their identification attributes.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The receiver, initialized with the given managed object context and managed objet cache.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithManagedObjectContext:cache:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/setManagedObjectContext:</TokenIdentifier>
+			<Abstract type="html">The managed object context with which the receiver is associated.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext</Declaration>
+			
+			
+			<Anchor>//api/name/managedObjectContext</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/managedObjectContext</TokenIdentifier>
+			<Abstract type="html">The managed object context with which the receiver is associated.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext</Declaration>
+			
+			
+			<Anchor>//api/name/managedObjectContext</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKManagedObjectMappingOperationDataSource/managedObjectContext</TokenIdentifier>
+			<Abstract type="html">The managed object context with which the receiver is associated.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext</Declaration>
+			
+			
+			<Anchor>//api/name/managedObjectContext</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/setManagedObjectCache:</TokenIdentifier>
+			<Abstract type="html">The managed object cache utilized by the receiver to find existing managed object instances by the identification attributes. A nil managed object cache will result in the insertion of new managed objects for all mapped content.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) id&lt;RKManagedObjectCaching&gt; managedObjectCache</Declaration>
+			
+			
+			<Anchor>//api/name/managedObjectCache</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/managedObjectCache</TokenIdentifier>
+			<Abstract type="html">The managed object cache utilized by the receiver to find existing managed object instances by the identification attributes. A nil managed object cache will result in the insertion of new managed objects for all mapped content.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) id&lt;RKManagedObjectCaching&gt; managedObjectCache</Declaration>
+			
+			
+			<Anchor>//api/name/managedObjectCache</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKManagedObjectMappingOperationDataSource/managedObjectCache</TokenIdentifier>
+			<Abstract type="html">The managed object cache utilized by the receiver to find existing managed object instances by the identification attributes. A nil managed object cache will result in the insertion of new managed objects for all mapped content.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) id&lt;RKManagedObjectCaching&gt; managedObjectCache</Declaration>
+			
+			
+			<Anchor>//api/name/managedObjectCache</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/setParentOperation:</TokenIdentifier>
+			<Abstract type="html">The parent operation upon which instances of RKRelationshipConnectionOperation created by the data source are dependent upon.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) NSOperation *parentOperation</Declaration>
+			
+			
+			<Anchor>//api/name/parentOperation</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/parentOperation</TokenIdentifier>
+			<Abstract type="html">The parent operation upon which instances of RKRelationshipConnectionOperation created by the data source are dependent upon.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) NSOperation *parentOperation</Declaration>
+			
+			
+			<Anchor>//api/name/parentOperation</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKManagedObjectMappingOperationDataSource/parentOperation</TokenIdentifier>
+			<Abstract type="html">The parent operation upon which instances of RKRelationshipConnectionOperation created by the data source are dependent upon.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) NSOperation *parentOperation</Declaration>
+			
+			
+			<Anchor>//api/name/parentOperation</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/setOperationQueue:</TokenIdentifier>
+			<Abstract type="html">The operation queue in which instances of RKRelationshipConnectionOperation will be enqueued to connect the relationships of mapped objects.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSOperationQueue *operationQueue</Declaration>
+			
+			
+			<Anchor>//api/name/operationQueue</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/operationQueue</TokenIdentifier>
+			<Abstract type="html">The operation queue in which instances of RKRelationshipConnectionOperation will be enqueued to connect the relationships of mapped objects.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSOperationQueue *operationQueue</Declaration>
+			
+			
+			<Anchor>//api/name/operationQueue</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/RKManagedObjectMappingOperationDataSource/operationQueue</TokenIdentifier>
+			<Abstract type="html">The operation queue in which instances of RKRelationshipConnectionOperation will be enqueued to connect the relationships of mapped objects.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSOperationQueue *operationQueue</Declaration>
+			
+			
+			<Anchor>//api/name/operationQueue</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/mappingOperation:targetObjectForMapping:inRelationship:</TokenIdentifier>
+			<Abstract type="html">Asks the data source for the target object for an object mapping operation the mapping object that will be used to perform the mapping.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.m</DeclaredIn>
+			
+			<Declaration>- (id)mappingOperation:(RKMappingOperation *)mappingOperation targetObjectForMapping:(RKObjectMapping *)mapping inRelationship:(RKRelationshipMapping *)relationship</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>mappingOperation</Name>
+					<Abstract type="html">The mapping operation requesting the target object.</Abstract>
+				</Parameter><Parameter>
+					<Name>representation</Name>
+					<Abstract type="html">A dictionary representation of the properties to be mapped onto the retrieved target object.</Abstract>
+				</Parameter><Parameter>
+					<Name>mapping</Name>
+					<Abstract type="html">The object mapping to be used to perform a mapping from the representation to the target object.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A key-value coding compliant object to perform the mapping on to.</Abstract></ReturnValue>
+			<Anchor>//api/name/mappingOperation:targetObjectForMapping:inRelationship:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:</TokenIdentifier>
+			<Abstract type="html">Asks the data source for the target object for an object mapping operation given an NSDictionary representation of the object&apos;s properties and the mapping object that will be used to perform the mapping.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.m</DeclaredIn>
+			
+			<Declaration>- (id)mappingOperation:(RKMappingOperation *)mappingOperation targetObjectForRepresentation:(NSDictionary *)representation withMapping:(RKObjectMapping *)mapping inRelationship:(RKRelationshipMapping *)relationship</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>mappingOperation</Name>
+					<Abstract type="html">The mapping operation requesting the target object.</Abstract>
+				</Parameter><Parameter>
+					<Name>representation</Name>
+					<Abstract type="html">A dictionary representation of the properties to be mapped onto the retrieved target object.</Abstract>
+				</Parameter><Parameter>
+					<Name>mapping</Name>
+					<Abstract type="html">The object mapping to be used to perform a mapping from the representation to the target object.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A key-value coding compliant object to perform the mapping on to.</Abstract></ReturnValue>
+			<Anchor>//api/name/mappingOperation:targetObjectForRepresentation:withMapping:inRelationship:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/commitChangesForMappingOperation:error:</TokenIdentifier>
+			<Abstract type="html">Tells the data source to commit any changes to the underlying data store.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)commitChangesForMappingOperation:(RKMappingOperation *)mappingOperation error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>mappingOperation</Name>
+					<Abstract type="html">The mapping operation that has completed its work.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">A pointer to an error to be set in the event that the mapping operation could not be committed.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A Boolean value indicating if the changes for the mapping operation were committed successfully.</Abstract></ReturnValue>
+			<Anchor>//api/name/commitChangesForMappingOperation:error:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/updateCacheWithChangesFromContextWillSaveNotification:</TokenIdentifier>
+			<Abstract type="html">         Attempt to establish the connections and delete the object if its invalid once we are done
+         
+         NOTE: We obtain a weak reference to the MOC to avoid a potential crash under iOS 5 if the MOC is deallocated before the operation executes. Under iOS 6, the object returns a nil managedObjectContext and the performBlockAndWait: message is sent to nil.
+         </Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.m</DeclaredIn>
+			
+			<Declaration>- (void)updateCacheWithChangesFromContextWillSaveNotification:(NSNotification *)notification</Declaration>
+			
+			
+			<Anchor>//api/name/updateCacheWithChangesFromContextWillSaveNotification:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:</TokenIdentifier>
+			<Abstract type="html">Tells the data source to delete the existing value for a relationship that has been mapped with an assignment policy of RKReplaceAssignmentPolicy.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)mappingOperation:(RKMappingOperation *)mappingOperation deleteExistingValueOfRelationshipWithMapping:(RKRelationshipMapping *)relationshipMapping error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>mappingOperation</Name>
+					<Abstract type="html">The mapping operation that is executing.</Abstract>
+				</Parameter><Parameter>
+					<Name>relationshipMapping</Name>
+					<Abstract type="html">The relationship mapping for which the existing value is being replaced.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">A pointer to an error to be set in the event that the deletion operation could not be completed.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A Boolean value indicating if the existing objects for the relationship were successfully deleted.</Abstract></ReturnValue>
+			<Anchor>//api/name/mappingOperation:deleteExistingValueOfRelationshipWithMapping:error:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/mappingOperationShouldSetUnchangedValues:</TokenIdentifier>
+			<Abstract type="html">Asks the data source if it should set values for properties without checking that the value has been changed. This method can result in a performance improvement during mapping as the mapping operation will not attempt to assess the change state of the property being mapped.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)mappingOperationShouldSetUnchangedValues:(RKMappingOperation *)mappingOperation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>mappingOperation</Name>
+					<Abstract type="html">The mapping operation that is querying the data source.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the mapping operation should disregard property change status, else NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/mappingOperationShouldSetUnchangedValues:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKManagedObjectMappingOperationDataSource/mappingOperationShouldCollectMappingInfo:</TokenIdentifier>
+			<Abstract type="html">Asks the data source if the mapping operation should collect RKMappingInfo information during the mapping
+(stored in the mappingInfo property).  If not needed, it can be a substantially faster to skip it.  The
+mappingInfo property will be nil if not collected.</Abstract>
+			<DeclaredIn>RKManagedObjectMappingOperationDataSource.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)mappingOperationShouldCollectMappingInfo:(RKMappingOperation *)mappingOperation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>mappingOperation</Name>
+					<Abstract type="html">The mapping operation that is querying the data source.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the mapping operation should collect mapping information, else NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/mappingOperationShouldCollectMappingInfo:</Anchor>
+            <NodeRef refid="61"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

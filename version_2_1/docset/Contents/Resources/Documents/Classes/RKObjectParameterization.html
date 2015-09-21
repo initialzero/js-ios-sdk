@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKObjectParameterization Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/parametersWithObject:requestDescriptor:error:">+ parametersWithObject:requestDescriptor:error:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKObjectParameterization Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKObjectParameterization.h<br />RKObjectParameterization.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>RKObjectParameterization</code> class provides an interface for mapping a local domain object into an <code>NSDictionary</code> representation suitable for use as the parameters of an HTTP request.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Parameterizing an Object" name="task_Parameterizing an Object"></a>
+						
+<h2 class="task-title">Parameterizing an Object</h2>
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/parametersWithObject:requestDescriptor:error:" title="parametersWithObject:requestDescriptor:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parametersWithObject:requestDescriptor:error:">+&nbsp;parametersWithObject:requestDescriptor:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a dictionary representation of the given <a href="#//api/name/object">object</a> by performing <a href="#//api/name/object">object</a> <a href="#//api/name/mapping">mapping</a> using the <a href="#//api/name/mapping">mapping</a>
+from the given request descriptor. If the request descriptor specifies a root key path, the mapped parameters
+will be nested within the dictionary under the specified root key path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSDictionary *)parametersWithObject:(id)<em>object</em> requestDescriptor:(RKRequestDescriptor *)<em>requestDescriptor</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>The <a href="#//api/name/object">object</a> to be parameterized.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>requestDescriptor</code></th>
+						<td><p>The request descriptor describing how the <a href="#//api/name/object">object</a> is to be mapped into an <code>NSDictionary</code> of parameters.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>If there is a problem <a href="#//api/name/mapping">mapping</a> the parameters, upon return contains a pointer to an instance of <code>NSError</code> that describes the problem.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new dictionary containing the mapped parameters or nil if an error has occurred.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectParameterization.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-09-21</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

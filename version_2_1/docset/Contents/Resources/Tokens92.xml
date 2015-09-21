@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKRefetchingMappingResult.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKRefetchingMappingResult</TokenIdentifier>
+			<Abstract type="html">This is an NSProxy object that stands in for the mapping result and provides support for refetching the results on demand. This enables us to defer the refetching until someone accesses the results directly. For managed object request operations that do not use the mapping result (such as those used in conjunction with a NSFetchedResultsController), the refetching will be skipped entirely.</Abstract>
+			<DeclaredIn>RKManagedObjectRequestOperation.m</DeclaredIn>
+            
+			
+			<NodeRef refid="92"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKRefetchingMappingResult/dealloc</TokenIdentifier>
+			<Abstract type="html">Add explicit ordering of deallocations to fight cxx_destruct crashes</Abstract>
+			<DeclaredIn>RKManagedObjectRequestOperation.m</DeclaredIn>
+			
+			<Declaration>- (void)dealloc</Declaration>
+			
+			
+			<Anchor>//api/name/dealloc</Anchor>
+            <NodeRef refid="92"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKMapperOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+		<option value="//api/name/error">error</option>
+		
+		<option value="//api/name/mappingInfo">mappingInfo</option>
+		
+		<option value="//api/name/mappingOperationDataSource">mappingOperationDataSource</option>
+		
+		<option value="//api/name/mappingResult">mappingResult</option>
+		
+		<option value="//api/name/mappingsDictionary">mappingsDictionary</option>
+		
+		<option value="//api/name/metadata">metadata</option>
+		
+		<option value="//api/name/representation">representation</option>
+		
+		<option value="//api/name/targetObject">targetObject</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/execute:">- execute:</option>
+		
+		<option value="//api/name/initWithRepresentation:mappingsDictionary:">- initWithRepresentation:mappingsDictionary:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKMapperOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKMapperOperation.h<br />RKMapperOperation.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>RKMapperOperation</code> is an <code>NSOperation</code> subclass that implements object mapping for opaque object representations. Given a dictionary or an array of dictionaries that represent objects and a dictionary describing how to map the representations, the mapper will transform the source representations into <code>NSObject</code> or <code>NSManagedObject</code> instances. Mapper operations are used to map object representations from Foundation object representations, such as those deserialized from a JSON or XML document or loaded from a file. Not all the mappings specified in the mappings dictionary are required to match content in the source object for the operation to succeed. However, if none of the mappable key paths in the mappings dictionary match the source object then the operation will fail and the <a href="#//api/name/error"><code>error</code></a> property will be set to an <code>NSError</code> object in the <code>RKErrorDomain</code> domain with an <a href="#//api/name/error">error</a> code value of <code>RKMappingErrorNotFound</code>.</p>
+
+<p><code>RKMapperOperation</code> does not actually perform any mapping work. Instead, it instantiates and starts <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> objects to process the mappable object representations it encounters.</p>
+
+<p><code>RKMapperOperation</code> is a non-concurrent operation. Execution will occur synchronously on the calling thread unless the operation is enqueued onto an <code>NSOperationQueue</code>.</p>
+
+<h2>Mappings Dictionary</h2>
+
+<p>The mappings dictionary describes how to object map the source object. The keys of the dictionary are key paths into the <a href="#//api/name/representation"><code>representation</code></a> and the values are <a href="../Classes/RKMapping.html"><code>RKMapping</code></a> objects describing how to map the representations at the corresponding key path. This dictionary based approach enables a single document to contain an arbitrary number of object representations that can be mapped independently. Consider the following example JSON structure:</p>
+
+<pre><code>{ "tags": [ "hacking", "phreaking" ], "authors": [ "Captain Crunch", "Emmanuel Goldstein" ], "magazine": { "title": "2600 The Hacker Quarterly" } }
+</code></pre>
+
+<p>Each key in the document could be mapped independently by providing a mapping for the key paths:</p>
+
+<pre><code>RKObjectMapping *tagMapping = [RKObjectMapping mappingForClass:[Tag class]];
+RKObjectMapping *authorMapping = [RKObjectMapping mappingForClass:[Author class]];
+RKObjectMapping *magazineMapping = [RKObjectMapping mappingForClass:[Magazine class]];
+NSDictionary *mappingsDictionary = @{ @"tag": tagMapping, @"author": authorMapping, @"magazine": magazine };
+</code></pre>
+
+<p>Note that the keys of the dictionary are <strong>key paths</strong>. Deeply nested content can be mapped by specifying the full key path as the key of the mappings dictionary.</p>
+
+<h3>Mapping the Root Object Representation</h3>
+
+<p>A mapping set for the key <code>[NSNull null]</code> value has special significance to the mapper operation. When a mapping is encountered with the a null key, the entire <a href="#//api/name/representation"><code>representation</code></a> is processed using the given mapping. This provides support for mapping content that does not have an outer nesting attribute.</p>
+
+<p>Note that it is possible to map the same <a href="#//api/name/representation">representation</a> with multiple mappings, including a combination of a root key mapping and nested keypaths.</p>
+
+<h2>Data Source</h2>
+
+<p>The data source is used to instantiate new objects or find existing objects to be updated during the mapping process. The object set as the <a href="#//api/name/mappingOperationDataSource"><code>mappingOperationDataSource</code></a> will be set as the <code>dataSource</code> for the <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> objects created by the mapper.</p>
+
+<h2>Target Object</h2>
+
+<p>If a <a href="#//api/name/targetObject"><code>targetObject</code></a> is configured on the mapper operation, all mapping work on the <a href="#//api/name/representation"><code>representation</code></a> will target the specified object. For transient <code>NSObject</code> mappings, this ensures that the properties of an existing object are updated rather than an new object being created for the mapped <a href="#//api/name/representation">representation</a>. If an array of representations is being processed and a <a href="#//api/name/targetObject"><code>targetObject</code></a> is provided, it must be a mutable collection object else an exception will be raised.</p>
+
+<h2>Metadata Mapping</h2>
+
+<p>The <code>RKMapperOperation</code> class provides support for <a href="#//api/name/metadata">metadata</a> mapping provided to the operation via the <code>mappingMetadata</code> property. This dictionary is made available to all <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> objects executed by the receiver to process the <a href="#//api/name/representation">representation</a> being mapped. In addition to any user supplied <a href="#//api/name/metadata">metadata</a>, the mapper operation makes the following <a href="#//api/name/metadata">metadata</a> key paths available for mapping:</p>
+
+<ol>
+<li><code>@</code>metadata<code>.mapping.rootKeyPath</code> - An object specifying the root key path at which the current <a href="#//api/name/representation">representation</a> is nested within the source <a href="#//api/name/representation">representation</a>. This will correspond to a key in the <a href="#//api/name/mappingsDictionary"><code>mappingsDictionary</code></a> and is typically an <code>NSString</code>, but can be <code>[NSNull null]</code> if the <a href="#//api/name/representation">representation</a> being mapped is at the root.</li>
+<li><code>@</code>metadata<code>.mapping.collectionIndex</code> - An <code>NSNumber</code> object specifying the index of the current object within a collection being mapped. This key is only available if the current <a href="#//api/name/representation">representation</a> exists within a collection.</li>
+</ol>
+
+
+<p>Please refer to the documentation accompanying <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> for more details on <a href="#//api/name/metadata">metadata</a> mapping.</p>
+
+<h2>Core Data</h2>
+
+<p><code>RKMapperOperation</code> supports mapping to Core Data target entities. To do so, it must be configured with an <a href="../Classes/RKManagedObjectMappingOperationDataSource.html"><code>RKManagedObjectMappingOperationDataSource</code></a> object as the data source.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Initializing a Mapper Operation" name="task_Initializing a Mapper Operation"></a>
+						<h2 class="task-title">Initializing a Mapper Operation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithRepresentation:mappingsDictionary:" title="initWithRepresentation:mappingsDictionary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithRepresentation:mappingsDictionary:">&ndash;&nbsp;initWithRepresentation:mappingsDictionary:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the operation with a source object and a mappings dictionary.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithRepresentation:(id)<em>representation</em> mappingsDictionary:(NSDictionary *)<em>mappingsDictionary</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>representation</code></th>
+						<td><p>An <code>NSDictionary</code> or <code>NSArray</code> of <code>NSDictionary</code> object representations to be mapped into local do<a href="#//api/name/main">main</a> objects.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingsDictionary</code></th>
+						<td><p>An <code>NSDictionary</code> wherein the keys are mappable key paths in <code>object</code> and the values are <a href="../Classes/RKMapping.html"><code>RKMapping</code></a> objects specifying how the representations at its key path are to be mapped.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given object and and dictionary of key paths to mappings.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing Mapping Result and Errors" name="task_Accessing Mapping Result and Errors"></a>
+						<h2 class="task-title">Accessing Mapping Result and Errors</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="method-title"><code><a href="#//api/name/error">&nbsp;&nbsp;error</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The error, if any, that occurred during the mapping process.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSError *error</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingResult" title="mappingResult"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingResult">&nbsp;&nbsp;mappingResult</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The result of the mapping process. A <code>nil</code> value indicates that no mappable object representations were found and no mapping was performed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKMappingResult *mappingResult</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingInfo" title="mappingInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingInfo">&nbsp;&nbsp;mappingInfo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a dictionary containing information about the mappings applied during the execution of the operation. The keys of the dictionary are keyPaths into the <a href="#//api/name/mappingResult"><code>mappingResult</code></a> for values that were mapped and the values are the corresponding <a href="../Classes/RKPropertyMapping.html"><code>RKPropertyMapping</code></a> objects used to perform the mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDictionary *mappingInfo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Managing Mapping Configuration" name="task_Managing Mapping Configuration"></a>
+						<h2 class="task-title">Managing Mapping Configuration</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/representation" title="representation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/representation">&nbsp;&nbsp;representation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The representation of one or more objects against which the mapping is performed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) id representation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Either an <code>NSDictionary</code> or an <code>NSArray</code> of <code>NSDictionary</code> objects.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingsDictionary" title="mappingsDictionary"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingsDictionary">&nbsp;&nbsp;mappingsDictionary</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A dictionary of key paths to <a href="../Classes/RKMapping.html"><code>RKMapping</code></a> objects specifying how object representations in the <a href="#//api/name/representation"><code>representation</code></a> are to be mapped.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *mappingsDictionary</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Please see the above discussion for in-depth details about the mappings dictionary.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/targetObject" title="targetObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/targetObject">&nbsp;&nbsp;targetObject</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The target object of the mapper. When configured, all object mapping will target the specified object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id targetObject</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Please see the above discussion for details about target objects.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingOperationDataSource" title="mappingOperationDataSource"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingOperationDataSource">&nbsp;&nbsp;mappingOperationDataSource</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The data source for the underlying <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> objects that perform the mapping work configured by the mapper.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id&lt;RKMappingOperationDataSource&gt; mappingOperationDataSource</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The delegate for the mapper operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;RKMapperOperationDelegate&gt; delegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/metadata" title="metadata"></a>
+	<h3 class="method-title"><code><a href="#//api/name/metadata">&nbsp;&nbsp;metadata</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A dictionary of metadata that is available for mappping by any mapping operation started by the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *metadata</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Executing the Operation" name="task_Executing the Operation"></a>
+						<h2 class="task-title">Executing the Operation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/execute:" title="execute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/execute:">&ndash;&nbsp;execute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Executes the mapper operation to completion.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)execute:(NSError **)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A pointer to an <code>NSError</code> object to set in the event an <a href="#//api/name/error">error</a> occurs during execution.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A Boolean value that indicates if the operation completed successfully.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-09-21</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

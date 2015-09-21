@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKObjectMappingMatcher Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/objectMapping">objectMapping</option>
+		
+		<option value="//api/name/possibleObjectMappings">possibleObjectMappings</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/matcherWithKeyPath:expectedClass:objectMapping:">+ matcherWithKeyPath:expectedClass:objectMapping:</option>
+		
+		<option value="//api/name/matcherWithKeyPath:expectedValue:objectMapping:">+ matcherWithKeyPath:expectedValue:objectMapping:</option>
+		
+		<option value="//api/name/matcherWithKeyPath:expectedValueMap:">+ matcherWithKeyPath:expectedValueMap:</option>
+		
+		<option value="//api/name/matcherWithPossibleMappings:block:">+ matcherWithPossibleMappings:block:</option>
+		
+		<option value="//api/name/matcherWithPredicate:objectMapping:">+ matcherWithPredicate:objectMapping:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/matches:">- matches:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKObjectMappingMatcher Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKObjectMappingMatcher.h<br />RKObjectMappingMatcher.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>RKObjectMappingMatcher</code> class provides an interface for encapsulating the selection of an object mapping based on runtime values. Matcher objects may be configured by key path and expected value or with a predicate object.</p>
+
+<h2>Key Path Matching</h2>
+
+<p>A key path matcher object is initialized with a key path, an expected value to be read from the key path, and an object mapping that is to be applied if the match evaluates to <code>YES</code>.  When evaluating the match, the matcher invokes <code>valueForKeyPath:</code> on the object being matched and compares the value returned with the <code>expectedValue</code> via the <code>RKObjectIsEqualToObject</code> function. This provides a flexible, semantic match of the property value.</p>
+
+<p>Alternatively, a key path matcher object can be initialized with an expected class instead. When evaluating the match, the matcher invokes <code>valueForKeyPath:</code> on the object being matched and compares the value returned with the <code>expectedClass</code> via the <code>isSubclassOfClass:</code> method. This provides a flexible, semantic match of the property value class.</p>
+
+<h2>Predicate Matching</h2>
+
+<p>A predicate matcher object is initialized with a predicate object and an object mapping that is to be applied if the predicate evaluates to <code>YES</code> for the object being matched.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Constructing Key Path Matchers" name="task_Constructing Key Path Matchers"></a>
+						<h2 class="task-title">Constructing Key Path Matchers</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/matcherWithKeyPath:expectedValue:objectMapping:" title="matcherWithKeyPath:expectedValue:objectMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matcherWithKeyPath:expectedValue:objectMapping:">+&nbsp;matcherWithKeyPath:expectedValue:objectMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a key path matcher object with a given key path, expected value, and an object mapping that applies in the event of a positive match.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)matcherWithKeyPath:(NSString *)<em>keyPath</em> expectedValue:(id)<em>expectedValue</em> objectMapping:(RKObjectMapping *)<em>objectMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path to obtain the comparison value from the object being matched via <code>valueForKeyPath:</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>expectedValue</code></th>
+						<td><p>The value that is expected to be read from <code>keyPath</code> if there is a match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectMapping</code></th>
+						<td><p>The object mapping object that applies if the comparison value is equal to the expected value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given key path, expected value, and object mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matcherWithKeyPath:expectedClass:objectMapping:" title="matcherWithKeyPath:expectedClass:objectMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matcherWithKeyPath:expectedClass:objectMapping:">+&nbsp;matcherWithKeyPath:expectedClass:objectMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a key path matcher object with a given key path, expected class, and an object mapping that applies in the event of a positive match.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)matcherWithKeyPath:(NSString *)<em>keyPath</em> expectedClass:(Class)<em>expectedClass</em> objectMapping:(RKObjectMapping *)<em>objectMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path to obtain the comparison value from the object being matched via <code>valueForKeyPath:</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>expectedClass</code></th>
+						<td><p>The Class that is expected to be read from <code>keyPath</code> if there is a match.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectMapping</code></th>
+						<td><p>The object mapping object that applies if the comparison value is equal to the expected value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given key path, expected value, and object mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matcherWithKeyPath:expectedValueMap:" title="matcherWithKeyPath:expectedValueMap:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matcherWithKeyPath:expectedValueMap:">+&nbsp;matcherWithKeyPath:expectedValueMap:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a key path matcher object with a given key path, and a map of expected values to associated <a href="../Classes/RKObjectMapping.html">RKObjectMapping</a> objects that applies in the event of a positive match with its associated value.  This method can evaluate the keyPath once</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)matcherWithKeyPath:(NSString *)<em>keyPath</em> expectedValueMap:(NSDictionary *)<em>valueToObjectMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path to obtain the comparison value from the object being matched via <code>valueForKeyPath:</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectMapping</code></th>
+						<td><p>The object mapping object that applies if the comparison value is equal to the expected value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>expectedValue</code></th>
+						<td><p>The value that is expected to be read from <code>keyPath</code> if there is a match.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given key path and expected value map.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Constructing Predicate Matchers" name="task_Constructing Predicate Matchers"></a>
+						<h2 class="task-title">Constructing Predicate Matchers</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/matcherWithPredicate:objectMapping:" title="matcherWithPredicate:objectMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matcherWithPredicate:objectMapping:">+&nbsp;matcherWithPredicate:objectMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a predicate matcher object with a given predicate and an object mapping that applies in the predicate evaluates positively.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)matcherWithPredicate:(NSPredicate *)<em>predicate</em> objectMapping:(RKObjectMapping *)<em>objectMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>predicate</code></th>
+						<td><p>The predicate with which to evaluate the matched object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectMapping</code></th>
+						<td><p>The object mapping object that applies if the predicate evaluates positively for the matched object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given key path, expected value, and object mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matcherWithPossibleMappings:block:" title="matcherWithPossibleMappings:block:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matcherWithPossibleMappings:block:">+&nbsp;matcherWithPossibleMappings:block:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a matcher object with a given block which returns the <a href="../Classes/RKObjectMapping.html">RKObjectMapping</a> instance to use, and an optional array of possible object mappings which could be returned.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)matcherWithPossibleMappings:(NSArray *)<em>mappings</em> block:(RKObjectMapping *( ^ ) ( id representation ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The block with which to evaluate the matched object, and return the object mapping to use.  Return nil if no match (i.e. a <code>NO</code> return from the <a href="#//api/name/matches:"><code>matches:</code></a> method).</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>possibleMappings</code></th>
+						<td><p>The list of known possible <a href="../Classes/RKObjectMapping.html">RKObjectMapping</a> instances which could be returned.  This is used to aid RKDynamicMapping&rsquo;s -objectMappings method which is used in some instances, but is not required for mapping.  The block could return a new instance if needed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given block ans possible mappings.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing the Object Mapping" name="task_Accessing the Object Mapping"></a>
+						<h2 class="task-title">Accessing the Object Mapping</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/possibleObjectMappings" title="possibleObjectMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/possibleObjectMappings">&nbsp;&nbsp;possibleObjectMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the list of all known <a href="../Classes/RKObjectMapping.html">RKObjectMapping</a> instances which could be returned from this matcher.  This is called when added to or removed from an <a href="../Classes/RKDynamicMapping.html">RKDynamicMapping</a>, and is used to populate the <code>objectMappings</code> property there.  The default implementation returns the single value set in the <a href="#//api/name/objectMapping"><code>objectMapping</code></a> property, so if that is the only possibility then this method does not need to be overridden.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *possibleObjectMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/objectMapping" title="objectMapping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/objectMapping">&nbsp;&nbsp;objectMapping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The object mapping object that applies when the receiver matches a given object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKObjectMapping *objectMapping</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Evaluating a Match" name="task_Evaluating a Match"></a>
+						<h2 class="task-title">Evaluating a Match</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/matches:" title="matches:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matches:">&ndash;&nbsp;matches:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a Boolean value that indicates if the given object matches the expectations of the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)matches:(id)<em>object</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>object</code></th>
+						<td><p>The object to be evaluated.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if the object matches the expectations of the receiver, else <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMappingMatcher.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-09-21</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

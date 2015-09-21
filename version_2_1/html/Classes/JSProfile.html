@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>JSProfile Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/alias">alias</option>
+		
+		<option value="//api/name/organization">organization</option>
+		
+		<option value="//api/name/password">password</option>
+		
+		<option value="//api/name/serverInfo">serverInfo</option>
+		
+		<option value="//api/name/serverUrl">serverUrl</option>
+		
+		<option value="//api/name/username">username</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithAlias:serverUrl:organization:username:password:">- initWithAlias:serverUrl:organization:username:password:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">JSProfile Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying<br />NSSecureCoding</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>JSProfile.h<br />JSProfile.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Uses to store connection details for JasperReports server</p>
+
+<p>@author Volodya Sabadosh vsabadosh@jaspersoft.com
+@author Vlad Zavadskii vzavadskii@jaspersoft.com
+@author Alexey Gubarev ogubarie@tibco.com</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/alias" title="alias"></a>
+	<h3 class="method-title"><code><a href="#//api/name/alias">&nbsp;&nbsp;alias</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The name used to refer to this profile.
+The alias is mainly used to display profile&rsquo;s name in UI (i.e. when displays
+a list of available servers)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *alias</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSProfile.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serverUrl" title="serverUrl"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serverUrl">&nbsp;&nbsp;serverUrl</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The URL of JasperReports Server.
+URL should match next pattern <a href="http://hostname:port/jasperserver">http://hostname:port/jasperserver</a>
+port parameter is not required (i.e. <a href="http://mobiledemo.jaspersoft.com/jasperserver-pro">http://mobiledemo.jaspersoft.com/jasperserver-pro)</a>)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *serverUrl</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSProfile.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/username" title="username"></a>
+	<h3 class="method-title"><code><a href="#//api/name/username">&nbsp;&nbsp;username</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The username, must be a valid account on JasperReports Server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *username</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSProfile.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/password" title="password"></a>
+	<h3 class="method-title"><code><a href="#//api/name/password">&nbsp;&nbsp;password</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The account password</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *password</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSProfile.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/organization" title="organization"></a>
+	<h3 class="method-title"><code><a href="#//api/name/organization">&nbsp;&nbsp;organization</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The name of an organization. Used in JasperReport Server Professional
+which supports multi-tenancy. May be <code>nil</code> or empty</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *organization</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSProfile.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/serverInfo" title="serverInfo"></a>
+	<h3 class="method-title"><code><a href="#//api/name/serverInfo">&nbsp;&nbsp;serverInfo</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The version of JasperReports server</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) JSServerInfo *serverInfo</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSProfile.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithAlias:serverUrl:organization:username:password:" title="initWithAlias:serverUrl:organization:username:password:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithAlias:serverUrl:organization:username:password:">&ndash;&nbsp;initWithAlias:serverUrl:organization:username:password:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a profile with the specified parameters</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithAlias:(NSString *)<em>alias</em> serverUrl:(NSString *)<em>serverUrl</em> organization:(NSString *)<em>organization</em> username:(NSString *)<em>username</em> password:(NSString *)<em>password</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>alias</code></th>
+						<td><p>The association name for server profile</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverUrl</code></th>
+						<td><p>The serverUrl. Should match pattern <a href="http://hostname:port/jasperserver">http://hostname:port/jasperserver</a> (port is not required)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>organization</code></th>
+						<td><p>The server <a href="#//api/name/organization">organization</a>. May be <code>nil</code> or empty</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>username</code></th>
+						<td><p>The valid server account <a href="#//api/name/username">username</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>password</code></th>
+						<td><p>The account <a href="#//api/name/password">password</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A configured JSProfile instance</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSProfile.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-09-21</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

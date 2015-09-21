@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>JSResourceDescriptor Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/classMappingForServerProfile:">+ classMappingForServerProfile:</option>
+		
+		<option value="//api/name/rkRequestDescriptorsForServerProfile:">+ rkRequestDescriptorsForServerProfile:</option>
+		
+		<option value="//api/name/rkResponseDescriptorsForServerProfile:">+ rkResponseDescriptorsForServerProfile:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/inputControlQueryData">- inputControlQueryData</option>
+		
+		<option value="//api/name/isDataSource">- isDataSource</option>
+		
+		<option value="//api/name/propertyByName:">- propertyByName:</option>
+		
+		<option value="//api/name/resourceDescriptorDataSource">- resourceDescriptorDataSource</option>
+		
+		<option value="//api/name/resourceDescriptorDataSourceURI:">- resourceDescriptorDataSourceURI:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">JSResourceDescriptor Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/JSSerializationDescriptorHolder.html">JSSerializationDescriptorHolder</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>JSResourceDescriptor.h<br />JSResourceDescriptor.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Represents a resource descriptor entity for convenient XML serialization process.</p>
+
+<p>@author Giulio Toffoli giulio@jaspersoft.com
+@author Vlad Zavadskii vzavadskii@jaspersoft.com
+@author Alexey Gubarev ogubarie@tibco.com</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isDataSource" title="isDataSource"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isDataSource">&ndash;&nbsp;isDataSource</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Looks the wsType of the resource descriptor and return YES
+if it is one of the following: datasource, jdbc, jndi, bean, custom.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isDataSource</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p><code>YES</code> if it is data source, <code>NO</code> otherwise.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSResourceDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resourceDescriptorDataSource" title="resourceDescriptorDataSource"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resourceDescriptorDataSource">&ndash;&nbsp;resourceDescriptorDataSource</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets a valid data source resource from a resource descriptor</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (JSResourceDescriptor *)resourceDescriptorDataSource</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The data source resource, or <code>nil</code> if no data source is found.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSResourceDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resourceDescriptorDataSourceURI:" title="resourceDescriptorDataSourceURI:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resourceDescriptorDataSourceURI:">&ndash;&nbsp;resourceDescriptorDataSourceURI:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets a valid data source uri from a resource descriptor</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)resourceDescriptorDataSourceURI:(JSResourceDescriptor *)<em>dataSource</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataSource</code></th>
+						<td><p>Data source resource</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The data source uri, or <code>nil</code> if no data source is found.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSResourceDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/propertyByName:" title="propertyByName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/propertyByName:">&ndash;&nbsp;propertyByName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets the property with the specified name</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (JSResourceProperty *)propertyByName:(NSString *)<em>name</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>name</code></th>
+						<td><p>The property name</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Property with the specified name, or <code>nil</code> if the property is not found</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSResourceDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/inputControlQueryData" title="inputControlQueryData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inputControlQueryData">&ndash;&nbsp;inputControlQueryData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets the query data of a query-based input control</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSArray *)inputControlQueryData</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The query data as list of <a href="../Classes/JSResourceProperty.html">JSResourceProperty</a> objects</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSResourceDescriptor.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/rkRequestDescriptorsForServerProfile:" title="rkRequestDescriptorsForServerProfile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rkRequestDescriptorsForServerProfile:">+&nbsp;rkRequestDescriptorsForServerProfile:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an array of <a href="../Classes/RKRequestDescriptor.html"><code>RKRequestDescriptor</code></a> objects to be added to the manager
+for mapping objects of the class to request.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)rkRequestDescriptorsForServerProfile:(JSProfile *)<em>serverProfile</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverProfile</code></th>
+						<td><p>Server Profile for configuring mapping according to server version</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <a href="../Classes/RKRequestDescriptor.html"><code>RKRequestDescriptor</code></a> objects to be added to the manager.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSSerializationDescriptorHolder.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rkResponseDescriptorsForServerProfile:" title="rkResponseDescriptorsForServerProfile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rkResponseDescriptorsForServerProfile:">+&nbsp;rkResponseDescriptorsForServerProfile:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects to be added to the manager
+for mapping objects of the class from response.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)rkResponseDescriptorsForServerProfile:(JSProfile *)<em>serverProfile</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverProfile</code></th>
+						<td><p>Server Profile for configuring mapping according to server version</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects to be added to the manager.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSSerializationDescriptorHolder.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/classMappingForServerProfile:" title="classMappingForServerProfile:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/classMappingForServerProfile:">+&nbsp;classMappingForServerProfile:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns <a href="../Classes/RKObjectMapping.html"><code>RKObjectMapping</code></a> object for added it as relation referencesß
+for mapping objects from response.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (RKObjectMapping *)classMappingForServerProfile:(JSProfile *)<em>serverProfile</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>serverProfile</code></th>
+						<td><p>Server Profile for configuring mapping according to server version</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Returns <a href="../Classes/RKObjectMapping.html"><code>RKObjectMapping</code></a> object for added it as relation references</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">JSSerializationDescriptorHolder.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-09-21</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

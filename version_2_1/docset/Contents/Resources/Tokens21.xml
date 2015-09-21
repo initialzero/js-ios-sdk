@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/JSOperationResult.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/JSOperationResult</TokenIdentifier>
+			<Abstract type="html">Uses to hold the different results of a REST call to JasperReports server. Result
+can be a list of object (single object represents as list with one object) or
+binary data (downloaded file)</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+            <Availability type="html"></Availability>
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setObjects:</TokenIdentifier>
+			<Abstract type="html">A list of objects coming from the call</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *objects</Declaration>
+			
+			
+			<Anchor>//api/name/objects</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/objects</TokenIdentifier>
+			<Abstract type="html">A list of objects coming from the call</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *objects</Declaration>
+			
+			
+			<Anchor>//api/name/objects</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/objects</TokenIdentifier>
+			<Abstract type="html">A list of objects coming from the call</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *objects</Declaration>
+			
+			
+			<Anchor>//api/name/objects</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setBody:</TokenIdentifier>
+			<Abstract type="html">The downloaded response as binary data</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *body</Declaration>
+			
+			
+			<Anchor>//api/name/body</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/body</TokenIdentifier>
+			<Abstract type="html">The downloaded response as binary data</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *body</Declaration>
+			
+			
+			<Anchor>//api/name/body</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/body</TokenIdentifier>
+			<Abstract type="html">The downloaded response as binary data</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSData *body</Declaration>
+			
+			
+			<Anchor>//api/name/body</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setRequest:</TokenIdentifier>
+			<Abstract type="html">The sent request associated with this result. This is an additional parameter
+which helps to determine which request was sent (because all they are asynchronous).</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) JSRequest *request</Declaration>
+			
+			
+			<Anchor>//api/name/request</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/request</TokenIdentifier>
+			<Abstract type="html">The sent request associated with this result. This is an additional parameter
+which helps to determine which request was sent (because all they are asynchronous).</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) JSRequest *request</Declaration>
+			
+			
+			<Anchor>//api/name/request</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/request</TokenIdentifier>
+			<Abstract type="html">The sent request associated with this result. This is an additional parameter
+which helps to determine which request was sent (because all they are asynchronous).</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) JSRequest *request</Declaration>
+			
+			
+			<Anchor>//api/name/request</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setError:</TokenIdentifier>
+			<Abstract type="html">The error returned from the request call, if any.</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSError *error</Declaration>
+			
+			
+			<Anchor>//api/name/error</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/error</TokenIdentifier>
+			<Abstract type="html">The error returned from the request call, if any.</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSError *error</Declaration>
+			
+			
+			<Anchor>//api/name/error</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/error</TokenIdentifier>
+			<Abstract type="html">The error returned from the request call, if any.</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSError *error</Declaration>
+			
+			
+			<Anchor>//api/name/error</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setStatusCode:</TokenIdentifier>
+			<Abstract type="html">The response HTTP code. This is a standard HTTP protocol code. Codes like 2xx are all ok.
+4xx are client errors, 5xx are server errors (even if sometimes these errors may
+happen due to a wrong request</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger statusCode</Declaration>
+			
+			
+			<Anchor>//api/name/statusCode</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/statusCode</TokenIdentifier>
+			<Abstract type="html">The response HTTP code. This is a standard HTTP protocol code. Codes like 2xx are all ok.
+4xx are client errors, 5xx are server errors (even if sometimes these errors may
+happen due to a wrong request</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger statusCode</Declaration>
+			
+			
+			<Anchor>//api/name/statusCode</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/statusCode</TokenIdentifier>
+			<Abstract type="html">The response HTTP code. This is a standard HTTP protocol code. Codes like 2xx are all ok.
+4xx are client errors, 5xx are server errors (even if sometimes these errors may
+happen due to a wrong request</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSInteger statusCode</Declaration>
+			
+			
+			<Anchor>//api/name/statusCode</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setAllHeaderFields:</TokenIdentifier>
+			<Abstract type="html">A dictionary of the response&apos;s headers.</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *allHeaderFields</Declaration>
+			
+			
+			<Anchor>//api/name/allHeaderFields</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/allHeaderFields</TokenIdentifier>
+			<Abstract type="html">A dictionary of the response&apos;s headers.</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *allHeaderFields</Declaration>
+			
+			
+			<Anchor>//api/name/allHeaderFields</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/allHeaderFields</TokenIdentifier>
+			<Abstract type="html">A dictionary of the response&apos;s headers.</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSDictionary *allHeaderFields</Declaration>
+			
+			
+			<Anchor>//api/name/allHeaderFields</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setMIMEType:</TokenIdentifier>
+			<Abstract type="html">The MIME Type of the response body</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *MIMEType</Declaration>
+			
+			
+			<Anchor>//api/name/MIMEType</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/MIMEType</TokenIdentifier>
+			<Abstract type="html">The MIME Type of the response body</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *MIMEType</Declaration>
+			
+			
+			<Anchor>//api/name/MIMEType</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/MIMEType</TokenIdentifier>
+			<Abstract type="html">The MIME Type of the response body</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *MIMEType</Declaration>
+			
+			
+			<Anchor>//api/name/MIMEType</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/setBodyAsString:</TokenIdentifier>
+			<Abstract type="html">The downloaded response as string</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSString *bodyAsString</Declaration>
+			
+			
+			<Anchor>//api/name/bodyAsString</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/bodyAsString</TokenIdentifier>
+			<Abstract type="html">The downloaded response as string</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSString *bodyAsString</Declaration>
+			
+			
+			<Anchor>//api/name/bodyAsString</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/JSOperationResult/bodyAsString</TokenIdentifier>
+			<Abstract type="html">The downloaded response as string</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSString *bodyAsString</Declaration>
+			
+			
+			<Anchor>//api/name/bodyAsString</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/initWithStatusCode:allHeaderFields:MIMEType:</TokenIdentifier>
+			<Abstract type="html">Returns a result with the specified request parameters</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithStatusCode:(NSInteger)statusCode allHeaderFields:(NSDictionary *)allHeaderFields MIMEType:(NSString *)MIMEType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>statusCode</Name>
+					<Abstract type="html">The response HTTP code</Abstract>
+				</Parameter><Parameter>
+					<Name>allHeaderFields</Name>
+					<Abstract type="html">A dictionary of the response&apos;s headers</Abstract>
+				</Parameter><Parameter>
+					<Name>MIMEType</Name>
+					<Abstract type="html">The MIME Type of the response body</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error returned from the request call, if any.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A configured JSOperationResult instance</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithStatusCode:allHeaderFields:MIMEType:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSOperationResult/isSuccessful</TokenIdentifier>
+			<Abstract type="html">Indicates an HTTP response code between 200 and 299</Abstract>
+			<DeclaredIn>JSOperationResult.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isSuccessful</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the HTTP response code is between 200 and 299</Abstract></ReturnValue>
+			<Anchor>//api/name/isSuccessful</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

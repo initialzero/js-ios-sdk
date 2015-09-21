@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/JSResourceParameter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/JSResourceParameter</TokenIdentifier>
+			<Abstract type="html">Represents a resource parameter entity for convenient XML serialization process.</Abstract>
+			<DeclaredIn>JSResourceParameter.h</DeclaredIn>
+            <Availability type="html"></Availability>
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/JSResourceParameter/initWithName:isListItem:value:</TokenIdentifier>
+			<Abstract type="html">Returns a configured resource parameter.</Abstract>
+			<DeclaredIn>JSResourceParameter.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithName:(NSString *)name isListItem:(NSString *)isListItem value:(NSString *)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The parameter name</Abstract>
+				</Parameter><Parameter>
+					<Name>isListItem</Name>
+					<Abstract type="html">Indicates if parameter is part (item) of list</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The parameter value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A configured JSResourceParameter instance</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithName:isListItem:value:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSResourceParameter/rkRequestDescriptorsForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns an array of RKRequestDescriptor objects to be added to the manager
+for mapping objects of the class to request.</Abstract>
+			<DeclaredIn>JSResourceParameter.m</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)rkRequestDescriptorsForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An array of RKRequestDescriptor objects to be added to the manager.</Abstract></ReturnValue>
+			<Anchor>//api/name/rkRequestDescriptorsForServerProfile:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/JSResourceParameter/classMappingForServerProfile:</TokenIdentifier>
+			<Abstract type="html">Returns RKObjectMapping object for added it as relation referencesß
+for mapping objects from response.</Abstract>
+			<DeclaredIn>JSResourceParameter.m</DeclaredIn>
+			
+			<Declaration>+ (RKObjectMapping *)classMappingForServerProfile:(JSProfile *)serverProfile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>serverProfile</Name>
+					<Abstract type="html">Server Profile for configuring mapping according to server version</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns RKObjectMapping object for added it as relation references</Abstract></ReturnValue>
+			<Anchor>//api/name/classMappingForServerProfile:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

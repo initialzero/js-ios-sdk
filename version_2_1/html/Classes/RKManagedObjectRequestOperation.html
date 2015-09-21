@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKManagedObjectRequestOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/deletesOrphanedObjects">deletesOrphanedObjects</option>
+		
+		<option value="//api/name/fetchRequestBlocks">fetchRequestBlocks</option>
+		
+		<option value="//api/name/managedObjectCache">managedObjectCache</option>
+		
+		<option value="//api/name/managedObjectContext">managedObjectContext</option>
+		
+		<option value="//api/name/savesToPersistentStore">savesToPersistentStore</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/dealloc">- dealloc</option>
+		
+		<option value="//api/name/initWithHTTPRequestOperation:responseDescriptors:">- initWithHTTPRequestOperation:responseDescriptors:</option>
+		
+		<option value="//api/name/performMappingOnResponseWithCompletionBlock:">- performMappingOnResponseWithCompletionBlock:</option>
+		
+		<option value="//api/name/saveContextToPersistentStore:error:">- saveContextToPersistentStore:error:</option>
+		
+		<option value="//api/name/setTargetObject:">- setTargetObject:</option>
+		
+		<option value="//api/name/setWillSaveMappingContextBlock:">- setWillSaveMappingContextBlock:</option>
+		
+		<option value="//api/name/willFinish">- willFinish</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKManagedObjectRequestOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/RKObjectRequestOperation.html">RKObjectRequestOperation</a> : NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKManagedObjectRequestOperation.h<br />RKManagedObjectRequestOperation.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>RKManagedObjectRequestOperation</code> is a subclass of <a href="../Classes/RKObjectRequestOperation.html"><code>RKObjectRequestOperation</code></a> that implements object mapping on the response body of an <code>NSHTTPResponse</code> loaded via an <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> in which the mapping targets <code>NSManagedObject</code> objects managed by Core Data.</p>
+
+<p>The <code>RKManagedObjectRequestOperation</code> class extends the basic behavior of an <a href="../Classes/RKObjectRequestOperation.html"><code>RKObjectRequestOperation</code></a> to meet the constraints imposed by Core Data. In particular, managed object request operations observe the threading requirements by making use of <code>NSManagedObjectContext</code> concurrency types, leverage the support for parent/child contexts, and handle obtaining a permanent <code>NSManagedObjectID</code> for objects being mapped so that they are addressable across contexts. Object mapping is internally performed within a block provided to the target context via <code>performBlockAndWait:</code>, ensuring execution on the appropriate queue.</p>
+
+<p>Aside from providing the basic infrastructure for successful object mapping into Core Data, a number of additional Core Data specific features are provided by the <code>RKManagedObjectRequestOperation</code> class that warrant discussion in detail.</p>
+
+<h2>Parent Context</h2>
+
+<p>Every <code>RKManagedObjectRequestOperation</code> object must be assigned an <code>NSManagedObjectContext</code> in which to persist the results of the underlying object mapping operation. This context is used as the parent context for a new, private <code>NSManagedObjectContext</code> with a concurrency type of <code>NSPrivateQueueConcurrencyType</code> in which the object mapping is actually performed. The use of this parent context has a number of benefits:</p>
+
+<ol>
+<li>If the context that was assigned to the managed object request operation has a concurrency type of <code>NSMainQueueConcurrencyType</code>, then directly mapping into the context would block the execution of the main thread for the duration of the mapping process. The use of the private child context isolates the mapping process from the main thread.</li>
+<li>In the event of an error, the private context can be discarded, leaving the state of the parent context unchanged. On successful completion, the private context is saved and &lsquo;pushes&rsquo; its changes up one level into the parent context.</li>
+</ol>
+
+
+<h2>Permanent Managed Object IDs</h2>
+
+<p>One of the confounding factors when working with asycnhronous processes interacting with Core Data is the addressability of managed objects that have not been saved to the persistent store across contexts. Unpersisted <code>NSManagedObject</code> instances have an <code>objectID</code> that is temporary and unsuitable for use in uniquely addressing a given object across two managed object contexts, even if they have common ancestry and share a persistent store coordinator. To mitigate this addressability issue without requiring objects to be saved to the persistent store, managed object request operations invoke <code>obtainPermanentIDsForObjects:</code> on the operation&rsquo;s target object (if any) and all managed objects that were inserted into the context during the mapping process. By the time the operation finishes, all managed objects in the mapping result can be referenced by <code>objectID</code> across contexts with no further action.</p>
+
+<h2>Identification Attributes &amp; Managed Object Caching</h2>
+
+<p>When object mapping managed objects it is necessary to differentiate between objects that already exist in the local store and those that are being created as part of the mapping process. This ensures that the local store does not become populated with duplicate records. To make this differentiation, RestKit requires that each <a href="../Classes/RKEntityMapping.html"><code>RKEntityMapping</code></a> be configured with one or more identification attributes. Each identification attribute must correspond to a static attribute assigned by the remote backend system. During mapping, these attributes are used to search the managed object context for an existing managed object. If one is found, the object is updated else a new object is created. Identification attributes are configured on the <a href="../Classes/RKEntityMapping.html#//api/name/identificationAttributes"><code>[RKEntityMapping identificationAttributes]</code></a> property.</p>
+
+<p>Identification attributes are used in conjunction with the <a href="../Protocols/RKManagedObjectCaching.html"><code>RKManagedObjectCaching</code></a> protocol. Each managed object request operation is associated with an object conforming to the <a href="../Protocols/RKManagedObjectCaching.html"><code>RKManagedObjectCaching</code></a> protocol via the <a href="#//api/name/managedObjectCache"><code>managedObjectCache</code></a> proeprty. This cache is consulted during mapping to find existing objects and when establishing relationships between entities by one or more attributes. Please see the documentation accompanying <a href="../Protocols/RKManagedObjectCaching.html"><code>RKManagedObjectCaching</code></a> and <a href="../Classes/RKConnectionDescription.html"><code>RKConnectionDescription</code></a> classes for more information.</p>
+
+<h2>Deleting Managed Objects for <code>DELETE</code> requests</h2>
+
+<p><code>RKManagedObjectRequestOperation</code> adds special behavior to <code>DELETE</code> requests. Upon retrieving a successful (2xx status code) response for a <code>DELETE</code>, the operation will invoke <code>deleteObject:</code> with the operations <code>targetObject</code> on the managed object context. This will delete the target object from the local store in conjunction the successfully deleted remote representation.</p>
+
+<h2>Fetch Request Blocks and Deleting Orphaned Objects</h2>
+
+<p>A common problem when accessing remote resources representing collections of objects is the problem of deletion of remote objects. The <code>RKManagedObjectRequestOperation</code> class provides support for the cleanup of such orphaned objects. In order to utilize the functionality, the operation must be able to compare a set of reference objects to the retrieved payload in order to determine which objects exist in the local store, but are no longer being returned by the server. This reference set of objects is built by executing an <code>NSFetchRequest</code> that corresponds to the URL being loaded. Configuration of this fetch request is done via an <a href="../Blocks/RKFetchRequestBlock.html"><code>RKFetchRequestBlock</code></a> block object. This block takes a single <code>NSURL</code> argument and returns an <code>NSFetchRequest</code> object. An array of these blocks can be provided to the managed object request operation and the array will be searched in reverse order until a non-nil value is returned by a block. Any block that cannot build a fetch request for the given URL is expected to return <code>nil</code> to indicate that it does not match the given URL. Processing of the URL is typically performed using an <a href="../Classes/RKPathMatcher.html"><code>RKPathMatcher</code></a> object against the value returned from the <code>relativePath</code> or <code>relativeString</code> methods of <code>NSURL</code>.</p>
+
+<p>To illustrate this concept, please consider the following real-world example which builds a fetch request for retrieving the Terminals that exist in an Airport:</p>
+
+<pre><code>RKObjectManager *manager = [RKObjectManager managerWithBaseURL:@"http://restkit.org"];
+[manager addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
+    RKPathMatcher *pathMatcher = [RKPathMatcher pathMatcherWithPattern:@"/airports/:airport_id/terminals.json"];
+
+    NSDictionary *argsDict = nil;
+    BOOL match = [pathMatcher matchesPath:[URL relativePath] tokenizeQueryStrings:NO parsedArguments:&amp;argsDict];
+    NSString *airportID;
+    if (match) {
+        airportID = [argsDict objectForKey:@"airport_id"];
+        NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Terminal"];
+        fetchRequest.predicate = [NSPredicate predicateWithFormat:@"airportID = %@", @([airportID integerValue])]; // NOTE: Coerced from string to number
+        fetchRequest.sortDescriptors = @[ [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES] ];
+        return fetchRequest;
+    }
+
+    return nil;
+}];
+</code></pre>
+
+<p>The above example code defines an <code>RKFetchRequestBlock</code> block object that will match an <code>NSURL</code> with a relative path matching the pattern <code>@"/airports/:airport_id/terminals.json"</code>. If a match is found, the block extracts the <code>airport_id</code> key from the matched arguments, coerces its value into a number, and uses it to construct an <code>NSPredicate</code> for the primary key attribute of <code>GGAirport</code> entity. Take note that the value of the &lsquo;airport_id&rsquo; was coerced from an <code>NSString</code> to an <code>NSNumber</code> &ndash; failure to so would result in a predicate whose value is equal to <code>airportID == '1234'</code> vs. <code>airportID == 1234</code>, which will prevent fetch requests from evaluating correctly. Once coerced, the value is used to construct a <code>NSFetchRequest</code> object for the <code>GGTerminal</code> entity that will retrieve all the managed objects with an airport ID attribute whose value is equal to <code>airport_id</code> encoded within the URL&rsquo;s path.</p>
+
+<p>In more concrete terms, given the URL <code>http://restkit.org/airports/1234/terminals.json</code> the block would return an <code>NSFetchRequest</code> equal to:</p>
+
+<pre><code>NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Terminal"];
+fetchRequest.predicate = [NSPredicate predicateWithFormat:@"airportID = 1234"];
+fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+</code></pre>
+
+<p>Once configured and registered with the object manager, any <code>RKManagedObjectRequestOperation</code> created through the manager will automatically consult the fetch request blocks and perform orphaned object cleanup. No cleanup is performed if no block in the <a href="#//api/name/fetchRequestBlocks"><code>fetchRequestBlocks</code></a> property is found to match the URL of the request.</p>
+
+<h2>Managed Object Context Save Behaviors</h2>
+
+<p>The results of the operation can either be &lsquo;pushed&rsquo; to the parent context or saved to the persistent store. Configuration is available via the <a href="#//api/name/savesToPersistentStore"><code>savesToPersistentStore</code></a> property. If an error is encountered while saving the managed object context, then the operation is considered to have failed and the <code>error</code> property will be set to the <code>NSError</code> object returned by the failed save.</p>
+
+<h2>304 &lsquo;Not Modified&rsquo; Responses</h2>
+
+<p>In the event that a managed object request operation loads a 304 &lsquo;Not Modified&rsquo; response for an HTTP request no object mapping is performed as Core Data is assumed to contain a managed object representation of the resource requested. No object mapping is performed on the cached response body, making a cache hit for a managed object request operation a very lightweight operation. To build the mapping result returned to the caller, all of the fetch request blocks matching the request URL will be invoked and each fetch request returned is executed against the managed object context and the objects returned are added to the mapping result. Please note that all managed objects returned in the mapping result for a &lsquo;Not Modified&rsquo; response will be returned under the <code>[NSNull null]</code> key path.</p>
+
+<p>Note that <code>NSURLConnection</code> supports conditional GET transparently when the cache policy is set to <code>NSURLRequestUseProtocolCachePolicy</code>. Because of this the <code>NSHTTPURLResponse</code> loaded does not have the 304 (Not Modified) status code. In order to determine if a 304 response has resulted in the loading of an existing response from <code>NSURLCache</code>, the managed object request operation evaluates the following heuristic on the response:</p>
+
+<ol>
+<li>Before the HTTP request is loaded, a reference to any existing <code>NSCachedURLResponse</code> is obtained.</li>
+<li>When the response is loaded, the request is evaluated for cacheability. A request is considered cacheable if and only if its HTTP method is either &ldquo;GET&rdquo; or &ldquo;HEAD&rdquo; and its status code is 200, 304, 203, 300, 301, 302, 307, or 410.</li>
+<li>If the request is found to be cacheable, the Etag of the current response is matched against the reference to the existing cache entry obtained before the request was loaded.</li>
+<li>If the Etags match, the response data of the loaded response is matched against the cache entry reference.</li>
+<li>If the data is found to match, then the <code>userInfo</code> dictionary of the cache entry for the current request is checked for the existence of Boolean value under the <code>RKResponseHasBeenMappedCacheUserInfoKey</code> key. If the value of this key is <code>YES</code>, it indicates that the response was previously mapped to completion by an object request operation.</li>
+</ol>
+
+
+<p>If this heuristic evaluates positively, then the response is determined to have been loaded from the cache and no mapping or managed object deletion cleanup is performed. This optimization greatly improves performance in applications where HTTP caching is leveraged.</p>
+
+<h2>Subclassing Notes</h2>
+
+<p>This class relies on the following <a href="../Protocols/RKMapperOperationDelegate.html"><code>RKMapperOperationDelegate</code></a> method methods to do its work:</p>
+
+<ol>
+<li><code>mapperDidFinishMapping:</code></li>
+</ol>
+
+
+<p>If you subclass <code>RKManagedObjectRequestOperation</code> and implement any of the above methods then you must call the superclass implementation.</p>
+
+<h2>Limitations and Caveats</h2>
+
+<ol>
+<li><code>RKManagedObjectRequestOperation</code> <strong>does NOT</strong> support object mapping that targets an <code>NSManagedObjectContext</code> with a <code>concurrencyType</code> of <code>NSConfinementConcurrencyType</code>.</li>
+</ol>
+
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Configuring Core Data Integration" name="task_Configuring Core Data Integration"></a>
+						<h2 class="task-title">Configuring Core Data Integration</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/managedObjectContext" title="managedObjectContext"></a>
+	<h3 class="method-title"><code><a href="#//api/name/managedObjectContext">&nbsp;&nbsp;managedObjectContext</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The managed object context associated with the managed object request operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This context acts as the parent context for a private managed object context in which the object mapping is performed and changes will be saved to this context upon successful completion of the operation.</p>
+
+<p>Please see the above discussion about &lsquo;Parent Context&rsquo; for details.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/managedObjectCache" title="managedObjectCache"></a>
+	<h3 class="method-title"><code><a href="#//api/name/managedObjectCache">&nbsp;&nbsp;managedObjectCache</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The managed object cache associated with the managed object request operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id&lt;RKManagedObjectCaching&gt; managedObjectCache</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The cache is used to look up existing objects by primary key to prevent the creation of duplicate objects during mapping. Please see the above discussion of &lsquo;Managed Object Caching&rsquo; for more details.</p><div class="warning"><p><strong>Warning:</strong> A <code>nil</code> value for the <code>managedObjectCache</code> property is valid, but may result in the creation of duplicate objects.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fetchRequestBlocks" title="fetchRequestBlocks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fetchRequestBlocks">&nbsp;&nbsp;fetchRequestBlocks</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An array of <a href="../Blocks/RKFetchRequestBlock.html"><code>RKFetchRequestBlock</code></a> block objects used to map <code>NSURL</code> objects into corresponding <code>NSFetchRequest</code> objects.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSArray *fetchRequestBlocks</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Fetch requests corresponding to URL&rsquo;s are used when deleting orphaned objects and completing object request operations in which <code>avoidsNetworkAccess</code> has been set to <code>YES</code>. Please see the above discussion of &lsquo;Fetch Request Blocks&rsquo; for more details.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Managing Completion Behaviors" name="task_Managing Completion Behaviors"></a>
+						<h2 class="task-title">Managing Completion Behaviors</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/deletesOrphanedObjects" title="deletesOrphanedObjects"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deletesOrphanedObjects">&nbsp;&nbsp;deletesOrphanedObjects</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean value that determines if the receiver will delete orphaned objects upon completion of the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL deletesOrphanedObjects</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Please see the above discussion of &lsquo;Deleting Managed Objects for <code>DELETE</code> requests&rsquo; for more details.</p>
+
+<p><strong>Default</strong>: <code>YES</code></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/savesToPersistentStore" title="savesToPersistentStore"></a>
+	<h3 class="method-title"><code><a href="#//api/name/savesToPersistentStore">&nbsp;&nbsp;savesToPersistentStore</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean value that determines if the operation saves the mapping results to the persistent store upon successful completion. If the network transport or mapping portions of the operation fail the operation then this option has no effect.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL savesToPersistentStore</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When <code>YES</code>, the receiver will invoke <code>saveToPersistentStore:</code> on its private managed object context to persist the mapping results all the way back to the persistent store coordinator. If <code>NO</code>, the private mapping context will be saved causing the mapped objects to be &lsquo;pushed&rsquo; to the parent context as represented by the <a href="#//api/name/managedObjectContext"><code>managedObjectContext</code></a> property.</p>
+
+<p><strong>Default</strong>: <code>YES</code></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setWillSaveMappingContextBlock:" title="setWillSaveMappingContextBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setWillSaveMappingContextBlock:">&ndash;&nbsp;setWillSaveMappingContextBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets a block to be invoked just before the operation saves the private mapping context.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setWillSaveMappingContextBlock:(void ( ^ ) ( NSManagedObjectContext *mappingContext ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The block to execute just before the context is saved.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The mapping context is saved just before the object request operation completes its work and transitions into the finished state. All managed objects mapped during the operation will have permanent object ID&rsquo;s. The <code>mappingResult</code> will contain managed object instances local to the context yielded to the block. The block will be invoked synchronously on the private queue of the context. After the block is executed, the save operation will take place, optionally saving the mapping results back to the persistent store.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithHTTPRequestOperation:responseDescriptors:" title="initWithHTTPRequestOperation:responseDescriptors:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithHTTPRequestOperation:responseDescriptors:">&ndash;&nbsp;initWithHTTPRequestOperation:responseDescriptors:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes an object request operation with an HTTP request operation and a set of response descriptors.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithHTTPRequestOperation:(RKHTTPRequestOperation *)<em>requestOperation</em> responseDescriptors:(NSArray *)<em>responseDescriptors</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>requestOperation</code></th>
+						<td><p>The request object to be used with the underlying network operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>responseDescriptors</code></th>
+						<td><p>An array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects specifying how object mapping is to be performed on the response loaded by the network operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given request and response descriptors.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This is the designated initializer.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/dealloc" title="dealloc"></a>
+	<h3 class="method-title"><code><a href="#//api/name/dealloc">&ndash;&nbsp;dealloc</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>NOTE: This dealloc implementation attempts to avoid crashes coming from Core Data due to the ordering of deallocations under ARC. If the MOC is deallocated before its managed objects, it can trigger a crash. We dispose of the mapping result and reset the private context to avoid this situation. The crash manifests itself in <code>cxx_destruct</code>
+[sbw - 2/25/2013]</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)dealloc</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTargetObject:" title="setTargetObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTargetObject:">&ndash;&nbsp;setTargetObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The target object for the object mapping operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTargetObject:(id)<em>targetObject</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/performMappingOnResponseWithCompletionBlock:" title="performMappingOnResponseWithCompletionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/performMappingOnResponseWithCompletionBlock:">&ndash;&nbsp;performMappingOnResponseWithCompletionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Performs object mapping using the <code>response</code> and <code>responseData</code> properties.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)performMappingOnResponseWithCompletionBlock:(void ( ^ ) ( RKMappingResult *mappingResult , NSError *error ))<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A pointer to an <code>NSError</code> object to be set in the event that the object mapping process has failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A mapping result or <code>nil</code> if an <a href="../Classes/RKObjectRequestOperation.html#//api/name/error">error</a> has occurred.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The <code>RKObjectRequestOperation</code> superclass is responsible for the invocation of this method and the subsequent handling of the mapping result or <a href="../Classes/RKObjectRequestOperation.html#//api/name/error">error</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperationSubclass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/saveContextToPersistentStore:error:" title="saveContextToPersistentStore:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/saveContextToPersistentStore:error:">&ndash;&nbsp;saveContextToPersistentStore:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>NOTE: This is more or less a direct port of the functionality provided by <code>[NSManagedObjectContext saveToPersistentStore:]</code> in the <code>RKAdditions</code> category. We have duplicated the logic here to add in support for checking if the operation has been cancelled since we began cascading up the MOC chain. Because each <code>performBlockAndWait:</code> invocation essentially jumps threads and is subject to the availability of the context, it is very possible for the operation to be cancelled during this part of the operation&rsquo;s lifecycle.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)saveContextToPersistentStore:(NSManagedObjectContext *)<em>contextToSave</em> error:(NSError **)<em>error</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKManagedObjectRequestOperation.m</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/willFinish" title="willFinish"></a>
+	<h3 class="method-title"><code><a href="#//api/name/willFinish">&ndash;&nbsp;willFinish</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Invoked to tell the receiver that the object request operation is finishing its work and is about to transition into the finished state. Used to perform any necessary cleanup before the operation is finished.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)willFinish</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperationSubclass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-09-21</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

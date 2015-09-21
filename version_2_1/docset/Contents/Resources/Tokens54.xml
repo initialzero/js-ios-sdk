@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/RKKeyPathClassObjectMappingMatcher.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/RKKeyPathClassObjectMappingMatcher</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RKObjectMappingMatcher.m</DeclaredIn>
+            
+			
+			<NodeRef refid="54"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RKKeyPathClassObjectMappingMatcher/matches:</TokenIdentifier>
+			<Abstract type="html">Returns a Boolean value that indicates if the given object matches the expectations of the receiver.</Abstract>
+			<DeclaredIn>RKObjectMappingMatcher.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)matches:(id)object</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">The object to be evaluated.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the object matches the expectations of the receiver, else NO.</Abstract></ReturnValue>
+			<Anchor>//api/name/matches:</Anchor>
+            <NodeRef refid="54"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

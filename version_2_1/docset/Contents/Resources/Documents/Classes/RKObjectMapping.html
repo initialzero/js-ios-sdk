@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKObjectMapping Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/)">)</option>
+		
+		<option value="//api/name/assignsDefaultValueForMissingAttributes">assignsDefaultValueForMissingAttributes</option>
+		
+		<option value="//api/name/assignsNilForMissingRelationships">assignsNilForMissingRelationships</option>
+		
+		<option value="//api/name/attributeMappings">attributeMappings</option>
+		
+		<option value="//api/name/keyAttributeMappings">keyAttributeMappings</option>
+		
+		<option value="//api/name/keyPathAttributeMappings">keyPathAttributeMappings</option>
+		
+		<option value="//api/name/objectClass">objectClass</option>
+		
+		<option value="//api/name/performsKeyValueValidation">performsKeyValueValidation</option>
+		
+		<option value="//api/name/propertyMappings">propertyMappings</option>
+		
+		<option value="//api/name/propertyMappingsByDestinationKeyPath">propertyMappingsByDestinationKeyPath</option>
+		
+		<option value="//api/name/propertyMappingsBySourceKeyPath">propertyMappingsBySourceKeyPath</option>
+		
+		<option value="//api/name/relationshipMappings">relationshipMappings</option>
+		
+		<option value="//api/name/valueTransformer">valueTransformer</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/addDefaultDateFormatter:">+ addDefaultDateFormatter:</option>
+		
+		<option value="//api/name/addDefaultDateFormatterForString:inTimeZone:">+ addDefaultDateFormatterForString:inTimeZone:</option>
+		
+		<option value="//api/name/defaultDateFormatters">+ defaultDateFormatters</option>
+		
+		<option value="//api/name/mappingForClass:">+ mappingForClass:</option>
+		
+		<option value="//api/name/preferredDateFormatter">+ preferredDateFormatter</option>
+		
+		<option value="//api/name/requestMapping">+ requestMapping</option>
+		
+		<option value="//api/name/setDefaultDateFormatters:">+ setDefaultDateFormatters:</option>
+		
+		<option value="//api/name/setDefaultSourceToDestinationKeyTransformationBlock:">+ setDefaultSourceToDestinationKeyTransformationBlock:</option>
+		
+		<option value="//api/name/setPreferredDateFormatter:">+ setPreferredDateFormatter:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addAttributeMappingFromKeyOfRepresentationToAttribute:">- addAttributeMappingFromKeyOfRepresentationToAttribute:</option>
+		
+		<option value="//api/name/addAttributeMappingToKeyOfRepresentationFromAttribute:">- addAttributeMappingToKeyOfRepresentationFromAttribute:</option>
+		
+		<option value="//api/name/addAttributeMappingsFromArray:">- addAttributeMappingsFromArray:</option>
+		
+		<option value="//api/name/addAttributeMappingsFromDictionary:">- addAttributeMappingsFromDictionary:</option>
+		
+		<option value="//api/name/addPropertyMapping:">- addPropertyMapping:</option>
+		
+		<option value="//api/name/addPropertyMappingsFromArray:">- addPropertyMappingsFromArray:</option>
+		
+		<option value="//api/name/addRelationshipMappingWithSourceKeyPath:mapping:">- addRelationshipMappingWithSourceKeyPath:mapping:</option>
+		
+		<option value="//api/name/classForKeyPath:">- classForKeyPath:</option>
+		
+		<option value="//api/name/classForProperty:">- classForProperty:</option>
+		
+		<option value="//api/name/defaultValueForAttribute:">- defaultValueForAttribute:</option>
+		
+		<option value="//api/name/initWithClass:">- initWithClass:</option>
+		
+		<option value="//api/name/inverseMapping">- inverseMapping</option>
+		
+		<option value="//api/name/inverseMappingWithPropertyMappingsPassingTest:">- inverseMappingWithPropertyMappingsPassingTest:</option>
+		
+		<option value="//api/name/isEqualToMapping:">- isEqualToMapping:</option>
+		
+		<option value="//api/name/mappingForDestinationKeyPath:">- mappingForDestinationKeyPath:</option>
+		
+		<option value="//api/name/mappingForSourceKeyPath:">- mappingForSourceKeyPath:</option>
+		
+		<option value="//api/name/removePropertyMapping:">- removePropertyMapping:</option>
+		
+		<option value="//api/name/setSourceToDestinationKeyTransformationBlock:">- setSourceToDestinationKeyTransformationBlock:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKObjectMapping Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/RKMapping.html">RKMapping</a> : NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKObjectMapping.h<br />RKObjectMapping.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>An <code>RKObjectMapping</code> object describes a transformation between object represenations using key-value coding and run-time type introspection. The mapping is defined in terms of a source object class and a collection of <a href="../Classes/RKPropertyMapping.html"><code>RKPropertyMapping</code></a> objects describing how key paths in the source representation should be transformed into attributes and relationships on the target object. Object mappings are provided to instances of <a href="../Classes/RKMapperOperation.html"><code>RKMapperOperation</code></a> and <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> to perform the transformations they describe.</p>
+
+<p>Object mappings are containers of property mappings that describe the actual key path transformations. There are two types of property mappings:</p>
+
+<ol>
+<li><a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a>: An attribute mapping describes a transformation between a single value from a source key path to a destination key path. The value to be mapped is read from the source object representation using <code>valueForKeyPath:</code> and then set to the destination key path using <code>setValueForKeyPath:</code>. Before the value is set, the <code>RKObjecMappingOperation</code> performing the mapping performs runtime introspection on the destination property to determine what, if any, type transformation is to be performed. Typical type transformations include reading an <code>NSString</code> value representation and mapping it to an <code>NSDecimalNumber</code> destination key path or reading an <code>NSString</code> and transforming it into an <code>NSDate</code> value before assigning to the destination.</li>
+<li><a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a>: A relationship mapping describes a transformation between a nested child object or objects from a source key path to a destination key path using another <code>RKObjectMapping</code>. The child objects to be mapped are read from the source object representation using <code>valueForKeyPath:</code>, then mapped recursively using the object mapping associated with the relationship mapping, and then finally assigned to the destination key path. Before assignment to the destination key path runtime type introspection is performed to determine if any type transformation is necessary. For relationship mappings, common type transformations include transforming a single object value in an <code>NSArray</code> or transforming an <code>NSArray</code> of object values into an <code>NSSet</code>.</li>
+</ol>
+
+
+<p>All type transformations available are discussed in detail in the documentation for <a href="../Classes/RKValueTransformer.html"><code>RKValueTransformer</code></a>.</p>
+
+<h2>Transforming Representation to Property Keys</h2>
+
+<p>Configuring object mappings can become quite repetitive if the keys in your serialized object representations follow a different convention than their local domain counterparts. For example, consider a typical JSON document in the &ldquo;snake case&rdquo; format:</p>
+
+<pre><code>{"user": {"first_name": "Blake", "last_name": "Watters", "email_address": "blake@restkit.org"}}
+</code></pre>
+
+<p>Typically when configuring a mapping for the object represented in this document we would transform the destination properties into the Objective-C idiomatic &ldquo;llama case&rdquo; variation. This can produce lengthy, error-prone mapping configurations in which the transformations are specified manually:</p>
+
+<pre><code>RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[RKUser class]];
+[userMapping addAttributeMappingsFromDictionary:@{ @"first_name": @"firstName", @"last_name": @"lastName", @"email_address", @"emailAddress" }];
+</code></pre>
+
+<p>To combat this repetition, a block can be designated to perform a transformation on source keys to produce corresponding destination keys:</p>
+
+<pre><code>[userMapping setSourceToDestinationKeyTransformationBlock:^NSString *(RKObjectMapping *mapping, NSString *sourceKey) {
+    // Value transformer compliments of TransformerKit (See https://github.com/mattt/TransformerKit)
+    return [[NSValueTransformer valueTransformerForName:TKLlamaCaseStringTransformerName] transformedValue:sourceKey];
+}];
+</code></pre>
+
+<p>With the block configured, the original configuration can be changed into a simpler array based invocation:</p>
+
+<pre><code>[userMapping addAttributeMappingsFromArray:@[ @"first_name", @"last_name", @"email_address" ]];
+</code></pre>
+
+<p>Transformation blocks can be configured on a per-mapping basis via <a href="#//api/name/sourceToDestinationKeyTransformationBlock"><code>setSourceToDestinationKeyTransformationBlock:</code></a> or globally via <a href="#//api/name/setDefaultSourceToDestinationKeyTransformationBlock:"><code>[RKObjectMapping setDefaultSourceToDestinationKeyTransformationBlock:]</code></a>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Creating an Object Mapping" name="task_Creating an Object Mapping"></a>
+						<h2 class="task-title">Creating an Object Mapping</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mappingForClass:" title="mappingForClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForClass:">+&nbsp;mappingForClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an object mapping for the specified class that is ready for configuration</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)mappingForClass:(Class)<em>objectClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>The class that the mapping targets.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new mapping object.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithClass:" title="initWithClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithClass:">&ndash;&nbsp;initWithClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes the receiver with a given object class. This is the designated initializer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithClass:(Class)<em>objectClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>The class that the mapping targets. Cannot be <code>nil</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given class.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestMapping" title="requestMapping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestMapping">+&nbsp;requestMapping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an object mapping with an <a href="#//api/name/objectClass"><code>objectClass</code></a> of <code>NSMutableDictionary</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (RKObjectMapping *)requestMapping</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An object mapping with an object class of <code>NSMutableDictionary</code>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Request mappings are used when configuring mappings that are to be used for transforming local objects into HTTP parameters using the <a href="../Classes/RKObjectParameterization.html"><code>RKObjectParameterization</code></a> class.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing Property Mappings" name="task_Accessing Property Mappings"></a>
+						<h2 class="task-title">Accessing Property Mappings</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/propertyMappings" title="propertyMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/propertyMappings">&nbsp;&nbsp;propertyMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The aggregate collection of attribute and relationship mappings within this object mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSArray *propertyMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/propertyMappingsBySourceKeyPath" title="propertyMappingsBySourceKeyPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/propertyMappingsBySourceKeyPath">&nbsp;&nbsp;propertyMappingsBySourceKeyPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the property mappings of the receiver in a dictionary, where the keys are the source key paths and the values are instances of <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> or <a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDictionary *propertyMappingsBySourceKeyPath</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The property mappings of the receiver in a dictionary, where the keys are the source key paths and the values are instances of <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> or <a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> Note this method does not return any property mappings with a <code>nil</code> value for the source key path in the dictionary returned.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/propertyMappingsByDestinationKeyPath" title="propertyMappingsByDestinationKeyPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/propertyMappingsByDestinationKeyPath">&nbsp;&nbsp;propertyMappingsByDestinationKeyPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the property mappings of the receiver in a dictionary, where the keys are the destination key paths and the values are instances of <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> or <a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDictionary *propertyMappingsByDestinationKeyPath</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The property mappings of the receiver in a dictionary, where the keys are the destination key paths and the values are instances of <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> or <a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> Note this method does not return any property mappings with a <code>nil</code> value for the source key path in the dictionary returned.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/attributeMappings" title="attributeMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/attributeMappings">&nbsp;&nbsp;attributeMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The collection of attribute mappings within this object mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *attributeMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/keyAttributeMappings" title="keyAttributeMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/keyAttributeMappings">&nbsp;&nbsp;keyAttributeMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The collection of single key attribute mappings within this object mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *keyAttributeMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>These are mappings where the source key path is a single key, and not a key path with multiple components.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/keyPathAttributeMappings" title="keyPathAttributeMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/keyPathAttributeMappings">&nbsp;&nbsp;keyPathAttributeMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The collection of key path attribute mappings within this object mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *keyPathAttributeMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A key path mapping is one where the source key path is actually a path with multiple components.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/relationshipMappings" title="relationshipMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/relationshipMappings">&nbsp;&nbsp;relationshipMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The collection of relationship mappings within this object mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray *relationshipMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForSourceKeyPath:" title="mappingForSourceKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForSourceKeyPath:">&ndash;&nbsp;mappingForSourceKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the property mapping registered with the receiver with the given source key path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)mappingForSourceKeyPath:(NSString *)<em>sourceKeyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sourceKeyPath</code></th>
+						<td><p>The key path to retrieve.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForDestinationKeyPath:" title="mappingForDestinationKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForDestinationKeyPath:">&ndash;&nbsp;mappingForDestinationKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the property mapping registered with the receiver with the given destinationKeyPath key path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)mappingForDestinationKeyPath:(NSString *)<em>destinationKeyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>destinationKeyPath</code></th>
+						<td><p>The key path to retrieve.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPropertyMapping:" title="addPropertyMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPropertyMapping:">&ndash;&nbsp;addPropertyMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds a property mapping to the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPropertyMapping:(RKPropertyMapping *)<em>propertyMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyMapping</code></th>
+						<td><p>The property mapping to be added to the object mapping.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addPropertyMappingsFromArray:" title="addPropertyMappingsFromArray:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addPropertyMappingsFromArray:">&ndash;&nbsp;addPropertyMappingsFromArray:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds an array of <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> or <a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a> objects to the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addPropertyMappingsFromArray:(NSArray *)<em>arrayOfPropertyMappings</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>arrayOfPropertyMappings</code></th>
+						<td><p>The array of property mappings to be added to the object mapping.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removePropertyMapping:" title="removePropertyMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removePropertyMapping:">&ndash;&nbsp;removePropertyMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes an <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> or <a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a> from the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removePropertyMapping:(RKPropertyMapping *)<em>propertyMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyMapping</code></th>
+						<td><p>The attribute or relationship mapping to remove.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAttributeMappingsFromDictionary:" title="addAttributeMappingsFromDictionary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAttributeMappingsFromDictionary:">&ndash;&nbsp;addAttributeMappingsFromDictionary:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds attribute mappings from a given dictionary wherein the keys represent the source key path and the values represent the names of the target attributes on the destination object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAttributeMappingsFromDictionary:(NSDictionary *)<em>keyPathToAttributeNames</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPathToAttributeNames</code></th>
+						<td><p>A dictionary keyed by source key to destination attribute name.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAttributeMappingsFromArray:" title="addAttributeMappingsFromArray:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAttributeMappingsFromArray:">&ndash;&nbsp;addAttributeMappingsFromArray:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds attribute mappings to the receiver from a given array.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAttributeMappingsFromArray:(NSArray *)<em>arrayOfAttributeNamesOrMappings</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>arrayOfAttributeNamesOrMappings</code></th>
+						<td><p>An array of <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> or <code>NSString</code> values to be added to the receiver&rsquo;s set of attribute mappings,</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The array can contain <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> objects or <code>NSString</code> values. If an <code>NSString</code> is given, then a new <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> object is instantiated with a <code>sourceKeyPath</code> and <code>destinationKeyPath</code> equal to the string value.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addRelationshipMappingWithSourceKeyPath:mapping:" title="addRelationshipMappingWithSourceKeyPath:mapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addRelationshipMappingWithSourceKeyPath:mapping:">&ndash;&nbsp;addRelationshipMappingWithSourceKeyPath:mapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds a relationship mapping to the receiver with the given source key path and mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addRelationshipMappingWithSourceKeyPath:(NSString *)<em>sourceKeyPath</em> mapping:(RKMapping *)<em>mapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sourceKeyPath</code></th>
+						<td><p>The source key path at which to read the nested representation of the related objects.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>The object mapping with which to process the related object representation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The destination key path will be the same as the source key path or processed by the source to destination key transformation block, if any is configured.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Configuring Key Transformation" name="task_Configuring Key Transformation"></a>
+						<h2 class="task-title">Configuring Key Transformation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setDefaultSourceToDestinationKeyTransformationBlock:" title="setDefaultSourceToDestinationKeyTransformationBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDefaultSourceToDestinationKeyTransformationBlock:">+&nbsp;setDefaultSourceToDestinationKeyTransformationBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets an application-wide default transformation block to be used when attribute or relationship mappings are added to an object mapping by source key path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setDefaultSourceToDestinationKeyTransformationBlock:(NSString *( ^ ) ( RKObjectMapping *mapping , NSString *sourceKey ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The block to be set as the default source to destination key transformer for all object mappings in the application.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSourceToDestinationKeyTransformationBlock:" title="setSourceToDestinationKeyTransformationBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSourceToDestinationKeyTransformationBlock:">&ndash;&nbsp;setSourceToDestinationKeyTransformationBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets a block to executed to transform a source key into a destination key.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setSourceToDestinationKeyTransformationBlock:(NSString *( ^ ) ( RKObjectMapping *mapping , NSString *sourceKey ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>The block to execute when the receiver needs to transform a source key into a destination key. The block has a string return value specifying the destination key and accepts a single string argument: the source key that is to be transformed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The transformation block set with this method is used whenever an attribute or relationship mapping is added to the receiver via a method that accepts a string value for the source key. The block will be executed with the source key as the only argument and the value returned will be taken as the corresponding destination key. Methods on the <code>RKObjectMapping</code> class that will trigger the execution of the block configured via this method include:
+* <code>addAttributeMappingsFromArray:</code> - Each string element contained in the given array is interpretted as a source key path and will be evaluated with the block to obtain a corresponding destination key path.
+* <a href="#//api/name/addRelationshipMappingWithSourceKeyPath:mapping:"><code>addRelationshipMappingWithSourceKeyPath:mapping:</code></a> - The source key path will be evaluated with the block to obtain a corresponding destination key path.</p><div class="warning"><p><strong>Warning:</strong> Please note that the block given accepts a <strong>key</strong> as opposed to a <strong>key path</strong>. When a key path is given to a method supporting key transformation it will be decomposed into its key components by splitting the key path at the &lsquo;.&rsquo; (period) character, then each key will be evaluated using the transformation block and the results will be joined together into a new key path with the period character delimiter.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Mapping Nested Dictionaries" name="task_Mapping Nested Dictionaries"></a>
+						<h2 class="task-title">Mapping Nested Dictionaries</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/addAttributeMappingFromKeyOfRepresentationToAttribute:" title="addAttributeMappingFromKeyOfRepresentationToAttribute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAttributeMappingFromKeyOfRepresentationToAttribute:">&ndash;&nbsp;addAttributeMappingFromKeyOfRepresentationToAttribute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds an attribute mapping from a dynamic nesting key value to an attribute. The mapped attribute name can then be referenced within other attribute mappings to access the nested content.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAttributeMappingFromKeyOfRepresentationToAttribute:(NSString *)<em>attributeName</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>For example, consider the following JSON:</p>
+
+<pre><code> { "users":
+     {
+         "blake": {  "id": 1234, "email": "blake@restkit.org" },
+         "rachit": { "id": 5678, "email": "rachit@restkit.org" }
+     }
+ }
+</code></pre>
+
+<p>We can configure our mappings to handle this in the following form:</p>
+
+<pre><code> RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[User class]];
+ mapping.forceCollectionMapping = YES; // RestKit cannot infer this is a collection, so we force it
+ [mapping addAttributeMappingFromKeyOfRepresentationToAttribute:@"firstName"];
+ [mapping addAttributeMappingsFromDictionary:@{ @"{firstName}.id": @"userID", @"{firstName}.email": @"email" }];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addAttributeMappingToKeyOfRepresentationFromAttribute:" title="addAttributeMappingToKeyOfRepresentationFromAttribute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addAttributeMappingToKeyOfRepresentationFromAttribute:">&ndash;&nbsp;addAttributeMappingToKeyOfRepresentationFromAttribute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds an attribute mapping to a dynamic nesting key from an attribute. The mapped attribute name can then be referenced wthin other attribute mappings to map content under the nesting key path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addAttributeMappingToKeyOfRepresentationFromAttribute:(NSString *)<em>attributeName</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>For example, consider that we wish to map a local user object with the properties &lsquo;id&rsquo;, &lsquo;firstName&rsquo; and &lsquo;email&rsquo;:</p>
+
+<pre><code>RKUser *user = [RKUser new];
+user.firstName = @"blake";
+user.userID = @(1234);
+user.email = @"blake@restkit.org";
+</code></pre>
+
+<p>And we wish to map it into JSON that looks like:</p>
+
+<pre><code>{ "blake": { "id": 1234, "email": "blake@restkit.org" } }
+</code></pre>
+
+<p>We can configure our request mapping to handle this like so:</p>
+
+<pre><code> RKObjectMapping *mapping = [RKObjectMapping requestMapping];
+ [mapping addAttributeMappingToKeyOfRepresentationFromAttribute:@"firstName"];
+ [mapping addAttributeMappingsFromDictionary:@{ @"userID": @"{firstName}.id", @"email": @"{firstName}.email" }];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Configuring Mapping Options" name="task_Configuring Mapping Options"></a>
+						<h2 class="task-title">Configuring Mapping Options</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/objectClass" title="objectClass"></a>
+	<h3 class="method-title"><code><a href="#//api/name/objectClass">&nbsp;&nbsp;objectClass</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The target class that the receiver describes a mapping for.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, readonly) Class objectClass</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/assignsDefaultValueForMissingAttributes" title="assignsDefaultValueForMissingAttributes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/assignsDefaultValueForMissingAttributes">&nbsp;&nbsp;assignsDefaultValueForMissingAttributes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>YES</code>, any attributes that have mappings defined but are not present within the source object will be set to nil, clearing any existing value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL assignsDefaultValueForMissingAttributes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><strong>Default</strong>: <code>NO</code></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/assignsNilForMissingRelationships" title="assignsNilForMissingRelationships"></a>
+	<h3 class="method-title"><code><a href="#//api/name/assignsNilForMissingRelationships">&nbsp;&nbsp;assignsNilForMissingRelationships</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>YES</code>, any relationships that have mappings defined but are not present within the source object will be set to <code>nil</code>, clearing any existing value.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL assignsNilForMissingRelationships</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><strong>Default</strong>: <code>NO</code></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/performsKeyValueValidation" title="performsKeyValueValidation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/performsKeyValueValidation">&nbsp;&nbsp;performsKeyValueValidation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>When <code>YES</code>, key-value validation will be invoked at object mapping time.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL performsKeyValueValidation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><strong>Default</strong>: <code>YES</code></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/valueTransformer" title="valueTransformer"></a>
+	<h3 class="method-title"><code><a href="#//api/name/valueTransformer">&nbsp;&nbsp;valueTransformer</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A value transformer with which to process input values being mapped with the receiver. Defaults to a copy of <code>[RKValueTransformer defaultTransformer]</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id&lt;RKValueTransforming&gt; valueTransformer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultValueForAttribute:" title="defaultValueForAttribute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultValueForAttribute:">&ndash;&nbsp;defaultValueForAttribute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the default value to be assigned to the specified attribute when it is missing from a mappable payload.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)defaultValueForAttribute:(NSString *)<em>attributeName</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The default implementation returns nil for transient object mappings. On an entity mapping, the default value returned from the Entity definition will be used.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><code>[RKEntityMapping defaultValueForAttribute:]</code></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Generating Inverse Mappings" name="task_Generating Inverse Mappings"></a>
+						<h2 class="task-title">Generating Inverse Mappings</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/inverseMapping" title="inverseMapping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inverseMapping">&ndash;&nbsp;inverseMapping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates an inverse mapping for the rules specified within this object mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)inverseMapping</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new mapping that will map the inverse of the receiver.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This can be used to quickly generate a corresponding serialization mapping from a configured object mapping. The inverse mapping will have the source and destination keyPaths swapped for all attribute and relationship mappings. All mapping configuration and date formatters are copied from the parent to the inverse mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/inverseMappingWithPropertyMappingsPassingTest:" title="inverseMappingWithPropertyMappingsPassingTest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/inverseMappingWithPropertyMappingsPassingTest:">&ndash;&nbsp;inverseMappingWithPropertyMappingsPassingTest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Generates an inverse mapping with all property mappings of the receiver that pass the given test. Each <a href="../Classes/RKAttributeMapping.html"><code>RKAttributeMapping</code></a> and <a href="../Classes/RKRelationshipMapping.html"><code>RKRelationshipMapping</code></a> added to the receiver is yielded to the block for evaluation. The block is also invoked for any nested relationships that are traversed during the inversion process.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)inverseMappingWithPropertyMappingsPassingTest:(BOOL ( ^ ) ( RKPropertyMapping *propertyMapping ))<em>predicate</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>predicate</code></th>
+						<td><p>A block object to be invoked for each <a href="../Classes/RKPropertyMapping.html"><code>RKPropertyMapping</code></a> that is considered for inversion. The block has a Boolean return value and accepts a single argument: the property mapping that is being evaluated for inversion.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new mapping that will map the inverse of the receiver.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="#//api/name/inverseMapping">- inverseMapping</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Obtaining Information About the Target Class" name="task_Obtaining Information About the Target Class"></a>
+						<h2 class="task-title">Obtaining Information About the Target Class</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/classForProperty:" title="classForProperty:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/classForProperty:">&ndash;&nbsp;classForProperty:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the class of the attribute or relationship property of the target <a href="#//api/name/objectClass"><code>objectClass</code></a> with the given name.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (Class)classForProperty:(NSString *)<em>propertyName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyName</code></th>
+						<td><p>The name of the property we would like to retrieve the type of.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The class of the property.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Given the name of a string property, this will return an <code>NSString</code>, etc.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/classForKeyPath:" title="classForKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/classForKeyPath:">&ndash;&nbsp;classForKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the class of the attribute or relationship property of the target <a href="#//api/name/objectClass"><code>objectClass</code></a> at the given key path.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (Class)classForKeyPath:(NSString *)<em>keyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The name of the property we would like to retrieve the type of.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The class of the property at the given key path.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Given a key path to a string property, this will return an <code>NSString</code>, etc.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/isEqualToMapping:" title="isEqualToMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isEqualToMapping:">&ndash;&nbsp;isEqualToMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns <code>YES</code> if the receiver and the specified mapping are considered equivalent.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToMapping:(RKObjectMapping *)<em>otherMapping</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><strong>NOTE</strong>: Must be implemented in subclass.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="LegacyDateAndTimeFormatting Methods" name="task_LegacyDateAndTimeFormatting Methods"></a>
+						<h2 class="task-title">LegacyDateAndTimeFormatting Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/defaultDateFormatters" title="defaultDateFormatters"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultDateFormatters">+&nbsp;defaultDateFormatters</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><strong>Deprecated in v0.21.0</strong></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSArray *)defaultDateFormatters</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An array of <code>NSFormatter</code> objects used when mapping strings into NSDate attributes</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method accesses <code>[RKValueTransformer defaultTransformer]</code> and returns all <code>NSDate</code> &lt;-> <code>NSString</code> value transformers.</p>
+
+<p>Returns the collection of default date formatters that will be used for all object mappings that have not been configured specifically.</p>
+
+<p>Out of the box, RestKit initializes default date formatters for you in the UTC time zone with the following format strings:</p>
+
+<ul>
+<li><code>yyyy-MM-dd'T'HH:mm:ss'Z'</code></li>
+<li><code>MM/dd/yyyy</code></li>
+</ul>
+
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDefaultDateFormatters:" title="setDefaultDateFormatters:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDefaultDateFormatters:">+&nbsp;setDefaultDateFormatters:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><strong>Deprecated in v0.21.0</strong></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setDefaultDateFormatters:(NSArray *)<em>dateFormatters</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dateFormatters</code></th>
+						<td><p>An array of date formatters to replace the existing defaults.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method accesses <code>[RKValueTransformer defaultTransformer]</code> and removes all <code>NSDate</code> &lt;-> <code>NSString</code> value transformers that are instances of <code>NSFormatter</code> and then adds the given array of formatters to the default transformer.</p>
+
+<p>Sets the collection of default date formatters to the specified array. The array should contain configured instances of NSDateFormatter in the order in which you want them applied during object mapping operations.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDefaultDateFormatter:" title="addDefaultDateFormatter:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDefaultDateFormatter:">+&nbsp;addDefaultDateFormatter:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><strong>Deprecated in v0.21.0</strong></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)addDefaultDateFormatter:(NSFormatter *)<em>dateFormatter</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dateFormatter</code></th>
+						<td><p>An <code>NSFormatter</code> object to prepend to the default formatters collection</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This methods prepends the given date formatter to <a href="../Classes/RKValueTransformer.html#//api/name/defaultValueTransformer"><code>[RKValueTransformer defaultValueTransformer]</code></a>.</p>
+
+<p>Adds a date formatter instance to the default collection</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addDefaultDateFormatterForString:inTimeZone:" title="addDefaultDateFormatterForString:inTimeZone:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addDefaultDateFormatterForString:inTimeZone:">+&nbsp;addDefaultDateFormatterForString:inTimeZone:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><strong>Deprecated in v0.21.0</strong></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)addDefaultDateFormatterForString:(NSString *)<em>dateFormatString</em> inTimeZone:(NSTimeZone *)<em>nilOrTimeZone</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dateFormatString</code></th>
+						<td><p>The dateFormat string to assign to the newly constructed <code>NSDateFormatter</code> instance</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>nilOrTimeZone</code></th>
+						<td><p>The NSTimeZone object to configure on the <code>NSDateFormatter</code> instance. Defaults to UTC time.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method instantiates a new <code>NSDateFormatter</code> object with the given format string and time zone and prepends it to <a href="../Classes/RKValueTransformer.html#//api/name/defaultValueTransformer"><code>[RKValueTransformer defaultValueTransformer]</code></a>.</p>
+
+<p>Convenience method for quickly constructing a date formatter and adding it to the collection of default date formatters. The locale is auto-configured to <code>en_US_POSIX</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/preferredDateFormatter" title="preferredDateFormatter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/preferredDateFormatter">+&nbsp;preferredDateFormatter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><strong>Deprecated in v0.21.0</strong></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSFormatter *)preferredDateFormatter</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The preferred NSFormatter object to use when serializing dates into strings</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method returns the first <code>NSString</code> -> <code>NSDate</code> value transformer that is an instance of <code>NSFormatter</code> in <a href="../Classes/RKValueTransformer.html#//api/name/defaultValueTransformer"><code>[RKValueTransformer defaultValueTransformer]</code></a>.</p>
+
+<p>Returns the preferred date formatter to use when generating NSString representations from NSDate attributes. This type of transformation occurs when RestKit is mapping local objects into JSON or form encoded serializations that do not have a native time construct.</p>
+
+<p>Defaults to an instance of the <a href="../Classes/RKISO8601DateFormatter.html"><code>RKISO8601DateFormatter</code></a> configured with the UTC time-zone. The format string is equal to &ldquo;yyyy-MM-DDThh:mm:ssTZD&rdquo;</p>
+
+<p>For details about the ISO-8601 format, see <a href="http://www.w3.org/TR/NOTE-datetime">http://www.w3.org/TR/NOTE-datetime</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setPreferredDateFormatter:" title="setPreferredDateFormatter:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setPreferredDateFormatter:">+&nbsp;setPreferredDateFormatter:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><strong>Deprecated in v0.21.0</strong></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)setPreferredDateFormatter:(NSFormatter *)<em>dateFormatter</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dateFormatter</code></th>
+						<td><p>The NSFormatter object to designate as the new preferred instance</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method inserts the given date formatter at position zero in <a href="../Classes/RKValueTransformer.html#//api/name/defaultValueTransformer"><code>[RKValueTransformer defaultValueTransformer]</code></a>, ensuring that it will be used for all transformations from <code>NSDate</code> -> <code>NSString</code>.</p>
+
+<p>Sets the preferred date formatter to use when generating NSString representations from NSDate attributes. This type of transformation occurs when RestKit is mapping local objects into JSON or form encoded serializations that do not have a native time construct.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/)" title=")"></a>
+	<h3 class="method-title"><code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p><strong>Deprecated in v0.21.0</strong></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *DEPRECATED_ATTRIBUTE_MESSAGE ( &quot;Use `valueTransformer` instead&quot; )</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>An array of <code>NSFormatter</code> objects to use when mapping string values into <code>NSDate</code> attributes on the target <a href="#//api/name/objectClass"><code>objectClass</code></a>. Each date formatter will be invoked with the string value being mapped until one of the date formatters does not return nil.</p>
+
+<p>Defaults to the application-wide collection of date formatters configured via <a href="#//api/name/setDefaultDateFormatters:"><code>[RKObjectMapping setDefaultDateFormatters:]</code></a></p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><code>[RKObjectMapping defaultDateFormatters]</code></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-09-21</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
