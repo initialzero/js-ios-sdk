@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CIDR_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/.idea" />
+    <content url="file://$MODULE_DIR$/JaspersoftSDK.xcworkspace" />
+    <content url="file://$MODULE_DIR$/Pods">
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPClient.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPClient.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFImageRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFImageRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFJSONRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFJSONRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFNetworking.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFPropertyListRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFPropertyListRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFURLConnectionOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFXMLRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/AFXMLRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/UIImageView+AFNetworking.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AFNetworking/AFNetworking/UIImageView+AFNetworking.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/ISO8601DateFormatterValueTransformer/Code/ISO8601DateFormatterValueTransformer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/ISO8601DateFormatterValueTransformer/Code/ISO8601DateFormatterValueTransformer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/ISO8601DateFormatterValueTransformer/Code/RKISO8601DateFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/ISO8601DateFormatterValueTransformer/Code/RKISO8601DateFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RKValueTransformers/Code/RKValueTransformers.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RKValueTransformers/Code/RKValueTransformers.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/NSManagedObject+RKAdditions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/NSManagedObject+RKAdditions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/NSManagedObjectContext+RKAdditions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/NSManagedObjectContext+RKAdditions.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKConnectionDescription.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKConnectionDescription.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKCoreData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKEntityByAttributeCache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKEntityByAttributeCache.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKEntityCache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKEntityCache.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKEntityMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKEntityMapping.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKFetchRequestManagedObjectCache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKFetchRequestManagedObjectCache.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKInMemoryManagedObjectCache.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKInMemoryManagedObjectCache.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKManagedObjectCaching.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKManagedObjectImporter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKManagedObjectImporter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKManagedObjectMappingOperationDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKManagedObjectMappingOperationDataSource.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKManagedObjectStore.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKManagedObjectStore.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKPropertyInspector+CoreData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKPropertyInspector+CoreData.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKRelationshipConnectionOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/CoreData/RKRelationshipConnectionOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKHTTPRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKHTTPRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKManagedObjectRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKManagedObjectRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKObjectManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKObjectManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKObjectParameterization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKObjectParameterization.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKObjectRequestOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKObjectRequestOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKObjectRequestOperationSubclass.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKPaginator.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKPaginator.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKPathMatcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKPathMatcher.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRequestDescriptor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRequestDescriptor.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKResponseDescriptor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKResponseDescriptor.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKResponseMapperOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKResponseMapperOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRoute.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRoute.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRouteSet.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRouteSet.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRouter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Network/RKRouter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKAttributeMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKAttributeMapping.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKDynamicMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKDynamicMapping.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKErrorMessage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKErrorMessage.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKHTTPUtilities.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKHTTPUtilities.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMapperOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMapperOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMapperOperation_Private.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMapping.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMappingErrors.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMappingOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMappingOperation.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMappingOperationDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMappingResult.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKMappingResult.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectMapping.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectMappingMatcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectMappingMatcher.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectMappingOperationDataSource.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectMappingOperationDataSource.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectUtilities.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKObjectUtilities.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKPropertyInspector.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKPropertyInspector.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKPropertyMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKPropertyMapping.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKRelationshipMapping.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/ObjectMapping/RKRelationshipMapping.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/RestKit.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKDictionaryUtilities.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKDictionaryUtilities.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKDotNetDateFormatter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKDotNetDateFormatter.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKErrors.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKErrors.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKLog.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKLog.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKLumberjackLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKLumberjackLogger.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKMIMETypeSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKMIMETypeSerialization.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKMIMETypes.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKMIMETypes.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKMacros.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKNSJSONSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKNSJSONSerialization.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKOperationStateMachine.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKOperationStateMachine.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKPathUtilities.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKPathUtilities.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKStringTokenizer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKStringTokenizer.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKURLEncodedSerialization.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/RKURLEncodedSerialization.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/lcl_config_components_RK.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/lcl_config_extensions_RK.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Code/Support/lcl_config_logger_RK.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Vendor/LibComponentLogging/Core/lcl_RK.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/RestKit/Vendor/LibComponentLogging/Core/lcl_RK.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SOCKit/SOCKit.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SOCKit/SOCKit.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/ServerReachability/ServerReachability.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/ServerReachability/ServerReachability.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-AFNetworking/Pods-AFNetworking.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ISO8601DateFormatterValueTransformer/Pods-ISO8601DateFormatterValueTransformer-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ISO8601DateFormatterValueTransformer/Pods-ISO8601DateFormatterValueTransformer-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ISO8601DateFormatterValueTransformer/Pods-ISO8601DateFormatterValueTransformer-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ISO8601DateFormatterValueTransformer/Pods-ISO8601DateFormatterValueTransformer.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RKValueTransformers/Pods-RKValueTransformers-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RKValueTransformers/Pods-RKValueTransformers-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RKValueTransformers/Pods-RKValueTransformers-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RKValueTransformers/Pods-RKValueTransformers.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RestKit/Pods-RestKit-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RestKit/Pods-RestKit-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RestKit/Pods-RestKit-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-RestKit/Pods-RestKit.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-SOCKit/Pods-SOCKit-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-SOCKit/Pods-SOCKit-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-SOCKit/Pods-SOCKit-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-SOCKit/Pods-SOCKit.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ServerReachability/Pods-ServerReachability-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ServerReachability/Pods-ServerReachability-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ServerReachability/Pods-ServerReachability-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ServerReachability/Pods-ServerReachability.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TransitionKit/Pods-TransitionKit-Private.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TransitionKit/Pods-TransitionKit-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TransitionKit/Pods-TransitionKit-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-TransitionKit/Pods-TransitionKit.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-environment.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods/Pods.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKEvent.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKEvent.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKState.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKState.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKStateMachine.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKStateMachine.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKTransition.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TKTransition.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/TransitionKit/Code/TransitionKit.h" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
