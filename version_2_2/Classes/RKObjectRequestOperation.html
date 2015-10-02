@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKObjectRequestOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/HTTPRequestOperation">HTTPRequestOperation</option>
+		
+		<option value="//api/name/error">error</option>
+		
+		<option value="//api/name/failureCallbackQueue">failureCallbackQueue</option>
+		
+		<option value="//api/name/mappingMetadata">mappingMetadata</option>
+		
+		<option value="//api/name/mappingResult">mappingResult</option>
+		
+		<option value="//api/name/responseDescriptors">responseDescriptors</option>
+		
+		<option value="//api/name/successCallbackQueue">successCallbackQueue</option>
+		
+		<option value="//api/name/targetObject">targetObject</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/canProcessRequest:">+ canProcessRequest:</option>
+		
+		<option value="//api/name/responseMappingQueue">+ responseMappingQueue</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithHTTPRequestOperation:responseDescriptors:">- initWithHTTPRequestOperation:responseDescriptors:</option>
+		
+		<option value="//api/name/initWithRequest:responseDescriptors:">- initWithRequest:responseDescriptors:</option>
+		
+		<option value="//api/name/performMappingOnResponseWithCompletionBlock:">- performMappingOnResponseWithCompletionBlock:</option>
+		
+		<option value="//api/name/setCompletionBlockWithSuccess:failure:">- setCompletionBlockWithSuccess:failure:</option>
+		
+		<option value="//api/name/setWillMapDeserializedResponseBlock:">- setWillMapDeserializedResponseBlock:</option>
+		
+		<option value="//api/name/willFinish">- willFinish</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKObjectRequestOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSOperation</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td>NSCopying<br /><a href="../Protocols/RKMapperOperationDelegate.html">RKMapperOperationDelegate</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKObjectRequestOperation.h<br />RKObjectRequestOperation.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>RKObjectRequestOperation</code> is an <code>NSOperation</code> subclass that implements object mapping on the response body of an <code>NSHTTPResponse</code> loaded via an <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a>.</p>
+
+<p>Object request operations are initialized with a fully configured <code>NSURLRequest</code> object and an array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects. <code>RKObjectRequestOperation</code> is internally implemented as an aggregate operation that constructs and starts an <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> to perform the network access and retrieve the mappable data. If an <a href="#//api/name/error">error</a> occurs during HTTP transport, the object request operation is failed with the transport <a href="#//api/name/error">error</a>. Once response data is loaded for the request, the object request operation creates and starts an <a href="../Classes/RKObjectResponseMapperOperation.html"><code>RKObjectResponseMapperOperation</code></a> to perform the object mapping on the response body. If the mapping operation fails, then object request operation is failed and the <a href="#//api/name/error"><code>error</code></a> property is set. If mapping is successful, then the <a href="#//api/name/mappingResult"><code>mappingResult</code></a> property is set and the operation is finished successfully.</p>
+
+<h2>Acceptable Content Types and Status Codes</h2>
+
+<p>Instances of <code>RKObjectRequestOperation</code> determine the acceptability of status codes and content types differently than is typical for <code>AFNetworking</code> derived network opertations. The <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> (which is a subclass of the AFNetworking <a href="../Classes/AFHTTPRequestOperation.html"><code>AFHTTPRequestOperation</code></a> class) supports the dynamic assignment of acceptable status codes and content types. This facility is utilized during the configuration of the network operation for an object request operation. The set of acceptable content types is determined by consulting the <a href="../Classes/RKMIMETypeSerialization.html"><code>RKMIMETypeSerialization</code></a> via an invocation of <a href="../Classes/RKMIMETypeSerialization.html#//api/name/registeredMIMETypes"><code>[RKMIMETypeSerialization registeredMIMETypes]</code></a>. The <code>registeredMIMETypes</code> method returns an <code>NSSet</code> containing either <code>NSString</code> or <code>NSRegularExpression</code> objects that specify the content types for which <a href="../Protocols/RKSerialization.html"><code>RKSerialization</code></a> classes have been registered to handle. The set of acceptable status codes is determined by aggregating the value of the <code>statusCodes</code> property from all registered <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects.</p>
+
+<h2>Error Mapping</h2>
+
+<p>If the HTTP request returned a response in the Client Error (400-499 range) or Server Error (500-599 range) class and an appropriate <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> is provided to perform mapping on the response, then the object mapping result is considered to contain a server returned <a href="#//api/name/error">error</a>. In this case, an <code>NSError</code> object is created in the <code>RKErrorDomain</code> with an <a href="#//api/name/error">error</a> code of <code>RKMappingErrorFromMappingResult</code> and the object request operation is failed. In the event that an a response is returned in an <a href="#//api/name/error">error</a> class and no <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> has been provided to the operation to handle it, then an <code>NSError</code> object in the <code>AFNetworkingErrorDomain</code> with an <a href="#//api/name/error">error</a> code of <code>NSURLErrorBadServerResponse</code> will be returned by the underlying <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> indicating that an unexpected status code was returned.</p>
+
+<h2>Metadata Mapping</h2>
+
+<p>The <code>RKObjectRequestOperation</code> class provides support for metadata mapping via the <a href="#//api/name/mappingMetadata"><code>mappingMetadata</code></a> property. This optional dictionary of user supplied information is made available to the mapping operations executed when processing the HTTP response loaded by an object request operation. More details about the metadata mapping architecture is available on the <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> documentation.</p>
+
+<h2>Prioritization and Cancellation</h2>
+
+<p>Object request operations support prioritization and cancellation of the underlying <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> and <a href="../Classes/RKResponseMapperOperation.html"><code>RKResponseMapperOperation</code></a> operations that perform the network transport and object mapping duties on their behalf. The queue priority of the object request operation, as set via the <code>[NSOperation setQueuePriority:]</code> method, is applied to the underlying response mapping operation when it is enqueued onto the <a href="#//api/name/responseMappingQueue"><code>responseMappingQueue</code></a>. If the object request operation is cancelled, then the underlying HTTP request operation and response mapping operation are also cancelled.</p>
+
+<h2>Caching</h2>
+
+<p>Instances of <code>RKObjectRequestOperation</code> support all the HTTP caching facilities available via the <code>NSURLConnection</code> family of API&rsquo;s. For caching to be enabled, the remote web server that the application is communicating with must emit the appropriate <code>Cache-Control</code>, <code>Expires</code>, and/or <code>ETag</code> headers. When the response headers include the appropriate caching information, the shared <code>NSURLCache</code> instance will manage responses and transparently add conditional GET support to cachable requests. HTTP caching is a deep topic explored in depth across the web and detailed in RFC 2616: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</a></p>
+
+<p>The <code>RKObjectRequestOperation</code> class also provides support for utilizing the <code>NSURLCache</code> to satisfy requests without hitting the network. This support enables applications to display views presenting data retrieved via a cachable <code>GET</code> request without revalidating with the server and incurring any overhead. The optimization is controlled via <code>avoidsNetworkAccess</code> property. When enabled, the operation will skip the network transport portion of the object request operation and proceed directly to object mapping the cached response data. When the object request operation is an instance of <a href="../Classes/RKManagedObjectRequestOperation.html"><code>RKManagedObjectRequestOperation</code></a>, the deserialization and mapping portion of the process can be skipped entirely and the operation will fetch the appropriate object directly from Core Data, falling back to network transport once the cache entry has expired. Please refer to the documentation accompanying <a href="../Classes/RKManagedObjectRequestOperation.html"><code>RKManagedObjectRequestOperation</code></a> for more details.</p>
+
+<h2>Core Data</h2>
+
+<p><code>RKObjectRequestOperation</code> is not able to perform object mapping that targets Core Data destination entities. Please refer to the <a href="../Classes/RKManagedObjectRequestOperation.html"><code>RKManagedObjectRequestOperation</code></a> subclass for details regarding performing a Core Data object request operation.</p>
+
+<h2>Subclassing Notes</h2>
+
+<p>The <code>RKObjectRequestOperation</code> is a non-current <code>NSOperation</code> subclass and can be extended by subclassing and providing an implementation of the <code>main</code> method. It conforms to the <a href="../Protocols/RKMapperOperationDelegate.html"><code>RKMapperOperationDelegate</code></a> protocol, providing access to the lifecycle of the mapping process to subclasses.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Initializing an Object Request Operation" name="task_Initializing an Object Request Operation"></a>
+						<h2 class="task-title">Initializing an Object Request Operation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithHTTPRequestOperation:responseDescriptors:" title="initWithHTTPRequestOperation:responseDescriptors:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithHTTPRequestOperation:responseDescriptors:">&ndash;&nbsp;initWithHTTPRequestOperation:responseDescriptors:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes an object request operation with an HTTP request operation and a set of response descriptors.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithHTTPRequestOperation:(RKHTTPRequestOperation *)<em>requestOperation</em> responseDescriptors:(NSArray *)<em>responseDescriptors</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>requestOperation</code></th>
+						<td><p>The request object to be used with the underlying network operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>responseDescriptors</code></th>
+						<td><p>An array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects specifying how object mapping is to be performed on the response loaded by the network operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given request and response descriptors.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This is the designated initializer.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithRequest:responseDescriptors:" title="initWithRequest:responseDescriptors:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithRequest:responseDescriptors:">&ndash;&nbsp;initWithRequest:responseDescriptors:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes an object request operation with a request object and a set of response descriptors.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithRequest:(NSURLRequest *)<em>request</em> responseDescriptors:(NSArray *)<em>responseDescriptors</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>The request object to be used with the underlying network operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>responseDescriptors</code></th>
+						<td><p>An array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects specifying how object mapping is to be performed on the response loaded by the network operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the given request and response descriptors.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method is a convenience initializer for initializing an object request operation from a URL request with the default HTTP operation class <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a>. This method is functionally equivalent to the following example code:</p>
+
+<pre><code>RKHTTPRequestOperation *requestOperation = [[RKHTTPRequestOperation alloc] initWithRequest:request];
+RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithHTTPRequestOperation:requestOperation responseDescriptors:responseDescriptors];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Configuring Object Mapping" name="task_Configuring Object Mapping"></a>
+						<h2 class="task-title">Configuring Object Mapping</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/responseDescriptors" title="responseDescriptors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseDescriptors">&nbsp;&nbsp;responseDescriptors</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects that specify how the deserialized <code>responseData</code> is to be object mapped.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *responseDescriptors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The response descriptors define the acceptable HTTP Status Codes of the receiver.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/targetObject" title="targetObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/targetObject">&nbsp;&nbsp;targetObject</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The target object for the object mapping operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id targetObject</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingMetadata" title="mappingMetadata"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingMetadata">&nbsp;&nbsp;mappingMetadata</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An optional dictionary of metadata to make available to mapping operations executed while processing the HTTP response loaded by the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *mappingMetadata</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing Operation Results" name="task_Accessing Operation Results"></a>
+						<h2 class="task-title">Accessing Operation Results</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mappingResult" title="mappingResult"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingResult">&nbsp;&nbsp;mappingResult</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The mapping result returned by the underlying <a href="../Classes/RKObjectResponseMapperOperation.html"><code>RKObjectResponseMapperOperation</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKMappingResult *mappingResult</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This property is <code>nil</code> if the operation is failed due to a network transport <a href="#//api/name/error">error</a> or no mapping was peformed on the response.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="method-title"><code><a href="#//api/name/error">&nbsp;&nbsp;error</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The error, if any, that occurred during execution of the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSError *error</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Errors may originate during the network transport or object mapping phases of the object request operation. A <code>nil</code> error value indicates that the operation completed successfully.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing the HTTP Request Operation" name="task_Accessing the HTTP Request Operation"></a>
+						<h2 class="task-title">Accessing the HTTP Request Operation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/HTTPRequestOperation" title="HTTPRequestOperation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/HTTPRequestOperation">&nbsp;&nbsp;HTTPRequestOperation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The underlying <a href="../Classes/RKHTTPRequestOperation.html"><code>RKHTTPRequestOperation</code></a> object used to manage the HTTP request/response lifecycle of the object request operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKHTTPRequestOperation *HTTPRequestOperation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Setting the Completion Block and Callback Queues" name="task_Setting the Completion Block and Callback Queues"></a>
+						<h2 class="task-title">Setting the Completion Block and Callback Queues</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setCompletionBlockWithSuccess:failure:" title="setCompletionBlockWithSuccess:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCompletionBlockWithSuccess:failure:">&ndash;&nbsp;setCompletionBlockWithSuccess:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the <code>completionBlock</code> property with a block that executes either the specified success or failure block, depending on the state of the object request on completion. If <a href="#//api/name/error"><code>error</code></a> returns a value, which can be set during HTTP transport by the underlying <a href="#//api/name/HTTPRequestOperation"><code>HTTPRequestOperation</code></a> or during object mapping by the <a href="../Classes/RKResponseMapperOperation.html"><code>RKResponseMapperOperation</code></a> object, then <code>failure</code> is executed. If the object request operation is cancelled, then the failure block will be executed with either a <code>RKOperationCancelledError</code> or a <code>NSURLErrorCancelled</code>, depending on the internal state of the operation at time of cancellation. Otherwise, <code>success</code> is executed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCompletionBlockWithSuccess:(void ( ^ ) ( RKObjectRequestOperation *operation , RKMappingResult *mappingResult ))<em>success</em> failure:(void ( ^ ) ( RKObjectRequestOperation *operation , NSError *error ))<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>The block to be executed on the completion of a successful operation. This block has no return value and takes two arguments: the receiver operation and the mapping result from object mapping the response data of the request.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>The block to be executed on the completion of an unsuccessful operation. This block has no return value and takes two arguments: the receiver operation and the <a href="#//api/name/error">error</a> that occurred during the execution of the operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/successCallbackQueue" title="successCallbackQueue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/successCallbackQueue">&nbsp;&nbsp;successCallbackQueue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The callback dispatch queue on success. If <code>NULL</code> (default), the main queue is used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) dispatch_queue_t successCallbackQueue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The queue is retained while this operation is living</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/failureCallbackQueue" title="failureCallbackQueue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/failureCallbackQueue">&nbsp;&nbsp;failureCallbackQueue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The callback dispatch queue on failure. If <code>NULL</code> (default), the main queue is used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) dispatch_queue_t failureCallbackQueue</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The queue is retained while this operation is living</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setWillMapDeserializedResponseBlock:" title="setWillMapDeserializedResponseBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setWillMapDeserializedResponseBlock:">&ndash;&nbsp;setWillMapDeserializedResponseBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets a block to be executed before the object request operation begins mapping the deserialized response body, providing an opportunity to manipulate the mappable representation input that will be passed to the response mapper.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setWillMapDeserializedResponseBlock:(id ( ^ ) ( id deserializedResponseBody ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>A block object to be executed before the deserialized response is passed to the response mapper. The block has an <code>id</code> return type and must return a dictionary or array of dictionaries corresponding to the object representations that are to be mapped. The block accepts a single argument: the deserialized response data that was loaded via HTTP. If you do not wish to make any chances to the response body before mapping begins, the block should return the value passed in the <code>deserializedResponseBody</code> block argument. Returning <code>nil</code> will decline the mapping from proceeding and fail the operation with an <a href="#//api/name/error">error</a> with the <code>RKMappingErrorMappingDeclined</code> code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> The deserialized response body may or may not be immutable depending on the implementation details of the <a href="../Protocols/RKSerialization.html"><code>RKSerialization</code></a> class that deserialized the response. If you wish to make changes to the mappable object representations, you must obtain a mutable copy of the response body input.</p></div>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Classes/RKResponseMapperOperation.html#//api/name/willMapDeserializedResponseBlock">[RKResponseMapperOperation setWillMapDeserializedResponseBlock:]</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Determining Whether a Request Can Be Processed" name="task_Determining Whether a Request Can Be Processed"></a>
+						<h2 class="task-title">Determining Whether a Request Can Be Processed</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/canProcessRequest:" title="canProcessRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/canProcessRequest:">+&nbsp;canProcessRequest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a Boolean value determining whether or not the class can process the specified request.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)canProcessRequest:(NSURLRequest *)<em>request</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>The request that is determined to be supported or not supported for this class.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing the Response Mapping Queue" name="task_Accessing the Response Mapping Queue"></a>
+						<h2 class="task-title">Accessing the Response Mapping Queue</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/responseMappingQueue" title="responseMappingQueue"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseMappingQueue">+&nbsp;responseMappingQueue</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the operation queue used by all object request operations when object mapping the body of a response loaded via HTTP.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSOperationQueue *)responseMappingQueue</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The response mapping queue.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>By default, the response mapping queue is configured with a maximum concurrent operation count of 1, ensuring that only one HTTP response is mapped at a time.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/performMappingOnResponseWithCompletionBlock:" title="performMappingOnResponseWithCompletionBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/performMappingOnResponseWithCompletionBlock:">&ndash;&nbsp;performMappingOnResponseWithCompletionBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Performs object mapping using the <code>response</code> and <code>responseData</code> properties.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)performMappingOnResponseWithCompletionBlock:(void ( ^ ) ( RKMappingResult *mappingResult , NSError *error ))<em>completionBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>A pointer to an <code>NSError</code> object to be set in the event that the object mapping process has failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A mapping result or <code>nil</code> if an <a href="../Classes/RKObjectRequestOperation.html#//api/name/error">error</a> has occurred.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The <code>RKObjectRequestOperation</code> superclass is responsible for the invocation of this method and the subsequent handling of the mapping result or <a href="../Classes/RKObjectRequestOperation.html#//api/name/error">error</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperationSubclass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/willFinish" title="willFinish"></a>
+	<h3 class="method-title"><code><a href="#//api/name/willFinish">&ndash;&nbsp;willFinish</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Invoked to tell the receiver that the object request operation is finishing its work and is about to transition into the finished state. Used to perform any necessary cleanup before the operation is finished.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)willFinish</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKObjectRequestOperationSubclass.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 TIBCO Jaspersoft. All rights reserved. Updated: 2015-10-02</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
