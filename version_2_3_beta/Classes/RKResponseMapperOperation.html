@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKResponseMapperOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/data">data</option>
+		
+		<option value="//api/name/error">error</option>
+		
+		<option value="//api/name/mapperDelegate">mapperDelegate</option>
+		
+		<option value="//api/name/mappingMetadata">mappingMetadata</option>
+		
+		<option value="//api/name/mappingResult">mappingResult</option>
+		
+		<option value="//api/name/matchingResponseDescriptors">matchingResponseDescriptors</option>
+		
+		<option value="//api/name/request">request</option>
+		
+		<option value="//api/name/response">response</option>
+		
+		<option value="//api/name/responseDescriptors">responseDescriptors</option>
+		
+		<option value="//api/name/responseMappingsDictionary">responseMappingsDictionary</option>
+		
+		<option value="//api/name/targetObject">targetObject</option>
+		
+		<option value="//api/name/treatsEmptyResponseAsSuccess">treatsEmptyResponseAsSuccess</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/registerMappingOperationDataSourceClass:">+ registerMappingOperationDataSourceClass:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithRequest:response:data:responseDescriptors:">- initWithRequest:response:data:responseDescriptors:</option>
+		
+		<option value="//api/name/setDidFinishMappingBlock:">- setDidFinishMappingBlock:</option>
+		
+		<option value="//api/name/setWillMapDeserializedResponseBlock:">- setWillMapDeserializedResponseBlock:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKResponseMapperOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKResponseMapperOperation.h<br />RKResponseMapperOperation.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>RKResponseMapperOperation</code> is an <code>NSOperation</code> that provides support for performing object mapping on an <code>NSHTTPURLResponse</code> and its associated <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a>.</p>
+
+<p>This is an abstract base class encapsulating the common interface API for its concrete subclasses <a href="../Classes/RKObjectResponseMapperOperation.html"><code>RKObjectResponseMapperOperation</code></a> and <a href="../Classes/RKManagedObjectResponseMapperOperation.html"><code>RKManagedObjectResponseMapperOperation</code></a>.</p>
+
+<p>The common behaviors encapsulated within <code>RKResponseMapperOperation</code> include:</p>
+
+<ol>
+<li><strong>Handling Empty Responses</strong>: Empty <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a> (see note below) requires special handling depending on the status code of the HTTP <a href="#//api/name/response">response</a>. If an empty <a href="#//api/name/response">response</a> is loaded with a status code in 4xx (Client Error) range, an <code>NSError</code> in the <code>RKErrorDomain</code> is created with the <code>NSURLErrorBadServerResponse</code> code to indicate that the <a href="#//api/name/response">response</a> was not processable. If an empty <a href="#//api/name/response">response</a> is loaded with a status code in 2xx (Successful) range, the interpretation of the <a href="#//api/name/response">response</a> is dependent on the value of <a href="#//api/name/treatsEmptyResponseAsSuccess"><code>treatsEmptyResponseAsSuccess</code></a>. When <code>YES</code>, empty responses result in the successful completion of the operation with an <a href="../Classes/RKMappingResult.html"><code>RKMappingResult</code></a> containing the <a href="#//api/name/targetObject">targetObject</a> of the operation, if any.</li>
+<li><strong>Deserializing Response Data</strong>: When started, the operation attempts to deserialize the <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a> into a Foundation object representation using the <a href="../Classes/RKMIMETypeSerialization.html"><code>RKMIMETypeSerialization</code></a> class. This deserialized representation is then made available to subclass implementations that perform the actual object mapping work.</li>
+</ol>
+
+
+<h2>How &lsquo;Empty&rsquo; Responses are Evaluated</h2>
+
+<p>Any <code>nil</code> <a href="#//api/name/response">response</a> or <code>NSData</code> object with a length equal to zero is considered empty. To support a common behavior of the widely deployed Ruby on Rails Framework, <code>RKResponseMapperOperation</code> also considers a <a href="#//api/name/response">response</a> containing a single space character to be empty. This type of <a href="#//api/name/response">response</a> is generated by Rails whe <code>render :nothing =&gt; true</code> is invoked.</p>
+
+<h2>Meta<a href="#//api/name/data">data</a> Mapping</h2>
+
+<p>The <code>RKResponseMapperOperation</code> class integrates with the meta<a href="#//api/name/data">data</a> mapping architecture. Clients of the <a href="#//api/name/response">response</a> mapper can provide a dictionary of meta<a href="#//api/name/data">data</a> via the <a href="#//api/name/mappingMetadata"><code>mappingMetadata</code></a> property and it will be made available to the underlying <a href="../Classes/RKMapperOperation.html"><code>RKMapperOperation</code></a> executed to process the <a href="#//api/name/response">response</a> body. In addition to any user supplied meta<a href="#//api/name/data">data</a>, the <a href="#//api/name/response">response</a> mapper makes the following meta<a href="#//api/name/data">data</a> key paths available for mapping:</p>
+
+<ol>
+<li><code>@meta</code>data<code>.HTTP.</code>request<code>.URL</code> - The <code>NSURL</code> object identifying the URL of the <a href="#//api/name/request">request</a> that loaded the <a href="#//api/name/response">response</a>.</li>
+<li><code>@meta</code>data<code>.HTTP.</code>request<code>.method</code> - An <code>NSString</code> specifying the HTTP method of the <a href="#//api/name/request">request</a> that loaded the <a href="#//api/name/response">response</a>.</li>
+<li><code>@meta</code>data<code>.HTTP.</code>request<code>.headers</code> - An <code>NSDictionary</code> object containing all HTTP headers and values for the <a href="#//api/name/request">request</a> that loaded the <a href="#//api/name/response">response</a>.</li>
+<li><code>@meta</code>data<code>.HTTP.</code>response<code>.URL</code> - The <code>NSURL</code> object identifying the URL of the <a href="#//api/name/response">response</a>.</li>
+<li><code>@meta</code>data<code>.HTTP.</code>response<code>.headers</code> - An <code>NSDictionary</code> object containing all HTTP headers and values for the <a href="#//api/name/response">response</a>.</li>
+</ol>
+
+
+<p>Please refer to the documentation accompanying <a href="../Classes/RKMappingOperation.html"><code>RKMappingOperation</code></a> for more details on meta<a href="#//api/name/data">data</a> mapping.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Initializing a Response Mapping Operation" name="task_Initializing a Response Mapping Operation"></a>
+						<h2 class="task-title">Initializing a Response Mapping Operation</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithRequest:response:data:responseDescriptors:" title="initWithRequest:response:data:responseDescriptors:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithRequest:response:data:responseDescriptors:">&ndash;&nbsp;initWithRequest:response:data:responseDescriptors:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns a newly created <a href="#//api/name/response">response</a> mapper operation with the given <a href="#//api/name/request">request</a>, HTTP <a href="#//api/name/response">response</a>, <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a>, and an array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithRequest:(NSURLRequest *)<em>request</em> response:(NSHTTPURLResponse *)<em>response</em> data:(NSData *)<em>data</em> responseDescriptors:(NSArray *)<em>responseDescriptors</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>The <a href="#//api/name/request">request</a> object for which the <a href="#//api/name/response">response</a> was loaded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>response</code></th>
+						<td><p>The HTTP <a href="#//api/name/response">response</a> object to be used for object mapping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>The <a href="#//api/name/data">data</a> loaded for the <a href="#//api/name/response">response</a> body.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>responseDescriptors</code></th>
+						<td><p>An array whose elements are <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects specifying object mapping configurations that may be applied to the <a href="#//api/name/response">response</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The receiver, initialized with the <a href="#//api/name/response">response</a>, <a href="#//api/name/data">data</a>, and <a href="#//api/name/response">response</a> descriptor objects.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing HTTP Request and Response Data" name="task_Accessing HTTP Request and Response Data"></a>
+						<h2 class="task-title">Accessing HTTP Request and Response Data</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/request" title="request"></a>
+	<h3 class="method-title"><code><a href="#//api/name/request">&nbsp;&nbsp;request</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An request object for which the <a href="#//api/name/response">response</a> was loaded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURLRequest *request</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/response" title="response"></a>
+	<h3 class="method-title"><code><a href="#//api/name/response">&nbsp;&nbsp;response</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The response object that loaded the <a href="#//api/name/data">data</a> that is to be object mapped by the operation. Cannot be <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSHTTPURLResponse *response</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/data" title="data"></a>
+	<h3 class="method-title"><code><a href="#//api/name/data">&nbsp;&nbsp;data</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The <a href="#//api/name/response">response</a> data that is to be deserialized and mapped by the operation. May be <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSData *data</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Configuring Object Mapping" name="task_Configuring Object Mapping"></a>
+						<h2 class="task-title">Configuring Object Mapping</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/responseDescriptors" title="responseDescriptors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseDescriptors">&nbsp;&nbsp;responseDescriptors</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An array of <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects that specify object mapping configurations that may be applied to the deserialized <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a> if they are found to match the <a href="#//api/name/response">response</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *responseDescriptors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/targetObject" title="targetObject"></a>
+	<h3 class="method-title"><code><a href="#//api/name/targetObject">&nbsp;&nbsp;targetObject</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The target object for the object mapping operation performed on the deserialized <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a>. May be <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id targetObject</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When object mapping is being performed against a known object, the targetObject is set to ensure that the mapping is applied to the appropriate object reference. When <code>nil</code>, the mapping operation will result in the fetching or creation of new objects as necessary to satisfy the mapping configuration.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapperDelegate" title="mapperDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapperDelegate">&nbsp;&nbsp;mapperDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The delegate for the <a href="../Classes/RKMapperOperation.html"><code>RKMapperOperation</code></a> created by the receiver to perform object mapping on the deserialized <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a>. May be <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;RKMapperOperationDelegate&gt; mapperDelegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The delegate provides access to the details of the mapping process as it is executing. Be aware that the delegate will be invoked from the thread on which the mapping is executing.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingMetadata" title="mappingMetadata"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingMetadata">&nbsp;&nbsp;mappingMetadata</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An optional dictionary of meta<a href="#//api/name/data">data</a> to make available to mapping operations executed by the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *mappingMetadata</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/treatsEmptyResponseAsSuccess" title="treatsEmptyResponseAsSuccess"></a>
+	<h3 class="method-title"><code><a href="#//api/name/treatsEmptyResponseAsSuccess">&nbsp;&nbsp;treatsEmptyResponseAsSuccess</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean value that indicates if the receiver should consider empty responses as being successfully mapped even though no mapping is actually performed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL treatsEmptyResponseAsSuccess</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>When <code>YES</code> and the <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a> is empty (see below), a mapping result will be returned containing the target object (if any). Otherwise, the <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a> will be pass through to the parser which may generate an <a href="#//api/name/error">error</a>.</p>
+
+<p><strong>Default:</strong> <code>YES</code></p><div class="warning"><p><strong>Warning:</strong> To support the Ruby on Rails behavior of rendering a single space character on invocation of <code>render :nothing =&gt; true</code>, a <a href="#//api/name/response">response</a> body&rsquo;s containing only a single space is treated as empty.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/responseMappingsDictionary" title="responseMappingsDictionary"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseMappingsDictionary">&nbsp;&nbsp;responseMappingsDictionary</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a dictionary of key path to <a href="../Classes/RKMapping.html"><code>RKMapping</code></a> objects that are applicable to mapping the <a href="#//api/name/response">response</a>. This is determined by evaluating the URL and status codes of the <a href="#//api/name/response">response</a> against the set of <a href="#//api/name/responseDescriptors"><code>responseDescriptors</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *responseMappingsDictionary</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/matchingResponseDescriptors" title="matchingResponseDescriptors"></a>
+	<h3 class="method-title"><code><a href="#//api/name/matchingResponseDescriptors">&nbsp;&nbsp;matchingResponseDescriptors</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an array containing all <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> objects in the configured <a href="#//api/name/responseDescriptors"><code>responseDescriptors</code></a> array that were found to match the <a href="#//api/name/response">response</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *matchingResponseDescriptors</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Accessing Mapping Results" name="task_Accessing Mapping Results"></a>
+						<h2 class="task-title">Accessing Mapping Results</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mappingResult" title="mappingResult"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingResult">&nbsp;&nbsp;mappingResult</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The results of performing object mapping on the deserialized <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a>. In the event that the operation has failed, the value will is <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RKMappingResult *mappingResult</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The <code>keyPath</code> of each <a href="../Classes/RKResponseDescriptor.html"><code>RKResponseDescriptor</code></a> from the <a href="#//api/name/responseDescriptors"><code>responseDescriptors</code></a> set that was successfully mapped from the <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a> will appear as an entry in the mapping result.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="method-title"><code><a href="#//api/name/error">&nbsp;&nbsp;error</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The error, if any, that occured during execution of the operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSError *error</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Configuring Callbacks" name="task_Configuring Callbacks"></a>
+						<h2 class="task-title">Configuring Callbacks</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setWillMapDeserializedResponseBlock:" title="setWillMapDeserializedResponseBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setWillMapDeserializedResponseBlock:">&ndash;&nbsp;setWillMapDeserializedResponseBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets a block to be executed before the <a href="#//api/name/response">response</a> mapper operation begins mapping the deserialized <a href="#//api/name/response">response</a> body, providing an opportunity to manipulate the mappable representation input before mapping begins.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setWillMapDeserializedResponseBlock:(id ( ^ ) ( id deserializedResponseBody ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>A block object to be executed before the deserialized <a href="#//api/name/response">response</a> is passed to the <a href="#//api/name/response">response</a> mapper. The block has an <code>id</code> return type and must return a dictionary or array of dictionaries corresponding to the object representations that are to be mapped. The block accepts a single argument: the deserialized <a href="#//api/name/response">response</a> <a href="#//api/name/data">data</a> that was loaded via HTTP. If you do not wish to make any chances to the <a href="#//api/name/response">response</a> body before mapping begins, the block should return the value passed in the <code>deserializedResponseBody</code> block argument. Returning <code>nil</code> will decline the mapping from proceeding and fail the operation with an <a href="#//api/name/error">error</a> with the <code>RKMappingErrorMappingDeclined</code> code.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> The deserialized <a href="#//api/name/response">response</a> body may or may not be immutable depending on the implementation details of the <a href="../Protocols/RKSerialization.html"><code>RKSerialization</code></a> class that deserialized the <a href="#//api/name/response">response</a>. If you wish to make changes to the mappable object representations, you must obtain a mutable copy of the <a href="#//api/name/response">response</a> body input.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setDidFinishMappingBlock:" title="setDidFinishMappingBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setDidFinishMappingBlock:">&ndash;&nbsp;setDidFinishMappingBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets a block to be executed when the <a href="#//api/name/response">response</a> mapper operation has completed its mapping activities. This method is distinct from the <code>completionBlock</code> because it is invoked while the operation is still executing. This block is guaranteed to be called even if the receiver is cancelled before it has been started.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setDidFinishMappingBlock:(void ( ^ ) ( RKMappingResult *mappingResult , NSError *error ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>A block object to be executed when the <a href="#//api/name/response">response</a> mapping is finished. The block has no return value and accepts two arguments: an <code>RKNappingResult</code> object that was mapped from the <a href="#//api/name/response">response</a> or an <code>NSError</code> <a href="#//api/name/error">error</a> indicating that the mapping has failed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Registering a Mapping Operation Data Source Class" name="task_Registering a Mapping Operation Data Source Class"></a>
+						<h2 class="task-title">Registering a Mapping Operation Data Source Class</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/registerMappingOperationDataSourceClass:" title="registerMappingOperationDataSourceClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerMappingOperationDataSourceClass:">+&nbsp;registerMappingOperationDataSourceClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Registers the given <a href="#//api/name/data">data</a> source class to to be used for mapper operations constructed by instances of the receiver.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerMappingOperationDataSourceClass:(Class&lt;RKMappingOperationDataSource&gt;)<em>dataSourceClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dataSourceClass</code></th>
+						<td><p>The class conforming to the <a href="../Protocols/RKMappingOperationDataSource.html">RKMappingOperationDataSource</a> protocol to be registered for use with mapper operations.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><strong>NOTE</strong>: The receiver class is significant to the registration: <code>[RKObjectResponseMapperOperation registerMappingOperationDataSourceClass:[MyDataSourceClass class]]</code> registers a <a href="#//api/name/data">data</a> source for use with instances of <a href="../Classes/RKObjectResponseMapperOperation.html"><code>RKObjectResponseMapperOperation</code></a> exclusively. When registering a <a href="#//api/name/data">data</a> source for <a href="../Classes/RKManagedObjectResponseMapperOperation.html"><code>RKManagedObjectResponseMapperOperation</code></a> the given class must inherit from <a href="../Classes/RKManagedObjectMappingOperationDataSource.html"><code>RKManagedObjectMappingOperationDataSource</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKResponseMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 TIBCO Jaspersoft. All rights reserved. Updated: 2016-01-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

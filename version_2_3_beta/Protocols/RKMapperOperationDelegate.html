@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKMapperOperationDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/mapper:didFailMappingOperation:forKeyPath:withError:">- mapper:didFailMappingOperation:forKeyPath:withError:</option>
+		
+		<option value="//api/name/mapper:didFindRepresentationOrArrayOfRepresentations:atKeyPath:">- mapper:didFindRepresentationOrArrayOfRepresentations:atKeyPath:</option>
+		
+		<option value="//api/name/mapper:didFinishMappingOperation:forKeyPath:">- mapper:didFinishMappingOperation:forKeyPath:</option>
+		
+		<option value="//api/name/mapper:didNotFindRepresentationOrArrayOfRepresentationsAtKeyPath:">- mapper:didNotFindRepresentationOrArrayOfRepresentationsAtKeyPath:</option>
+		
+		<option value="//api/name/mapper:willStartMappingOperation:forKeyPath:">- mapper:willStartMappingOperation:forKeyPath:</option>
+		
+		<option value="//api/name/mapperDidCancelMapping:">- mapperDidCancelMapping:</option>
+		
+		<option value="//api/name/mapperDidFinishMapping:">- mapperDidFinishMapping:</option>
+		
+		<option value="//api/name/mapperWillStartMapping:">- mapperWillStartMapping:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKMapperOperationDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKMapperOperation.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Objects wishing to act as the delegate for <a href="../Classes/RKMapperOperation.html"><code>RKMapperOperation</code></a> objects must adopt the <code>RKMapperOperationDelegate</code> protocol. The protocol provides a rich set of optional callback methods that provides insight into the lifecycle of a mapper operation.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Tracking Mapper Status" name="task_Tracking Mapper Status"></a>
+						<h2 class="task-title">Tracking Mapper Status</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mapperWillStartMapping:" title="mapperWillStartMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapperWillStartMapping:">&ndash;&nbsp;mapperWillStartMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that the mapper operation is about to start mapping.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapperWillStartMapping:(RKMapperOperation *)<em>mapper</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation that is about to start mapping.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapperDidFinishMapping:" title="mapperDidFinishMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapperDidFinishMapping:">&ndash;&nbsp;mapperDidFinishMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that the mapper has finished.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapperDidFinishMapping:(RKMapperOperation *)<em>mapper</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation that has finished mapping.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapperDidCancelMapping:" title="mapperDidCancelMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapperDidCancelMapping:">&ndash;&nbsp;mapperDidCancelMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that the mapper has been cancelled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapperDidCancelMapping:(RKMapperOperation *)<em>mapper</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation that was cancelled.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Key Path Search Messages" name="task_Key Path Search Messages"></a>
+						<h2 class="task-title">Key Path Search Messages</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mapper:didFindRepresentationOrArrayOfRepresentations:atKeyPath:" title="mapper:didFindRepresentationOrArrayOfRepresentations:atKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapper:didFindRepresentationOrArrayOfRepresentations:atKeyPath:">&ndash;&nbsp;mapper:didFindRepresentationOrArrayOfRepresentations:atKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that the mapper has found one or more mappable object representations at a key path specified in the <code>mappingsDictionary</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapper:(RKMapperOperation *)<em>mapper</em> didFindRepresentationOrArrayOfRepresentations:(id)<em>dictionaryOrArrayOfDictionaries</em> atKeyPath:(NSString *)<em>keyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation performing the mapping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dictionaryOrArrayOfDictionaries</code></th>
+						<td><p>The <code>NSDictictionary</code> or <code>NSArray</code> of <code>NSDictionary</code> object representations that was found at the <code>keyPath</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path that the representation was read from in the <code>representation</code>. If the <code>keyPath</code> was <code>[NSNull null]</code> in the <code>mappingsDictionary</code>, it will be given as <code>nil</code> to the delegate.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapper:didNotFindRepresentationOrArrayOfRepresentationsAtKeyPath:" title="mapper:didNotFindRepresentationOrArrayOfRepresentationsAtKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapper:didNotFindRepresentationOrArrayOfRepresentationsAtKeyPath:">&ndash;&nbsp;mapper:didNotFindRepresentationOrArrayOfRepresentationsAtKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that the mapper failed to find any mappable object representations at a key path specified in the <code>mappingsDictionary</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapper:(RKMapperOperation *)<em>mapper</em> didNotFindRepresentationOrArrayOfRepresentationsAtKeyPath:(NSString *)<em>keyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation performing the mapping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path that was searched for a mappable object representation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Tracking Child Mapping Operation Status" name="task_Tracking Child Mapping Operation Status"></a>
+						<h2 class="task-title">Tracking Child Mapping Operation Status</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mapper:willStartMappingOperation:forKeyPath:" title="mapper:willStartMappingOperation:forKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapper:willStartMappingOperation:forKeyPath:">&ndash;&nbsp;mapper:willStartMappingOperation:forKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that the mapper is about to start a mapping operation to map a representation found in the <code>representation</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapper:(RKMapperOperation *)<em>mapper</em> willStartMappingOperation:(RKMappingOperation *)<em>mappingOperation</em> forKeyPath:(NSString *)<em>keyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation performing the mapping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation that is about to be started.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path that was mapped. A <code>nil</code> key path indicates that the mapping matched the entire <code>representation</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapper:didFinishMappingOperation:forKeyPath:" title="mapper:didFinishMappingOperation:forKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapper:didFinishMappingOperation:forKeyPath:">&ndash;&nbsp;mapper:didFinishMappingOperation:forKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that a mapping operation that was started by the mapper has finished executing.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapper:(RKMapperOperation *)<em>mapper</em> didFinishMappingOperation:(RKMappingOperation *)<em>mappingOperation</em> forKeyPath:(NSString *)<em>keyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation performing the mapping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation that has finished.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path that was mapped. A <code>nil</code> key path indicates that the mapping matched the entire <code>representation</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapper:didFailMappingOperation:forKeyPath:withError:" title="mapper:didFailMappingOperation:forKeyPath:withError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapper:didFailMappingOperation:forKeyPath:withError:">&ndash;&nbsp;mapper:didFailMappingOperation:forKeyPath:withError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells the delegate that a mapping operation that was started by the mapper has failed with an error.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapper:(RKMapperOperation *)<em>mapper</em> didFailMappingOperation:(RKMappingOperation *)<em>mappingOperation</em> forKeyPath:(NSString *)<em>keyPath</em> withError:(NSError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapper</code></th>
+						<td><p>The mapper operation performing the mapping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingOperation</code></th>
+						<td><p>The mapping operation that has failed.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>The key path that was mapped. A <code>nil</code> key path indicates that the mapping matched the entire <code>representation</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>The error that occurred during the execution of the mapping operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKMapperOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 TIBCO Jaspersoft. All rights reserved. Updated: 2016-01-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

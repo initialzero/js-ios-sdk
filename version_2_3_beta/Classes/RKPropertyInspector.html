@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>RKPropertyInspector Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedInspector">+ sharedInspector</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/classForPropertyNamed:ofClass:isPrimitive:">- classForPropertyNamed:ofClass:isPrimitive:</option>
+		
+		<option value="//api/name/classForPropertyNamed:ofEntity:">- classForPropertyNamed:ofEntity:</option>
+		
+		<option value="//api/name/propertyInspectionForClass:">- propertyInspectionForClass:</option>
+		
+		<option value="//api/name/propertyInspectionForEntity:">- propertyInspectionForEntity:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">RKPropertyInspector Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>RKPropertyInspector.h<br />RKPropertyInspector.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>RKPropertyInspector</code> class provides an interface for introspecting the properties and attributes of classes using the reflection capabilities of the Objective-C runtime. Once inspected, the properties inspection details are cached.</p>
+
+<p>The <code>CoreData</code> category augments the <code>RKPropertyInspector</code> class with support for introspecting the property types for <code>NSManagedObject</code> and <code>NSEntityDescription</code> objects.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Retrieving the Shared Inspector Instance" name="task_Retrieving the Shared Inspector Instance"></a>
+						<h2 class="task-title">Retrieving the Shared Inspector Instance</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedInspector" title="sharedInspector"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedInspector">+&nbsp;sharedInspector</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the shared property inspector singleton instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (RKPropertyInspector *)sharedInspector</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The shared <code>RKPropertyInspector</code> instance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKPropertyInspector.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Retrieving the Properties and Types for a Class" name="task_Retrieving the Properties and Types for a Class"></a>
+						<h2 class="task-title">Retrieving the Properties and Types for a Class</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/propertyInspectionForClass:" title="propertyInspectionForClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/propertyInspectionForClass:">&ndash;&nbsp;propertyInspectionForClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a dictionary keyed by property name that includes the key-value coding class of the property and a Boolean indicating if the property is backed by a primitive (non-object) value. The <a href="../Classes/RKPropertyInspectorPropertyInfo.html">RKPropertyInspectorPropertyInfo</a> object for each property includes details about the key-value coding class representing the property and if the property is backed by a primitive type.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSDictionary *)propertyInspectionForClass:(Class)<em>objectClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>The class to inspect the properties of.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A dictionary keyed by property name that includes details about all declared properties of the class.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKPropertyInspector.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/classForPropertyNamed:ofClass:isPrimitive:" title="classForPropertyNamed:ofClass:isPrimitive:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/classForPropertyNamed:ofClass:isPrimitive:">&ndash;&nbsp;classForPropertyNamed:ofClass:isPrimitive:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the <code>Class</code> object specifying the type of the property with given name on a class.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (Class)classForPropertyNamed:(NSString *)<em>propertyName</em> ofClass:(Class)<em>objectClass</em> isPrimitive:(BOOL *)<em>isPrimitive</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyName</code></th>
+						<td><p>The name of the property to retrieve the type of.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>The class to retrieve the property from.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isPrimitive</code></th>
+						<td><p>A pointer to a Boolean value to set indicating if the specified property is of a primitive (non-object) type.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A <code>Class</code> object specifying the type of the requested property.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKPropertyInspector.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="CoreData Methods" name="task_CoreData Methods"></a>
+						<h2 class="task-title">CoreData Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/propertyInspectionForEntity:" title="propertyInspectionForEntity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/propertyInspectionForEntity:">&ndash;&nbsp;propertyInspectionForEntity:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a dictionary wherein the keys are the names of attribute and relationship properties and the values are the class used to represent the corresponding property for a given entity.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSDictionary *)propertyInspectionForEntity:(NSEntityDescription *)<em>entity</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>entity</code></th>
+						<td><p>The entity to retrieve the properties names and classes of.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A dictionary containing the names and classes of the given entity.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKPropertyInspector+CoreData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/classForPropertyNamed:ofEntity:" title="classForPropertyNamed:ofEntity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/classForPropertyNamed:ofEntity:">&ndash;&nbsp;classForPropertyNamed:ofEntity:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the class used to represent the property with the given name on the given entity.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (Class)classForPropertyNamed:(NSString *)<em>propertyName</em> ofEntity:(NSEntityDescription *)<em>entity</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyName</code></th>
+						<td><p>The name of the property to retrieve the class for.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>entity</code></th>
+						<td><p>The entity containing the property to retrieve the class for.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The class used to represent the property.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">RKPropertyInspector+CoreData.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 TIBCO Jaspersoft. All rights reserved. Updated: 2016-01-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AFImageRequestOperation Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/automaticallyInflatesResponseImage">automaticallyInflatesResponseImage</option>
+		
+		<option value="//api/name/imageScale">imageScale</option>
+		
+		<option value="//api/name/responseImage">responseImage</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/acceptableContentTypes">+ acceptableContentTypes</option>
+		
+		<option value="//api/name/canProcessRequest:">+ canProcessRequest:</option>
+		
+		<option value="//api/name/imageRequestOperationWithRequest:imageProcessingBlock:success:failure:">+ imageRequestOperationWithRequest:imageProcessingBlock:success:failure:</option>
+		
+		<option value="//api/name/imageRequestOperationWithRequest:success:">+ imageRequestOperationWithRequest:success:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithRequest:">- initWithRequest:</option>
+		
+		<option value="//api/name/setCompletionBlockWithSuccess:failure:">- setCompletionBlockWithSuccess:failure:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AFImageRequestOperation Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/AFHTTPRequestOperation.html">AFHTTPRequestOperation</a> : <a href="../Classes/AFURLConnectionOperation.html">AFURLConnectionOperation</a> : NSOperation</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AFImageRequestOperation.h<br />AFImageRequestOperation.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>AFImageRequestOperation</code> is a subclass of <a href="../Classes/AFHTTPRequestOperation.html"><code>AFHTTPRequestOperation</code></a> for downloading and processing images.</p>
+
+<h2>Acceptable Content Types</h2>
+
+<p>By default, <code>AFImageRequestOperation</code> accepts the following MIME types, which correspond to the image formats supported by UIImage or NSImage:</p>
+
+<ul>
+<li><code>image/tiff</code></li>
+<li><code>image/jpeg</code></li>
+<li><code>image/gif</code></li>
+<li><code>image/png</code></li>
+<li><code>image/ico</code></li>
+<li><code>image/x-icon</code></li>
+<li><code>image/bmp</code></li>
+<li><code>image/x-bmp</code></li>
+<li><code>image/x-xbitmap</code></li>
+<li><code>image/x-win-bitmap</code></li>
+</ul>
+
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/responseImage" title="responseImage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/responseImage">&nbsp;&nbsp;responseImage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An image constructed from the response data. If an error occurs during the request, <code>nil</code> will be returned, and the <code>error</code> property will be set to the error.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, strong) UIImage *responseImage</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFImageRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/imageScale" title="imageScale"></a>
+	<h3 class="method-title"><code><a href="#//api/name/imageScale">&nbsp;&nbsp;imageScale</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The scale factor used when interpreting the image data to construct <a href="#//api/name/responseImage"><code>responseImage</code></a>. Specifying a scale factor of 1.0 results in an image whose size matches the pixel-based dimensions of the image. Applying a different scale factor changes the size of the image as reported by the size property. This is set to the value of scale of the main screen by default, which automatically scales images for retina displays, for instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat imageScale</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFImageRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/automaticallyInflatesResponseImage" title="automaticallyInflatesResponseImage"></a>
+	<h3 class="method-title"><code><a href="#//api/name/automaticallyInflatesResponseImage">&nbsp;&nbsp;automaticallyInflatesResponseImage</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether to automatically inflate response image data for compressed formats (such as PNG or JPEG). Enabling this can significantly improve drawing performance on iOS when used with <a href="#//api/name/setCompletionBlockWithSuccess:failure:"><code>setCompletionBlockWithSuccess:failure:</code></a>, as it allows a bitmap representation to be constructed in the background rather than on the main thread. <code>YES</code> by default.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL automaticallyInflatesResponseImage</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFImageRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/imageRequestOperationWithRequest:success:" title="imageRequestOperationWithRequest:success:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/imageRequestOperationWithRequest:success:">+&nbsp;imageRequestOperationWithRequest:success:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns an <code>AFImageRequestOperation</code> object and sets the specified success callback.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)imageRequestOperationWithRequest:(NSURLRequest *)<em>urlRequest</em> success:(void ( ^ ) ( UIImage *image ))<em>success</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>urlRequest</code></th>
+						<td><p>The request object to be loaded asynchronously during execution of the operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>A block object to be executed when the request finishes successfully. This block has no return value and takes a single argument, the image created from the response data of the request.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new image request operation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFImageRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/imageRequestOperationWithRequest:imageProcessingBlock:success:failure:" title="imageRequestOperationWithRequest:imageProcessingBlock:success:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/imageRequestOperationWithRequest:imageProcessingBlock:success:failure:">+&nbsp;imageRequestOperationWithRequest:imageProcessingBlock:success:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns an <code>AFImageRequestOperation</code> object and sets the specified success callback.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)imageRequestOperationWithRequest:(NSURLRequest *)<em>urlRequest</em> imageProcessingBlock:(UIImage *( ^ ) ( UIImage *image ))<em>imageProcessingBlock</em> success:(void ( ^ ) ( NSURLRequest *request , NSHTTPURLResponse *response , UIImage *image ))<em>success</em> failure:(void ( ^ ) ( NSURLRequest *request , NSHTTPURLResponse *response , NSError *error ))<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>urlRequest</code></th>
+						<td><p>The request object to be loaded asynchronously during execution of the operation.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>imageProcessingBlock</code></th>
+						<td><p>A block object to be executed after the image request finishes successfully, but before the image is returned in the <code>success</code> block. This block takes a single argument, the image loaded from the response body, and returns the processed image.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>A block object to be executed when the request finishes successfully, with a status code in the 2xx range, and with an acceptable content type (e.g. <code>image/png</code>). This block has no return value and takes three arguments: the request object of the operation, the response for the request, and the image created from the response data.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>A block object to be executed when the request finishes unsuccessfully. This block has no return value and takes three arguments: the request object of the operation, the response for the request, and the error associated with the cause for the unsuccessful operation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A new image request operation</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFImageRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/initWithRequest:" title="initWithRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithRequest:">&ndash;&nbsp;initWithRequest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes and returns a newly allocated operation object with a url <a href="#//api/name/connection">connection</a> configured with the specified url <a href="#//api/name/request">request</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)initWithRequest:(NSURLRequest *)<em>urlRequest</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>urlRequest</code></th>
+						<td><p>The <a href="#//api/name/request">request</a> object to be used by the operation <a href="#//api/name/connection">connection</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This is the designated initializer.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFURLConnectionOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/acceptableContentTypes" title="acceptableContentTypes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/acceptableContentTypes">+&nbsp;acceptableContentTypes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an <code>NSSet</code> object containing the acceptable MIME types. When non-<code>nil</code>, the operation will set the <a href="../Classes/AFHTTPRequestOperation.html#//api/name/error"><code>error</code></a> property to an <a href="../Classes/AFHTTPRequestOperation.html#//api/name/error">error</a> in <code>AFErrorDomain</code>. See <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</a>#sec14.17</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSSet *)acceptableContentTypes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>By default, this is <code>nil</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFHTTPRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/canProcessRequest:" title="canProcessRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/canProcessRequest:">+&nbsp;canProcessRequest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A Boolean value determining whether or not the class can process the specified <a href="../Classes/AFHTTPRequestOperation.html#//api/name/request">request</a>. For example, <a href="../Classes/AFJSONRequestOperation.html"><code>AFJSONRequestOperation</code></a> may check to make sure the content type was <code>application/json</code> or the URL path extension was <code>.json</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)canProcessRequest:(NSURLRequest *)<em>request</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>urlRequest</code></th>
+						<td><p>The <a href="../Classes/AFHTTPRequestOperation.html#//api/name/request">request</a> that is determined to be supported or not supported for this class.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFHTTPRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCompletionBlockWithSuccess:failure:" title="setCompletionBlockWithSuccess:failure:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCompletionBlockWithSuccess:failure:">&ndash;&nbsp;setCompletionBlockWithSuccess:failure:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the <code>completionB</code>lock<code></code> property with a b<a href="../Classes/AFHTTPRequestOperation.html#//api/name/lock">lock</a> that executes either the specified success or failure b<a href="../Classes/AFHTTPRequestOperation.html#//api/name/lock">lock</a>, depending on the state of the <a href="../Classes/AFHTTPRequestOperation.html#//api/name/request">request</a> on completion. If <a href="../Classes/AFHTTPRequestOperation.html#//api/name/error"><code>error</code></a> returns a value, which can be caused by an unacceptable status code or content type, then <code>failure</code> is executed. Otherwise, <code>success</code> is executed.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCompletionBlockWithSuccess:(void ( ^ ) ( AFHTTPRequestOperation *operation , id responseObject ))<em>success</em> failure:(void ( ^ ) ( AFHTTPRequestOperation *operation , NSError *error ))<em>failure</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>success</code></th>
+						<td><p>The b<a href="../Classes/AFHTTPRequestOperation.html#//api/name/lock">lock</a> to be executed on the completion of a successful <a href="../Classes/AFHTTPRequestOperation.html#//api/name/request">request</a>. This b<a href="../Classes/AFHTTPRequestOperation.html#//api/name/lock">lock</a> has no return value and takes two arguments: the receiver operation and the object constructed from the <a href="../Classes/AFHTTPRequestOperation.html#//api/name/response">response</a> data of the <a href="../Classes/AFHTTPRequestOperation.html#//api/name/request">request</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>failure</code></th>
+						<td><p>The b<a href="../Classes/AFHTTPRequestOperation.html#//api/name/lock">lock</a> to be executed on the completion of an unsuccessful <a href="../Classes/AFHTTPRequestOperation.html#//api/name/request">request</a>. This b<a href="../Classes/AFHTTPRequestOperation.html#//api/name/lock">lock</a> has no return value and takes two arguments: the receiver operation and the <a href="../Classes/AFHTTPRequestOperation.html#//api/name/error">error</a> that occurred during the <a href="../Classes/AFHTTPRequestOperation.html#//api/name/request">request</a>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This method should be overridden in subclasses in order to specify the <a href="../Classes/AFHTTPRequestOperation.html#//api/name/response">response</a> object passed into the success b<a href="../Classes/AFHTTPRequestOperation.html#//api/name/lock">lock</a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AFHTTPRequestOperation.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 TIBCO Jaspersoft. All rights reserved. Updated: 2016-01-04</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
