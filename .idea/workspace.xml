@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="898b5cbb-6b96-496a-9057-4486ded15ea4" name="Default" comment="" />
+    <list default="true" id="8a8d473a-b080-4bb7-aed5-6b8aa33c54f3" name="Default" comment="" />
     <ignored path="js-ios-sdk.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +15,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="JaspersoftSDK" />
   </component>
@@ -40,14 +40,14 @@
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1007" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -60,7 +60,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Cidr.FilesView" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -70,6 +70,8 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
@@ -80,21 +82,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JaspersoftSDK" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Support" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JaspersoftSDK" />
+              <option name="myItemId" value="Pods" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -102,68 +90,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JaspersoftSDK" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Classes" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JaspersoftSDK" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Classes" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectMappings" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JaspersoftSDK" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Classes" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Helpers" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JaspersoftSDK" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Classes" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -187,22 +113,23 @@
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="JaspersoftSDK" />
   </component>
   <component name="RunManager" selected="Application.Pods-AFNetworking">
-    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="JaspersoftSDK" TARGET_NAME="JaspersoftSDK" CONFIG_NAME="Debug" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="JaspersoftSDK" TARGET_NAME="JaspersoftSDK" CONFIG_NAME="Debug" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -211,56 +138,56 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Pods-AFNetworking" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-AFNetworking" CONFIG_NAME="Debug" SCHEME_NAME="Pods-AFNetworking" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods-AFNetworking" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods-AFNetworking" CONFIG_NAME="Debug" SCHEME_NAME="Pods-AFNetworking" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-ISO8601DateFormatterValueTransformer" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-ISO8601DateFormatterValueTransformer" CONFIG_NAME="Debug" SCHEME_NAME="Pods-ISO8601DateFormatterValueTransformer" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods-ISO8601DateFormatterValueTransformer" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods-ISO8601DateFormatterValueTransformer" CONFIG_NAME="Debug" SCHEME_NAME="Pods-ISO8601DateFormatterValueTransformer" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-RestKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-RestKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-RestKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods-RestKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods-RestKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-RestKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-RKValueTransformers" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-RKValueTransformers" CONFIG_NAME="Debug" SCHEME_NAME="Pods-RKValueTransformers" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods-RKValueTransformers" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods-RKValueTransformers" CONFIG_NAME="Debug" SCHEME_NAME="Pods-RKValueTransformers" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-ServerReachability" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-ServerReachability" CONFIG_NAME="Debug" SCHEME_NAME="Pods-ServerReachability" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods-ServerReachability" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods-ServerReachability" CONFIG_NAME="Debug" SCHEME_NAME="Pods-ServerReachability" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-SOCKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-SOCKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-SOCKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods-SOCKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods-SOCKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-SOCKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-TransitionKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-TransitionKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-TransitionKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods-TransitionKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods-TransitionKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-TransitionKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods" CONFIG_NAME="Debug" SCHEME_NAME="Pods" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <configuration default="false" name="Pods" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Pods" TARGET_NAME="Pods" CONFIG_NAME="Debug" SCHEME_NAME="Pods" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -278,7 +205,9 @@
       <item index="7" class="java.lang.String" itemvalue="Application.Pods" />
     </list>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -287,101 +216,118 @@
       <changelist id="898b5cbb-6b96-496a-9057-4486ded15ea4" name="Default" comment="" />
       <created>1439459550198</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1439459550198</updated>
     </task>
     <task id="LOCAL-00001" summary="fix issue with 'capitalized' URL">
       <created>1439459653484</created>
       <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1439459653484</updated>
     </task>
     <task id="LOCAL-00002" summary="add the new classes that perform an encryption of the text.">
       <created>1439799001446</created>
       <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1439799001446</updated>
     </task>
     <task id="LOCAL-00003" summary="add support encrypted passwords.">
       <created>1439799019391</created>
       <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
       <updated>1439799019391</updated>
     </task>
     <task id="LOCAL-00004" summary="change notice about using a new third party lib.">
       <created>1439803268890</created>
       <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1439803268890</updated>
     </task>
     <task id="LOCAL-00005" summary="add TODO">
       <created>1439803280936</created>
       <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
       <updated>1439803280937</updated>
     </task>
     <task id="LOCAL-00006" summary="Merge branch 'develop' into tast/support_encrypted_passwords&#10;&#10;# Conflicts:&#10;#&#9;NOTICES.txt&#10;">
       <created>1439803784444</created>
       <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
       <updated>1439803784444</updated>
     </task>
     <task id="LOCAL-00007" summary="fix compile flag">
       <created>1439813198747</created>
       <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
       <updated>1439813198757</updated>
     </task>
     <task id="LOCAL-00008" summary="fix importing of a lib.">
       <created>1439813218723</created>
       <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1439813218723</updated>
     </task>
     <task id="LOCAL-00009" summary="add checking that the data was received from server before proceed a next operation.">
       <created>1440072183346</created>
       <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1440072183346</updated>
     </task>
     <task id="LOCAL-00010" summary="add new method that return encrypted password.">
       <created>1440760391486</created>
       <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
       <updated>1440760391486</updated>
     </task>
     <task id="LOCAL-00011" summary="add new property for block that constructs multi form body.">
       <created>1441356894344</created>
       <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
       <updated>1441356894344</updated>
     </task>
     <task id="LOCAL-00012" summary="extend authentication logic to add ability use POST requests.">
       <created>1441357001207</created>
       <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
       <updated>1441357001218</updated>
     </task>
     <task id="LOCAL-00013" summary="correct logic for getting authentication key (make it asynchronous, and use correct method).&#10;setup auth for using &quot;application/x-www-form-urlencoded&quot; for POST requests.">
       <created>1441363244719</created>
       <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
       <option name="project" value="LOCAL" />
       <updated>1441363244719</updated>
     </task>
     <task id="LOCAL-00014" summary="clean code. resolve memory leaks.">
       <created>1441605487860</created>
       <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
       <updated>1441605487860</updated>
     </task>
     <task id="LOCAL-00015" summary="add checking publicKeyRef (there is issue in iOS9)">
       <created>1442587162615</created>
       <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
       <updated>1442587162615</updated>
     </task>
     <task id="LOCAL-00016" summary="add checking publicKeyRef (there is an issue in iOS9)">
       <created>1442814353370</created>
       <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
       <updated>1442814353370</updated>
     </task>
@@ -389,30 +335,50 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="23" width="1920" height="1007" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2090574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22198732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715377" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33034572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5748634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32497275" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43149808" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3780332" sideWeight="0.49753347" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4071703" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45692477" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32439336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33034572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43149808" sideWeight="0.5024665" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3149808" sideWeight="0.49753347" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35851473" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22198732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32439336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="SHOW_DETAILS" value="false" />
@@ -452,330 +418,128 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
+    <entry file="file://$PROJECT_DIR$/Sources/JSObjectMappings/JSScheduleJobState.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="360">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/JSRestClient/JSRESTBase.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/JSRestClient/JSRESTBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/JSObjectMappings/JSScheduleTrigger.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/JSObjectMappings/JSScheduleMetadata.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/JSRestClient/JSRESTBase+JSSchedule.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="190" column="42" selection-start-line="190" selection-start-column="42" selection-end-line="190" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m">
+    <entry file="file://$PROJECT_DIR$/Sources/JSRestClient/JSRESTBase+JSSchedule.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        <state relative-caret-position="404">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.m">
+    <entry file="file://$PROJECT_DIR$/Sources/JSRestClient/JSRESTBase+JSRESTReport.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="299">
+          <caret line="564" column="37" selection-start-line="564" selection-start-column="37" selection-end-line="564" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sources/JSObjectMappings/JSDashboardComponent.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="49" column="60" selection-start-line="49" selection-start-column="60" selection-end-line="50" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m">
+    <entry file="file://$PROJECT_DIR$/Sources/JSObjectMappings/JSDashboardComponent.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="83" selection-start-line="170" selection-start-column="83" selection-end-line="170" selection-end-column="83" />
-          <folding />
+        <state relative-caret-position="244">
+          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+          <folding>
+            <element signature="e#1227#2697#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="90" selection-start-line="130" selection-start-column="90" selection-end-line="130" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="181" column="83" selection-start-line="181" selection-start-column="83" selection-end-line="181" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="181" column="83" selection-start-line="181" selection-start-column="83" selection-end-line="181" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NOTICES.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43291995">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h" />
+    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h" />
+    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h" />
+    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
+    <entry file="file://$PROJECT_DIR$/NOTICES.txt" />
+    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.h" />
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30357143">
+        <state relative-caret-position="0">
           <caret line="389" column="0" selection-start-line="389" selection-start-column="0" selection-end-line="389" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9458545">
-          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="83" selection-start-line="170" selection-start-column="83" selection-end-line="170" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.027072757">
-          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07952622">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Helpers/JSEncryptionManager.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRequest.h" />
+    <entry file="file://$PROJECT_DIR$/Pods/Headers/Public/RestKit/ObjectMapping/RKHTTPUtilities.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.h" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSRESTBase+JSRESTSession.m" />
+    <entry file="file://$PROJECT_DIR$/Classes/Core/JSProfile.m" />
   </component>
 </project>
