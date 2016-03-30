@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>EKManagedObjectMapping Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/entityName">entityName</option>
+		
+		<option value="//api/name/primaryKey">primaryKey</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/mappingForClass:withBlock:EKDesignatedInitializer:">+ mappingForClass:withBlock:EKDesignatedInitializer:</option>
+		
+		<option value="//api/name/mappingForClass:withRootPath:withBlock:EKDesignatedInitializer:">+ mappingForClass:withRootPath:withBlock:EKDesignatedInitializer:</option>
+		
+		<option value="//api/name/mappingForEntityName:withBlock:">+ mappingForEntityName:withBlock:</option>
+		
+		<option value="//api/name/mappingForEntityName:withRootPath:withBlock:">+ mappingForEntityName:withRootPath:withBlock:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithEntityName:">- initWithEntityName:</option>
+		
+		<option value="//api/name/initWithEntityName:withRootPath:">- initWithEntityName:withRootPath:</option>
+		
+		<option value="//api/name/initWithObjectClass:EKDesignatedInitializer:">- initWithObjectClass:EKDesignatedInitializer:</option>
+		
+		<option value="//api/name/initWithObjectClass:withRootPath:EKDesignatedInitializer:">- initWithObjectClass:withRootPath:EKDesignatedInitializer:</option>
+		
+		<option value="//api/name/mapKeyPath:toProperty:withValueBlock:">- mapKeyPath:toProperty:withValueBlock:</option>
+		
+		<option value="//api/name/mapKeyPath:toProperty:withValueBlock:reverseBlock:">- mapKeyPath:toProperty:withValueBlock:reverseBlock:</option>
+		
+		<option value="//api/name/primaryKeyPropertyMapping">- primaryKeyPropertyMapping</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">EKManagedObjectMapping Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/EKObjectMapping.html">EKObjectMapping</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>EKManagedObjectMapping.h<br />EKManagedObjectMapping.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>EKManagedObjectMapping</code> is a subclass of <a href="../Classes/EKObjectMapping.html"><code>EKObjectMapping</code></a>, intended to be used with CoreData objects.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/entityName" title="entityName"></a>
+	<h3 class="method-title"><code><a href="#//api/name/entityName">&nbsp;&nbsp;entityName</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Entity name of CoreData object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *entityName</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/primaryKey" title="primaryKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/primaryKey">&nbsp;&nbsp;primaryKey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Primary key of CoreData objects</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *primaryKey</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapKeyPath:toProperty:withValueBlock:" title="mapKeyPath:toProperty:withValueBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapKeyPath:toProperty:withValueBlock:">&ndash;&nbsp;mapKeyPath:toProperty:withValueBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map JSON keyPath to object property, using valueBlock.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapKeyPath:(NSString *)<em>keyPath</em> toProperty:(NSString *)<em>property</em> withValueBlock:(EKManagedMappingValueBlock)<em>valueBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>JSON keypath, that will be used by valueForKeyPath: method</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Property name.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>valueBlock</code></th>
+						<td><p>block to transform JSON value into property value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapKeyPath:toProperty:withValueBlock:reverseBlock:" title="mapKeyPath:toProperty:withValueBlock:reverseBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapKeyPath:toProperty:withValueBlock:reverseBlock:">&ndash;&nbsp;mapKeyPath:toProperty:withValueBlock:reverseBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map JSON keyPath to object property, using valueBlock. Include serialization block, that does reverse this operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapKeyPath:(NSString *)<em>keyPath</em> toProperty:(NSString *)<em>property</em> withValueBlock:(EKManagedMappingValueBlock)<em>valueBlock</em> reverseBlock:(EKManagedMappingReverseValueBlock)<em>reverseBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>JSON keypath, that will be used by valueForKeyPath: method</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Property name.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>valueBlock</code></th>
+						<td><p>block to transform JSON value into property value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reverseBlock</code></th>
+						<td><p>block to transform property value into JSON value</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForEntityName:withBlock:" title="mappingForEntityName:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForEntityName:withBlock:">+&nbsp;mappingForEntityName:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convenience constructor for <code>EKManagedObjectMapping</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (EKManagedObjectMapping *)mappingForEntityName:(NSString *)<em>entityName</em> withBlock:(void ( ^ ) ( EKManagedObjectMapping *mapping ))<em>mappingBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>entityName</code></th>
+						<td><p>Name of CoreData entity.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingBlock</code></th>
+						<td><p>Block, that contains managed object mapping.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>managed object mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForEntityName:withRootPath:withBlock:" title="mappingForEntityName:withRootPath:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForEntityName:withRootPath:withBlock:">+&nbsp;mappingForEntityName:withRootPath:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convenience constructor for <code>EKManagedObjectMapping</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (EKManagedObjectMapping *)mappingForEntityName:(NSString *)<em>entityName</em> withRootPath:(NSString *)<em>rootPath</em> withBlock:(void ( ^ ) ( EKManagedObjectMapping *mapping ))<em>mappingBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>entityName</code></th>
+						<td><p>Name of CoreData entity.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rootPath</code></th>
+						<td><p>rootPath for mapping.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingBlock</code></th>
+						<td><p>Block, that contains managed object mapping</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>managed object mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithEntityName:" title="initWithEntityName:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithEntityName:">&ndash;&nbsp;initWithEntityName:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Designated initializer for <code>EKManagedObjectMapping</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithEntityName:(NSString *)<em>entityName</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>entityName</code></th>
+						<td><p>CoreData entity name.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>managed object mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithEntityName:withRootPath:" title="initWithEntityName:withRootPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithEntityName:withRootPath:">&ndash;&nbsp;initWithEntityName:withRootPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Designated initializer for <code>EKManagedObjectMapping</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithEntityName:(NSString *)<em>entityName</em> withRootPath:(NSString *)<em>rootPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>entityName</code></th>
+						<td><p>CoreData entity name.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rootPath</code></th>
+						<td><p>rootPath for mapping.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>managed object mapping.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/primaryKeyPropertyMapping" title="primaryKeyPropertyMapping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/primaryKeyPropertyMapping">&ndash;&nbsp;primaryKeyPropertyMapping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Property mapping for primary key of managed object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (EKPropertyMapping *)primaryKeyPropertyMapping</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>property mapping</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithObjectClass:EKDesignatedInitializer:" title="initWithObjectClass:EKDesignatedInitializer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithObjectClass:EKDesignatedInitializer:">&ndash;&nbsp;initWithObjectClass:EKDesignatedInitializer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is unavailable for <code>EKManagedObjectMapping</code>. Use <a href="#//api/name/initWithEntityName:"><code>initWithEntityName:</code></a> method instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithObjectClass:(Class)<em>objectClass</em> EKDesignatedInitializer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithObjectClass:withRootPath:EKDesignatedInitializer:" title="initWithObjectClass:withRootPath:EKDesignatedInitializer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithObjectClass:withRootPath:EKDesignatedInitializer:">&ndash;&nbsp;initWithObjectClass:withRootPath:EKDesignatedInitializer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is unavailable for <code>EKManagedObjectMapping</code>. Use <code>initWithEntityName:rootPath:</code> method instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithObjectClass:(Class)<em>objectClass</em> withRootPath:(NSString *)<em>rootPath</em> EKDesignatedInitializer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForClass:withBlock:EKDesignatedInitializer:" title="mappingForClass:withBlock:EKDesignatedInitializer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForClass:withBlock:EKDesignatedInitializer:">+&nbsp;mappingForClass:withBlock:EKDesignatedInitializer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is unavailable for <code>EKManagedObjectMapping</code>. Use <a href="#//api/name/mappingForEntityName:withBlock:"><code>mappingForEntityName:withBlock:</code></a> method instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)mappingForClass:(Class)<em>objectClass</em> withBlock:(void ( ^ ) ( EKObjectMapping *mapping ))<em>mappingBlock</em> EKDesignatedInitializer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForClass:withRootPath:withBlock:EKDesignatedInitializer:" title="mappingForClass:withRootPath:withBlock:EKDesignatedInitializer:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForClass:withRootPath:withBlock:EKDesignatedInitializer:">+&nbsp;mappingForClass:withRootPath:withBlock:EKDesignatedInitializer:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is unavailable for <code>EKManagedObjectMapping</code>. Use <code>mappingForEntityName:rootPath:withBlock:</code> method instead.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)mappingForClass:(Class)<em>objectClass</em> withRootPath:(NSString *)<em>rootPath</em> withBlock:(void ( ^ ) ( EKObjectMapping *mapping ))<em>mappingBlock</em> EKDesignatedInitializer</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKManagedObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 TIBCO Jaspersoft. All rights reserved. Updated: 2016-03-30</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

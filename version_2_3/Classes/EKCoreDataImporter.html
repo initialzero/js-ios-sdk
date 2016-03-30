@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>EKCoreDataImporter Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/context">context</option>
+		
+		<option value="//api/name/externalRepresentation">externalRepresentation</option>
+		
+		<option value="//api/name/mapping">mapping</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/importerWithMapping:externalRepresentation:context:">+ importerWithMapping:externalRepresentation:context:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/existingObjectForRepresentation:mapping:context:">- existingObjectForRepresentation:mapping:context:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">EKCoreDataImporter Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>EKCoreDataImporter.h<br />EKCoreDataImporter.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>EKCoreDataImporter</code> is internal EasyMapping class and is used by <a href="../Classes/EKManagedObjectMapper.html"><code>EKManagedObjectMapper</code></a> to manage CoreData imports and make them fast and efficient. It basically does 3 things:</p>
+
+<ul>
+<li>Collect all entity names from <a href="#//api/name/mapping">mapping</a></li>
+<li>Introspect passed JSON to collect all primary keys for collected entities</li>
+<li>Prefetch all existing entities instead of fetching them one by one.</li>
+</ul>
+
+
+<p>The more high level JSON is passed to <code>EKCoreDataImporer</code>, the bigger perfomance win will be. If you can use methods like arrayOfObjectsFromExternalRepresentation: instead of objectFromExternalRepresentation, use them.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/context" title="context"></a>
+	<h3 class="method-title"><code><a href="#//api/name/context">&nbsp;&nbsp;context</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Context, on which import will be happening.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSManagedObjectContext *context</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKCoreDataImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapping" title="mapping"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapping">&nbsp;&nbsp;mapping</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Mapping for the JSON, that was passed to importer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) EKManagedObjectMapping *mapping</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKCoreDataImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/externalRepresentation" title="externalRepresentation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/externalRepresentation">&nbsp;&nbsp;externalRepresentation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>JSON representation of data to import.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) id externalRepresentation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKCoreDataImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/importerWithMapping:externalRepresentation:context:" title="importerWithMapping:externalRepresentation:context:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/importerWithMapping:externalRepresentation:context:">+&nbsp;importerWithMapping:externalRepresentation:context:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Create instance of <code>EKCoreDataImporter</code> and start collecting data from JSON and <a href="#//api/name/mapping">mapping</a>. This is designated initializer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)importerWithMapping:(EKManagedObjectMapping *)<em>mapping</em> externalRepresentation:(id)<em>externalRepresentation</em> context:(NSManagedObjectContext *)<em>context</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>object <a href="#//api/name/mapping">mapping</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>externalRepresentation</code></th>
+						<td><p>JSON, that will be mapped to objects</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>context</code></th>
+						<td><p>Context, on which all changes will happen</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>CoreData importer</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKCoreDataImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/existingObjectForRepresentation:mapping:context:" title="existingObjectForRepresentation:mapping:context:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/existingObjectForRepresentation:mapping:context:">&ndash;&nbsp;existingObjectForRepresentation:mapping:context:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Get&rsquo;s existing object by it&rsquo;s primary key value. Returns nil, if object does not exist in CoreData database.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id)existingObjectForRepresentation:(id)<em>representation</em> mapping:(EKManagedObjectMapping *)<em>mapping</em> context:(NSManagedObjectContext *)<em>context</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>representation</code></th>
+						<td><p>JSON representation of object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapping</code></th>
+						<td><p>object <a href="#//api/name/mapping">mapping</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>managed object</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKCoreDataImporter.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 TIBCO Jaspersoft. All rights reserved. Updated: 2016-03-30</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
