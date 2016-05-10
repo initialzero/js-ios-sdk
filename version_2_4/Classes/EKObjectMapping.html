@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>EKObjectMapping Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">JaspersoftSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">TIBCO Jaspersoft</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/hasManyMappings">hasManyMappings</option>
+		
+		<option value="//api/name/hasOneMappings">hasOneMappings</option>
+		
+		<option value="//api/name/ignoreMissingFields">ignoreMissingFields</option>
+		
+		<option value="//api/name/incrementalData">incrementalData</option>
+		
+		<option value="//api/name/objectClass">objectClass</option>
+		
+		<option value="//api/name/propertyMappings">propertyMappings</option>
+		
+		<option value="//api/name/respectPropertyFoundationTypes">respectPropertyFoundationTypes</option>
+		
+		<option value="//api/name/rootPath">rootPath</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/mappingForClass:withBlock:">+ mappingForClass:withBlock:</option>
+		
+		<option value="//api/name/mappingForClass:withRootPath:withBlock:">+ mappingForClass:withRootPath:withBlock:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/hasMany:forKeyPath:">- hasMany:forKeyPath:</option>
+		
+		<option value="//api/name/hasMany:forKeyPath:forProperty:">- hasMany:forKeyPath:forProperty:</option>
+		
+		<option value="//api/name/hasMany:forKeyPath:forProperty:withObjectMapping:">- hasMany:forKeyPath:forProperty:withObjectMapping:</option>
+		
+		<option value="//api/name/hasOne:forDictionaryFromKeyPaths:forProperty:withObjectMapping:">- hasOne:forDictionaryFromKeyPaths:forProperty:withObjectMapping:</option>
+		
+		<option value="//api/name/hasOne:forKeyPath:">- hasOne:forKeyPath:</option>
+		
+		<option value="//api/name/hasOne:forKeyPath:forProperty:">- hasOne:forKeyPath:forProperty:</option>
+		
+		<option value="//api/name/hasOne:forKeyPath:forProperty:withObjectMapping:">- hasOne:forKeyPath:forProperty:withObjectMapping:</option>
+		
+		<option value="//api/name/initWithObjectClass:">- initWithObjectClass:</option>
+		
+		<option value="//api/name/initWithObjectClass:withRootPath:">- initWithObjectClass:withRootPath:</option>
+		
+		<option value="//api/name/mapKeyPath:toProperty:">- mapKeyPath:toProperty:</option>
+		
+		<option value="//api/name/mapKeyPath:toProperty:withDateFormat:">- mapKeyPath:toProperty:withDateFormat:</option>
+		
+		<option value="//api/name/mapKeyPath:toProperty:withDateFormatter:">- mapKeyPath:toProperty:withDateFormatter:</option>
+		
+		<option value="//api/name/mapKeyPath:toProperty:withValueBlock:">- mapKeyPath:toProperty:withValueBlock:</option>
+		
+		<option value="//api/name/mapKeyPath:toProperty:withValueBlock:reverseBlock:">- mapKeyPath:toProperty:withValueBlock:reverseBlock:</option>
+		
+		<option value="//api/name/mapPropertiesFromArray:">- mapPropertiesFromArray:</option>
+		
+		<option value="//api/name/mapPropertiesFromArrayToPascalCase:">- mapPropertiesFromArrayToPascalCase:</option>
+		
+		<option value="//api/name/mapPropertiesFromDictionary:">- mapPropertiesFromDictionary:</option>
+		
+		<option value="//api/name/mapPropertiesFromMappingObject:">- mapPropertiesFromMappingObject:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">EKObjectMapping Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>EKObjectMapping.h<br />EKObjectMapping.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>EKObjectMapping</code> class is used to define mappings between JSON representation and objective-c object.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/ignoreMissingFields" title="ignoreMissingFields"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ignoreMissingFields">&nbsp;&nbsp;ignoreMissingFields</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines if missing fields will be ignored, or as in case of relations set to nil</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL ignoreMissingFields</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/incrementalData" title="incrementalData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/incrementalData">&nbsp;&nbsp;incrementalData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Defines if to-many relationship data is pushed or replaced.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL incrementalData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/respectPropertyFoundationTypes" title="respectPropertyFoundationTypes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/respectPropertyFoundationTypes">&nbsp;&nbsp;respectPropertyFoundationTypes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If set to YES, mapper will introspect your class properties and try to create appropriate objects. Supported classes: NSMutableArray, NSMutableDictionary, NSSet, NSMutableSet, NSOrderedSet, NSMutableOrderedSet.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL respectPropertyFoundationTypes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Due to perfomance reasons, this property defaults to NO.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/objectClass" title="objectClass"></a>
+	<h3 class="method-title"><code><a href="#//api/name/objectClass">&nbsp;&nbsp;objectClass</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Class, for which this mapping is meant to be used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readwrite) Class objectClass</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/rootPath" title="rootPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/rootPath">&nbsp;&nbsp;rootPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Root JSON path. This is helpful, when all object data is inside another JSON dictionary.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *rootPath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/propertyMappings" title="propertyMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/propertyMappings">&nbsp;&nbsp;propertyMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Dictionary, containing property mappings for current object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSMutableDictionary *propertyMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasOneMappings" title="hasOneMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasOneMappings">&nbsp;&nbsp;hasOneMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Dictionary, containing to-one relationships of current object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSMutableDictionary *hasOneMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasManyMappings" title="hasManyMappings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasManyMappings">&nbsp;&nbsp;hasManyMappings</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Dictionary, containing to-many relationships of current object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSMutableDictionary *hasManyMappings</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForClass:withBlock:" title="mappingForClass:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForClass:withBlock:">+&nbsp;mappingForClass:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convenience initializer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (EKObjectMapping *)mappingForClass:(Class)<em>objectClass</em> withBlock:(void ( ^ ) ( EKObjectMapping *mapping ))<em>mappingBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>Class of object, that will consume results of mapping</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingBlock</code></th>
+						<td><p>Block, that contains created EKObjectMapping to be filled with mappings.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>object mapping</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mappingForClass:withRootPath:withBlock:" title="mappingForClass:withRootPath:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mappingForClass:withRootPath:withBlock:">+&nbsp;mappingForClass:withRootPath:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Convenience initializer.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (EKObjectMapping *)mappingForClass:(Class)<em>objectClass</em> withRootPath:(NSString *)<em>rootPath</em> withBlock:(void ( ^ ) ( EKObjectMapping *mapping ))<em>mappingBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>Class of object, that will consume results of mapping</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rootPath</code></th>
+						<td><p><a href="#//api/name/rootPath">rootPath</a> for mapping</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mappingBlock</code></th>
+						<td><p>Block, that contains created EKObjectMapping to be filled with mappings.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>object mapping</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithObjectClass:" title="initWithObjectClass:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithObjectClass:">&ndash;&nbsp;initWithObjectClass:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Designated initializer</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithObjectClass:(Class)<em>objectClass</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>Class of object, that will consume results of mapping</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>object mapping</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithObjectClass:withRootPath:" title="initWithObjectClass:withRootPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithObjectClass:withRootPath:">&ndash;&nbsp;initWithObjectClass:withRootPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Designated initializer</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithObjectClass:(Class)<em>objectClass</em> withRootPath:(NSString *)<em>rootPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>Class of object, that will consume results of mapping</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>rootPath</code></th>
+						<td><p><a href="#//api/name/rootPath">rootPath</a> for mapping</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>object mapping</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapKeyPath:toProperty:" title="mapKeyPath:toProperty:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapKeyPath:toProperty:">&ndash;&nbsp;mapKeyPath:toProperty:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map JSON keyPath to object property.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapKeyPath:(NSString *)<em>keyPath</em> toProperty:(NSString *)<em>property</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>JSON keypath, that will be used by valueForKeyPath: method</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Property name.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapKeyPath:toProperty:withDateFormatter:" title="mapKeyPath:toProperty:withDateFormatter:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapKeyPath:toProperty:withDateFormatter:">&ndash;&nbsp;mapKeyPath:toProperty:withDateFormatter:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map JSON keyPath to object property. This method assumes, that value contains NSString, that can be transformed into NSDate by NSDateFormatter. You can get current thread date formatter by using NSDateFormatter+EasyMappingAdditions category. Default timezone is GMT. Default date format ISO 8601.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapKeyPath:(NSString *)<em>keyPath</em> toProperty:(NSString *)<em>property</em> withDateFormatter:(NSDateFormatter *)<em>formatter</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>JSON keypath, that will be used by valueForKeyPath: method</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Property name.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>formatter</code></th>
+						<td><p>Date formatter to use when transforming string to dates and reverse.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapPropertiesFromArray:" title="mapPropertiesFromArray:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapPropertiesFromArray:">&ndash;&nbsp;mapPropertiesFromArray:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Maps properties from array. We assume, that names of keypaths and properties are the same.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapPropertiesFromArray:(NSArray *)<em>propertyNamesArray</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyNamesArray</code></th>
+						<td><p>Array of property names</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapPropertiesFromArrayToPascalCase:" title="mapPropertiesFromArrayToPascalCase:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapPropertiesFromArrayToPascalCase:">&ndash;&nbsp;mapPropertiesFromArrayToPascalCase:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Maps properties from array. We assume, that names of keypaths and properties are the same, except for the first letter, that is uppercased. For example, property @&ldquo;name&rdquo; will be filled, using &ldquo;Name&rdquo; value of JSON.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapPropertiesFromArrayToPascalCase:(NSArray *)<em>propertyNamesArray</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyNamesArray</code></th>
+						<td><p>Array of property names</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapPropertiesFromDictionary:" title="mapPropertiesFromDictionary:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapPropertiesFromDictionary:">&ndash;&nbsp;mapPropertiesFromDictionary:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Maps properties from dictionary. Keys are keypaths in JSON, values are names of properties.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapPropertiesFromDictionary:(NSDictionary *)<em>propertyDictionary</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>propertyDictionary</code></th>
+						<td><p>Dictionary with keypaths and property names</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapPropertiesFromMappingObject:" title="mapPropertiesFromMappingObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapPropertiesFromMappingObject:">&ndash;&nbsp;mapPropertiesFromMappingObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map mappings from another <code>EKObjectMapping</code> object. This can be useful with inheritance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapPropertiesFromMappingObject:(EKObjectMapping *)<em>mappingObj</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapKeyPath:toProperty:withValueBlock:" title="mapKeyPath:toProperty:withValueBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapKeyPath:toProperty:withValueBlock:">&ndash;&nbsp;mapKeyPath:toProperty:withValueBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map JSON keyPath to object property, using valueBlock.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapKeyPath:(NSString *)<em>keyPath</em> toProperty:(NSString *)<em>property</em> withValueBlock:(EKMappingValueBlock)<em>valueBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>JSON keypath, that will be used by valueForKeyPath: method</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Property name.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>valueBlock</code></th>
+						<td><p>block to transform JSON value into property value.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapKeyPath:toProperty:withValueBlock:reverseBlock:" title="mapKeyPath:toProperty:withValueBlock:reverseBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapKeyPath:toProperty:withValueBlock:reverseBlock:">&ndash;&nbsp;mapKeyPath:toProperty:withValueBlock:reverseBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map JSON keyPath to object property, using valueBlock. Include serialization block, that does reverse this operation.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapKeyPath:(NSString *)<em>keyPath</em> toProperty:(NSString *)<em>property</em> withValueBlock:(EKMappingValueBlock)<em>valueBlock</em> reverseBlock:(EKMappingReverseBlock)<em>reverseBlock</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>JSON keypath, that will be used by valueForKeyPath: method</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Property name.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>valueBlock</code></th>
+						<td><p>block to transform JSON value into property value.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reverseBlock</code></th>
+						<td><p>block to transform property value into JSON value</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasOne:forKeyPath:" title="hasOne:forKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasOne:forKeyPath:">&ndash;&nbsp;hasOne:forKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map to-one relationship for keyPath. Assuming keyPath and property name are equal. ObjectClass should conform to <a href="../Protocols/EKMappingProtocol.html"><code>EKMappingProtocol</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hasOne:(Class)<em>objectClass</em> forKeyPath:(NSString *)<em>keyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>class for child object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>keyPath to child object representation in JSON</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasOne:forKeyPath:forProperty:" title="hasOne:forKeyPath:forProperty:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasOne:forKeyPath:forProperty:">&ndash;&nbsp;hasOne:forKeyPath:forProperty:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map to-one relationship for keyPath. ObjectClass should conform to <a href="../Protocols/EKMappingProtocol.html"><code>EKMappingProtocol</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hasOne:(Class)<em>objectClass</em> forKeyPath:(NSString *)<em>keyPath</em> forProperty:(NSString *)<em>property</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>class for child object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>keyPath to child object representation in JSON</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Name of the property, that will receive mapped object.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasOne:forDictionaryFromKeyPaths:forProperty:withObjectMapping:" title="hasOne:forDictionaryFromKeyPaths:forProperty:withObjectMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasOne:forDictionaryFromKeyPaths:forProperty:withObjectMapping:">&ndash;&nbsp;hasOne:forDictionaryFromKeyPaths:forProperty:withObjectMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map to-one relationship, using keys that are on the same level as current object. They are collected into dictionary and passed along, as like they were in separate JSON dictionary.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hasOne:(Class)<em>objectClass</em> forDictionaryFromKeyPaths:(NSArray *)<em>keyPaths</em> forProperty:(NSString *)<em>property</em> withObjectMapping:(EKObjectMapping *)<em>objectMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p>class, instance of which will be created as a result of mapping</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPaths</code></th>
+						<td><p>Array of properties to collect from representation</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>name of the property, that will receive mapped object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectMapping</code></th>
+						<td><p>optional mapping override for child object</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> If you have recursive mappings, do not use this method, cause it can cause infinite recursion to happen. Or you need to handle recursive mappings situation by yourself, subclassing EKObjectMapping and providing different mappings for different mapping levels.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasOne:forKeyPath:forProperty:withObjectMapping:" title="hasOne:forKeyPath:forProperty:withObjectMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasOne:forKeyPath:forProperty:withObjectMapping:">&ndash;&nbsp;hasOne:forKeyPath:forProperty:withObjectMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map to-one relationship for keyPath.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hasOne:(Class)<em>objectClass</em> forKeyPath:(NSString *)<em>keyPath</em> forProperty:(NSString *)<em>property</em> withObjectMapping:(EKObjectMapping *)<em>objectMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>keyPath to child object representation in JSON</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Name of the property, that will receive mapped object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectMapping</code></th>
+						<td><p>optional mapping override for child object</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> If you have recursive mappings, do not use this method, cause it can cause infinite recursion to happen. Or you need to handle recursive mappings situation by yourself, subclassing EKObjectMapping and providing different mappings for different mapping levels.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasMany:forKeyPath:" title="hasMany:forKeyPath:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasMany:forKeyPath:">&ndash;&nbsp;hasMany:forKeyPath:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map to-many relationship for keyPath. Assuming keyPath and property name are equal. ObjectClass should conform to <a href="../Protocols/EKMappingProtocol.html"><code>EKMappingProtocol</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hasMany:(Class)<em>objectClass</em> forKeyPath:(NSString *)<em>keyPath</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p><a href="#//api/name/objectClass">objectClass</a> for child objects</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>keyPath to child object representations in JSON</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasMany:forKeyPath:forProperty:" title="hasMany:forKeyPath:forProperty:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasMany:forKeyPath:forProperty:">&ndash;&nbsp;hasMany:forKeyPath:forProperty:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map to-many relationship for keyPath. ObjectClass should conform to <a href="../Protocols/EKMappingProtocol.html"><code>EKMappingProtocol</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hasMany:(Class)<em>objectClass</em> forKeyPath:(NSString *)<em>keyPath</em> forProperty:(NSString *)<em>property</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectClass</code></th>
+						<td><p><a href="#//api/name/objectClass">objectClass</a> for child objects</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>keyPath to child objects representation in JSON</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Name of the property, that will receive mapped objects.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/hasMany:forKeyPath:forProperty:withObjectMapping:" title="hasMany:forKeyPath:forProperty:withObjectMapping:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/hasMany:forKeyPath:forProperty:withObjectMapping:">&ndash;&nbsp;hasMany:forKeyPath:forProperty:withObjectMapping:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Map to-many relationship for keyPath.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)hasMany:(Class)<em>objectClass</em> forKeyPath:(NSString *)<em>keyPath</em> forProperty:(NSString *)<em>property</em> withObjectMapping:(EKObjectMapping *)<em>objectMapping</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>keyPath to child objects representation in JSON</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Name of the property, that will receive mapped objects.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>objectMapping</code></th>
+						<td><p>optional mapping override for child objects</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> If you have recursive mappings, do not use this method, cause it can cause infinite recursion to happen. Or you need to handle recursive mappings situation by yourself, subclassing EKObjectMapping and providing different mappings for different mapping levels.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mapKeyPath:toProperty:withDateFormat:" title="mapKeyPath:toProperty:withDateFormat:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapKeyPath:toProperty:withDateFormat:">&ndash;&nbsp;mapKeyPath:toProperty:withDateFormat:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>This method is deprecated and may be removed in the future releases. Please use <code></code>mapKeyPath:toProperty:withDateFormatter:<code> method</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapKeyPath:(NSString *)<em>keyPath</em> toProperty:(NSString *)<em>property</em> withDateFormat:(NSString *)<em>dateFormat</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>keyPath</code></th>
+						<td><p>JSON keypath, that will be used by valueForKeyPath: method</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>property</code></th>
+						<td><p>Property name.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>dateFormat</code></th>
+						<td><p>Date format</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Map JSON keyPath to object property. This method assumes, that value contains NSString, that can be transformed into NSDate by NSDateFormatter. Default timezone is GMT. Transformation is done by <code>EKTransformer</code> class.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">EKObjectMapping.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2016 TIBCO Jaspersoft. All rights reserved. Updated: 2016-05-10</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
