@@ -20,6 +20,10 @@
 #import "JSDashboardExtention.h"
 #endif
 
+#if __has_include("JSAdHocExtention.h")
+#import "JSAdHocExtention.h"
+#endif
+
 #if __has_include("JSSecurity.h")
 #import "JSSecurity.h"
 #endif
