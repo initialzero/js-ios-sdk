@@ -1,0 +1,63 @@
+/*
+ * Copyright © 2017. TIBCO Software Inc. All Rights Reserved. Confidential & Proprietary.
+ */
+
+
+/**
+ @author Oleksii Gubariev ogubarie@tibco.com
+ @since 2.7
+ */
+
+
+#import "JSAdhocDataViewMetadata.h"
+#import "JSAdHocQueryExecutionParameters.h"
+#import "JSAdHocQueryExecutionRequest.h"
+#import "JSAdHocQueryExecutionResponse.h"
+#import "JSDataSet.h"
+#import "JSFlatDataSet.h"
+#import "JSFlatDataSetField.h"
+#import "JSFlatDataSetRow.h"
+#import "JSMultiAxesDataSet.h"
+#import "JSMultiLevelDataSet.h"
+#import "JSAdHocMultiAxesQueryModel.h"
+#import "JSAdHocMultiLevelQueryModel.h"
+#import "JSAdHocQueryAggregation.h"
+#import "JSAdHocQueryFrom.h"
+#import "JSAdHocMultiAxesQueryGroupBy.h"
+#import "JSAdHocMultiLevelQueryGroupBy.h"
+#import "JSAdHocQueryGroupBy.h"
+#import "JSAdHocQueryGroupByConditions.h"
+#import "JSAdHocQueryGroupByExpansionLevel.h"
+#import "JSAdHocQueryGroupByExpansionMember.h"
+#import "JSAdHocQueryGroupByAllGroup.h"
+#import "JSAdHocQueryGroupByGroup.h"
+#import "JSAdHocQueryGroupByRollup.h"
+#import "JSAdHocQueryGroupByAllLevel.h"
+#import "JSAdHocQueryGroupByLevel.h"
+#import "JSAdHocQueryModel.h"
+#import "JSAdHocQueryOrderBy.h"
+#import "JSAdHocQueryOrderByBottomN.h"
+#import "JSAdHocQueryOrderByLevel.h"
+#import "JSAdHocQueryOrderByMember.h"
+#import "JSAdHocQueryOrderByTopN.h"
+#import "JSAdHocQuerySelect.h"
+#import "JSAdHocQuerySelectField.h"
+#import "JSAdHocQueryWhere.h"
+#import "JSAdHocQueryWhereOperand.h"
+#import "JSAdHocQueryWhereOperandFunction.h"
+#import "JSAdHocQueryWhereOperandOperation.h"
+#import "JSAdHocQueryWhereParameter.h"
+#import "JSAdHocQueryWhereParameterString.h"
+#import "JSAdHocQueryWhereParameterBooleanValue.h"
+#import "JSAdHocQueryWhereParameterDateValue.h"
+#import "JSAdHocQueryWhereParameterDecimalValue.h"
+#import "JSAdHocQueryWhereParameterIntegerValue.h"
+#import "JSAdHocQueryWhereParameterListValue.h"
+#import "JSAdHocQueryWhereParameterRangeValue.h"
+#import "JSAdHocQueryWhereParameterRelativeDateRangeValue.h"
+#import "JSAdHocQueryWhereParameterStringValue.h"
+#import "JSAdHocQueryWhereParameterTimestampValue.h"
+#import "JSAdHocQueryWhereParameterTimeValue.h"
+#import "JSAdHocQueryWhereParameterValue.h"
+#import "JSAdHocQueryWhereParameterVariableValue.h"
+#import "JSRESTBase+JSRESTAdHoc.h"

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = 'JaspersoftSDK'
-	s.version = '2.6'
+	s.version = '2.7'
 	s.summary = 'JaspersoftSDK - The simplest way to build JasperReports Server apps.'
 	s.description = <<-DESC
 		JaspersoftSDK for iOS is a set of Objective-C classes to easily connect
@@ -75,11 +75,16 @@ Pod::Spec.new do |s|
 	
 	s.subspec 'JSReportExtention' do |jsreSpec|
 	    jsreSpec.dependency 'JaspersoftSDK/JSCore'
-    	jsreSpec.source_files = 'Sources/JSReportExtention.h', 'Sources/JSReportExtention'
+    	jsreSpec.source_files = 'Sources/JSReportExtention'
 	end
 	
-	s.subspec 'JSDashboardExtention' do |jsreSpec|
-	    jsreSpec.dependency 'JaspersoftSDK/JSCore'
-    	jsreSpec.source_files = 'Sources/JSDashboardExtention.h', 'Sources/JSDashboardExtention'
+	s.subspec 'JSDashboardExtention' do |jsdeSpec|
+	    jsdeSpec.dependency 'JaspersoftSDK/JSCore'
+    	jsdeSpec.source_files = 'Sources/JSDashboardExtention'
+	end
+	
+	s.subspec 'JSAdHocExtention' do |jsaeSpec|
+	    jsaeSpec.dependency 'JaspersoftSDK/JSCore'
+    	jsaeSpec.source_files = 'Sources/JSAdHocExtention/**/*.{h,m}'
 	end
 end

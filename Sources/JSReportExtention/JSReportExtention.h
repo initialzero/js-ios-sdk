@@ -18,3 +18,4 @@
 #import "JSReportExecutor.h"
 #import "JSReportSaver.h"
 #import "JSReportLoader.h"
+#import "JSRESTBase+JSRESTReport.h"

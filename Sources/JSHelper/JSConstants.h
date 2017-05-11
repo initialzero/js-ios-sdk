@@ -198,6 +198,7 @@ extern NSString *const kJS_REST_EXPORT_EXECUTION_URI;
 extern NSString *const kJS_REST_EXPORT_EXECUTION_ATTACHMENTS_PREFIX_URI;
 extern NSString *const kJS_REST_DASHBOARD_EXECUTION_URI;
 extern NSString *const kJS_REST_DASHBOARD_EXECUTION_STATUS_URI;
+extern NSString *const kJS_QUERY_EXECUTION_URI;
 /** @} */
 
 
@@ -232,3 +233,15 @@ typedef NS_ENUM(NSInteger, JSMarkupType) {
 
 extern NSString *const JSRestClientDidChangeCookies;
 extern NSString *const JSReportLoaderDidSetReportNotification;
+
+
+/**
+ @name AdHoc Date Formats
+ @{
+ */
+extern NSString * const kJSAdHocQueryWhereParameterDateValueFormat;
+extern NSString * const kJSAdHocQueryWhereParameterTimeValueFormat;
+extern NSString * const kJSAdHocQueryWhereParameterTimestampValueFormat;
+extern NSString * const kJSDataSetDateValueFormat;
+extern NSString * const kJSDataSetDateTimeValueFormat;
+/** @} */

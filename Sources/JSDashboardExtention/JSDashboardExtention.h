@@ -10,3 +10,4 @@
 
 #import "JSDashboard.h"
 #import "JSDashboardSaver.h"
+#import "JSRESTBase+JSRESTDashboard.h"

@@ -156,8 +156,6 @@
 		0849FCCA1C2B0A92008F1064 /* JSProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0849FC711C2B0A91008F1064 /* JSProfile.m */; };
 		0849FCCB1C2B0A92008F1064 /* JSRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0849FC721C2B0A91008F1064 /* JSRequest.h */; };
 		0849FCCC1C2B0A92008F1064 /* JSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0849FC731C2B0A91008F1064 /* JSRequest.m */; };
-		0849FCCD1C2B0A92008F1064 /* JSRESTBase+JSRESTReport.h in Headers */ = {isa = PBXBuildFile; fileRef = 0849FC741C2B0A91008F1064 /* JSRESTBase+JSRESTReport.h */; };
-		0849FCCE1C2B0A92008F1064 /* JSRESTBase+JSRESTReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 0849FC751C2B0A91008F1064 /* JSRESTBase+JSRESTReport.m */; };
 		0849FCCF1C2B0A92008F1064 /* JSRESTBase+JSRESTResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0849FC761C2B0A91008F1064 /* JSRESTBase+JSRESTResource.h */; };
 		0849FCD01C2B0A92008F1064 /* JSRESTBase+JSRESTResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0849FC771C2B0A91008F1064 /* JSRESTBase+JSRESTResource.m */; };
 		0849FCD11C2B0A92008F1064 /* JSRESTBase+JSRESTSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 0849FC781C2B0A91008F1064 /* JSRESTBase+JSRESTSession.h */; };
@@ -190,7 +188,6 @@
 		0899C44A1C3170AC00CFBD91 /* JSContentResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C4481C3170AC00CFBD91 /* JSContentResource.m */; };
 		0899C44D1C3170C300CFBD91 /* JSRESTBase+JSRESTContentResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0899C44B1C3170C300CFBD91 /* JSRESTBase+JSRESTContentResource.h */; };
 		0899C44E1C3170C300CFBD91 /* JSRESTBase+JSRESTContentResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C44C1C3170C300CFBD91 /* JSRESTBase+JSRESTContentResource.m */; };
-		A147800DD37B9AF78B86CEF8 /* JSRESTBase+JSRESTDashboard.h in Headers */ = {isa = PBXBuildFile; fileRef = A1478F16274972BB223D56F6 /* JSRESTBase+JSRESTDashboard.h */; };
 		A147807F7FC01CA5D92C4C37 /* JSDashboardComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A147828C4698D5A889D3163B /* JSDashboardComponent.m */; };
 		A14783AEA5266354993F7F4C /* JSReportPart.h in Headers */ = {isa = PBXBuildFile; fileRef = A1478BAC3C92E5793C65F8E9 /* JSReportPart.h */; };
 		A1478449D2FAFA08F51A8C36 /* JSRESTBase+JSSchedule.h in Headers */ = {isa = PBXBuildFile; fileRef = A14788C87487E6E38FAC413D /* JSRESTBase+JSSchedule.h */; };
@@ -206,7 +203,6 @@
 		A14789D7C67ED26B7DED7A09 /* JSDateFormatterFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = A1478E5FF766BDE05BFDB838 /* JSDateFormatterFactory.h */; };
 		A1478A75DCE4466F783BEEEB /* JSReportComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A147898826A139D7447590B4 /* JSReportComponent.h */; };
 		A1478B2366FD595E1D5184F7 /* JSDashboardComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A14780CE0E752AD263D1C79E /* JSDashboardComponent.h */; };
-		A1478CA432B170CFEDB4D4E4 /* JSRESTBase+JSRESTDashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A1478FDBCBE0FE99F2512696 /* JSRESTBase+JSRESTDashboard.m */; };
 		A1478CBCB217D3A4C19CDBE7 /* JSScheduleJobState.m in Sources */ = {isa = PBXBuildFile; fileRef = A1478CA259B4BAD463F39B36 /* JSScheduleJobState.m */; };
 		A1478CE668255138CB7CFEA6 /* JSReportDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = A1478A9FDC07CAC502A29AC7 /* JSReportDestination.m */; };
 		A1478DD6E4A12B15D8ABDB78 /* JSDateFormatterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A1478F2F9E43E7F32310F7FB /* JSDateFormatterFactory.m */; };
@@ -248,6 +244,115 @@
 		BD8AE89B1D356C4F006B5595 /* JSDashboard.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8AE8991D356C4F006B5595 /* JSDashboard.h */; };
 		BD8AE89C1D356C4F006B5595 /* JSDashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8AE89A1D356C4F006B5595 /* JSDashboard.m */; };
 		BD8AE89E1D357253006B5595 /* JSDashboardExtention.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8AE89D1D357253006B5595 /* JSDashboardExtention.h */; };
+		BD8B43091EC4BA8300BE2631 /* JSAdhocDataViewMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42741EC4BA8200BE2631 /* JSAdhocDataViewMetadata.h */; };
+		BD8B430A1EC4BA8300BE2631 /* JSAdhocDataViewMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42751EC4BA8200BE2631 /* JSAdhocDataViewMetadata.m */; };
+		BD8B430B1EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42771EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.h */; };
+		BD8B430C1EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42781EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.m */; };
+		BD8B430D1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B427A1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.h */; };
+		BD8B430E1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B427B1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.m */; };
+		BD8B430F1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B427D1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.h */; };
+		BD8B43101EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B427E1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.m */; };
+		BD8B43111EC4BA8300BE2631 /* JSDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42801EC4BA8300BE2631 /* JSDataSet.h */; };
+		BD8B43121EC4BA8300BE2631 /* JSDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42811EC4BA8300BE2631 /* JSDataSet.m */; };
+		BD8B43131EC4BA8300BE2631 /* JSFlatDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42831EC4BA8300BE2631 /* JSFlatDataSet.h */; };
+		BD8B43141EC4BA8300BE2631 /* JSFlatDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42841EC4BA8300BE2631 /* JSFlatDataSet.m */; };
+		BD8B43151EC4BA8300BE2631 /* JSFlatDataSetField.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42861EC4BA8300BE2631 /* JSFlatDataSetField.h */; };
+		BD8B43161EC4BA8300BE2631 /* JSFlatDataSetField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42871EC4BA8300BE2631 /* JSFlatDataSetField.m */; };
+		BD8B43171EC4BA8300BE2631 /* JSFlatDataSetRow.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42891EC4BA8300BE2631 /* JSFlatDataSetRow.h */; };
+		BD8B43181EC4BA8300BE2631 /* JSFlatDataSetRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B428A1EC4BA8300BE2631 /* JSFlatDataSetRow.m */; };
+		BD8B43191EC4BA8300BE2631 /* JSMultiAxesDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B428C1EC4BA8300BE2631 /* JSMultiAxesDataSet.h */; };
+		BD8B431A1EC4BA8300BE2631 /* JSMultiAxesDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B428D1EC4BA8300BE2631 /* JSMultiAxesDataSet.m */; };
+		BD8B431B1EC4BA8300BE2631 /* JSMultiLevelDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B428F1EC4BA8300BE2631 /* JSMultiLevelDataSet.h */; };
+		BD8B431C1EC4BA8300BE2631 /* JSMultiLevelDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42901EC4BA8300BE2631 /* JSMultiLevelDataSet.m */; };
+		BD8B431D1EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42931EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.h */; };
+		BD8B431E1EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42941EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.m */; };
+		BD8B431F1EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42961EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.h */; };
+		BD8B43201EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42971EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.m */; };
+		BD8B43211EC4BA8300BE2631 /* JSAdHocQueryAggregation.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42991EC4BA8300BE2631 /* JSAdHocQueryAggregation.h */; };
+		BD8B43221EC4BA8300BE2631 /* JSAdHocQueryAggregation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B429A1EC4BA8300BE2631 /* JSAdHocQueryAggregation.m */; };
+		BD8B43231EC4BA8300BE2631 /* JSAdHocQueryFrom.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B429C1EC4BA8300BE2631 /* JSAdHocQueryFrom.h */; };
+		BD8B43241EC4BA8300BE2631 /* JSAdHocQueryFrom.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B429D1EC4BA8300BE2631 /* JSAdHocQueryFrom.m */; };
+		BD8B43251EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42A01EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.h */; };
+		BD8B43261EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42A11EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.m */; };
+		BD8B43271EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42A31EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.h */; };
+		BD8B43281EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42A41EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.m */; };
+		BD8B43291EC4BA8300BE2631 /* JSAdHocQueryGroupBy.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42A51EC4BA8300BE2631 /* JSAdHocQueryGroupBy.h */; };
+		BD8B432A1EC4BA8300BE2631 /* JSAdHocQueryGroupBy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42A61EC4BA8300BE2631 /* JSAdHocQueryGroupBy.m */; };
+		BD8B432B1EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42A81EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.h */; };
+		BD8B432C1EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42A91EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.m */; };
+		BD8B432D1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42AB1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.h */; };
+		BD8B432E1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42AC1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.m */; };
+		BD8B432F1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42AE1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.h */; };
+		BD8B43301EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42AF1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.m */; };
+		BD8B43311EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42B11EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.h */; };
+		BD8B43321EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42B21EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.m */; };
+		BD8B43331EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42B31EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.h */; };
+		BD8B43341EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42B41EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.m */; };
+		BD8B43351EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42B51EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.h */; };
+		BD8B43361EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42B61EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.m */; };
+		BD8B43371EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42B81EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.h */; };
+		BD8B43381EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42B91EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.m */; };
+		BD8B43391EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42BA1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.h */; };
+		BD8B433A1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42BB1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.m */; };
+		BD8B433B1EC4BA8300BE2631 /* JSAdHocQueryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42BC1EC4BA8300BE2631 /* JSAdHocQueryModel.h */; };
+		BD8B433C1EC4BA8300BE2631 /* JSAdHocQueryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42BD1EC4BA8300BE2631 /* JSAdHocQueryModel.m */; };
+		BD8B433D1EC4BA8300BE2631 /* JSAdHocQueryOrderBy.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42BF1EC4BA8300BE2631 /* JSAdHocQueryOrderBy.h */; };
+		BD8B433E1EC4BA8300BE2631 /* JSAdHocQueryOrderBy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42C01EC4BA8300BE2631 /* JSAdHocQueryOrderBy.m */; };
+		BD8B433F1EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42C21EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.h */; };
+		BD8B43401EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42C31EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.m */; };
+		BD8B43411EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42C51EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.h */; };
+		BD8B43421EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42C61EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.m */; };
+		BD8B43431EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42C81EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.h */; };
+		BD8B43441EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42C91EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.m */; };
+		BD8B43451EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42CB1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.h */; };
+		BD8B43461EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42CC1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.m */; };
+		BD8B43471EC4BA8300BE2631 /* JSAdHocQuerySelect.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42CE1EC4BA8300BE2631 /* JSAdHocQuerySelect.h */; };
+		BD8B43481EC4BA8300BE2631 /* JSAdHocQuerySelect.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42CF1EC4BA8300BE2631 /* JSAdHocQuerySelect.m */; };
+		BD8B43491EC4BA8300BE2631 /* JSAdHocQuerySelectField.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42D11EC4BA8300BE2631 /* JSAdHocQuerySelectField.h */; };
+		BD8B434A1EC4BA8300BE2631 /* JSAdHocQuerySelectField.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42D21EC4BA8300BE2631 /* JSAdHocQuerySelectField.m */; };
+		BD8B434B1EC4BA8300BE2631 /* JSAdHocQueryWhere.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42D41EC4BA8300BE2631 /* JSAdHocQueryWhere.h */; };
+		BD8B434C1EC4BA8300BE2631 /* JSAdHocQueryWhere.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42D51EC4BA8300BE2631 /* JSAdHocQueryWhere.m */; };
+		BD8B434D1EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42D71EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.h */; };
+		BD8B434E1EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42D81EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.m */; };
+		BD8B434F1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42DA1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.h */; };
+		BD8B43501EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42DB1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.m */; };
+		BD8B43511EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42DD1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.h */; };
+		BD8B43521EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42DE1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.m */; };
+		BD8B43531EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42E01EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.h */; };
+		BD8B43541EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42E11EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.m */; };
+		BD8B43551EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42E31EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.h */; };
+		BD8B43561EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42E41EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.m */; };
+		BD8B43571EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42E71EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.h */; };
+		BD8B43581EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42E81EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.m */; };
+		BD8B43591EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42EA1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.h */; };
+		BD8B435A1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42EB1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.m */; };
+		BD8B435B1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42ED1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.h */; };
+		BD8B435C1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42EE1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.m */; };
+		BD8B435D1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42F01EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.h */; };
+		BD8B435E1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42F11EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.m */; };
+		BD8B435F1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42F31EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.h */; };
+		BD8B43601EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42F41EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.m */; };
+		BD8B43611EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42F61EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.h */; };
+		BD8B43621EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42F71EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.m */; };
+		BD8B43631EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42F91EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.h */; };
+		BD8B43641EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42FA1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.m */; };
+		BD8B43651EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42FC1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.h */; };
+		BD8B43661EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B42FD1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.m */; };
+		BD8B43671EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B42FF1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.h */; };
+		BD8B43681EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B43001EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.m */; };
+		BD8B43691EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B43021EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.h */; };
+		BD8B436A1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B43031EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.m */; };
+		BD8B436B1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B43041EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.h */; };
+		BD8B436C1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B43051EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.m */; };
+		BD8B436D1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B43071EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.h */; };
+		BD8B436E1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B43081EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.m */; };
+		BD8B43701EC4BD4C00BE2631 /* JSAdHocExtention.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B436F1EC4BD4C00BE2631 /* JSAdHocExtention.h */; };
+		BD8B43731EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B43711EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.h */; };
+		BD8B43741EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B43721EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.m */; };
+		BD8B43771EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B43751EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.h */; };
+		BD8B43781EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B43761EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.m */; };
+		BD8B437B1EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8B43791EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.h */; };
+		BD8B437C1EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8B437A1EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.m */; };
 		BD991C5A1CF76B5B00859145 /* NSString+JSURLEncodings.h in Headers */ = {isa = PBXBuildFile; fileRef = BD991C581CF76B5B00859145 /* NSString+JSURLEncodings.h */; };
 		BD991C5B1CF76B5B00859145 /* NSString+JSURLEncodings.m in Sources */ = {isa = PBXBuildFile; fileRef = BD991C591CF76B5B00859145 /* NSString+JSURLEncodings.m */; };
 		FFD65C5964595F50D9326C49 /* libPods-JaspersoftSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F85CFDE522786E932150FC50 /* libPods-JaspersoftSDK.a */; };
@@ -414,8 +519,6 @@
 		0849FC711C2B0A91008F1064 /* JSProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfile.m; sourceTree = "<group>"; };
 		0849FC721C2B0A91008F1064 /* JSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRequest.h; sourceTree = "<group>"; };
 		0849FC731C2B0A91008F1064 /* JSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRequest.m; sourceTree = "<group>"; };
-		0849FC741C2B0A91008F1064 /* JSRESTBase+JSRESTReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSRESTBase+JSRESTReport.h"; sourceTree = "<group>"; };
-		0849FC751C2B0A91008F1064 /* JSRESTBase+JSRESTReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSRESTBase+JSRESTReport.m"; sourceTree = "<group>"; };
 		0849FC761C2B0A91008F1064 /* JSRESTBase+JSRESTResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSRESTBase+JSRESTResource.h"; sourceTree = "<group>"; };
 		0849FC771C2B0A91008F1064 /* JSRESTBase+JSRESTResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSRESTBase+JSRESTResource.m"; sourceTree = "<group>"; };
 		0849FC781C2B0A91008F1064 /* JSRESTBase+JSRESTSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSRESTBase+JSRESTSession.h"; sourceTree = "<group>"; };
@@ -472,10 +575,8 @@
 		A1478CA259B4BAD463F39B36 /* JSScheduleJobState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSScheduleJobState.m; sourceTree = "<group>"; };
 		A1478D4DAE50A9711D3A00EF /* JSReportBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSReportBookmark.h; sourceTree = "<group>"; };
 		A1478E5FF766BDE05BFDB838 /* JSDateFormatterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDateFormatterFactory.h; sourceTree = "<group>"; };
-		A1478F16274972BB223D56F6 /* JSRESTBase+JSRESTDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSRESTBase+JSRESTDashboard.h"; sourceTree = "<group>"; };
 		A1478F2F9E43E7F32310F7FB /* JSDateFormatterFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDateFormatterFactory.m; sourceTree = "<group>"; };
 		A1478FC0657A2C5AE60CA688 /* JSScheduleMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSScheduleMetadata.m; sourceTree = "<group>"; };
-		A1478FDBCBE0FE99F2512696 /* JSRESTBase+JSRESTDashboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSRESTBase+JSRESTDashboard.m"; sourceTree = "<group>"; };
 		BD0A8F041C7F646A00C63F44 /* JSMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMapping.h; sourceTree = "<group>"; };
 		BD0A8F051C7F646A00C63F44 /* JSMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapping.m; sourceTree = "<group>"; };
 		BD194F881C75D50100C99DA9 /* JSObjectMappingsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSObjectMappingsProtocol.h; sourceTree = "<group>"; };
@@ -510,6 +611,115 @@
 		BD8AE8991D356C4F006B5595 /* JSDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDashboard.h; sourceTree = "<group>"; };
 		BD8AE89A1D356C4F006B5595 /* JSDashboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDashboard.m; sourceTree = "<group>"; };
 		BD8AE89D1D357253006B5595 /* JSDashboardExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDashboardExtention.h; sourceTree = "<group>"; };
+		BD8B42741EC4BA8200BE2631 /* JSAdhocDataViewMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdhocDataViewMetadata.h; sourceTree = "<group>"; };
+		BD8B42751EC4BA8200BE2631 /* JSAdhocDataViewMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdhocDataViewMetadata.m; sourceTree = "<group>"; };
+		BD8B42771EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryExecutionParameters.h; sourceTree = "<group>"; };
+		BD8B42781EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryExecutionParameters.m; sourceTree = "<group>"; };
+		BD8B427A1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryExecutionRequest.h; sourceTree = "<group>"; };
+		BD8B427B1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryExecutionRequest.m; sourceTree = "<group>"; };
+		BD8B427D1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryExecutionResponse.h; sourceTree = "<group>"; };
+		BD8B427E1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryExecutionResponse.m; sourceTree = "<group>"; };
+		BD8B42801EC4BA8300BE2631 /* JSDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDataSet.h; sourceTree = "<group>"; };
+		BD8B42811EC4BA8300BE2631 /* JSDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDataSet.m; sourceTree = "<group>"; };
+		BD8B42831EC4BA8300BE2631 /* JSFlatDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlatDataSet.h; sourceTree = "<group>"; };
+		BD8B42841EC4BA8300BE2631 /* JSFlatDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlatDataSet.m; sourceTree = "<group>"; };
+		BD8B42861EC4BA8300BE2631 /* JSFlatDataSetField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlatDataSetField.h; sourceTree = "<group>"; };
+		BD8B42871EC4BA8300BE2631 /* JSFlatDataSetField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlatDataSetField.m; sourceTree = "<group>"; };
+		BD8B42891EC4BA8300BE2631 /* JSFlatDataSetRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFlatDataSetRow.h; sourceTree = "<group>"; };
+		BD8B428A1EC4BA8300BE2631 /* JSFlatDataSetRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFlatDataSetRow.m; sourceTree = "<group>"; };
+		BD8B428C1EC4BA8300BE2631 /* JSMultiAxesDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMultiAxesDataSet.h; sourceTree = "<group>"; };
+		BD8B428D1EC4BA8300BE2631 /* JSMultiAxesDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMultiAxesDataSet.m; sourceTree = "<group>"; };
+		BD8B428F1EC4BA8300BE2631 /* JSMultiLevelDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMultiLevelDataSet.h; sourceTree = "<group>"; };
+		BD8B42901EC4BA8300BE2631 /* JSMultiLevelDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMultiLevelDataSet.m; sourceTree = "<group>"; };
+		BD8B42931EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocMultiAxesQueryModel.h; sourceTree = "<group>"; };
+		BD8B42941EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocMultiAxesQueryModel.m; sourceTree = "<group>"; };
+		BD8B42961EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocMultiLevelQueryModel.h; sourceTree = "<group>"; };
+		BD8B42971EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocMultiLevelQueryModel.m; sourceTree = "<group>"; };
+		BD8B42991EC4BA8300BE2631 /* JSAdHocQueryAggregation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryAggregation.h; sourceTree = "<group>"; };
+		BD8B429A1EC4BA8300BE2631 /* JSAdHocQueryAggregation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryAggregation.m; sourceTree = "<group>"; };
+		BD8B429C1EC4BA8300BE2631 /* JSAdHocQueryFrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryFrom.h; sourceTree = "<group>"; };
+		BD8B429D1EC4BA8300BE2631 /* JSAdHocQueryFrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryFrom.m; sourceTree = "<group>"; };
+		BD8B42A01EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocMultiAxesQueryGroupBy.h; sourceTree = "<group>"; };
+		BD8B42A11EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocMultiAxesQueryGroupBy.m; sourceTree = "<group>"; };
+		BD8B42A31EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocMultiLevelQueryGroupBy.h; sourceTree = "<group>"; };
+		BD8B42A41EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocMultiLevelQueryGroupBy.m; sourceTree = "<group>"; };
+		BD8B42A51EC4BA8300BE2631 /* JSAdHocQueryGroupBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupBy.h; sourceTree = "<group>"; };
+		BD8B42A61EC4BA8300BE2631 /* JSAdHocQueryGroupBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupBy.m; sourceTree = "<group>"; };
+		BD8B42A81EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByConditions.h; sourceTree = "<group>"; };
+		BD8B42A91EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByConditions.m; sourceTree = "<group>"; };
+		BD8B42AB1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByExpansionLevel.h; sourceTree = "<group>"; };
+		BD8B42AC1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByExpansionLevel.m; sourceTree = "<group>"; };
+		BD8B42AE1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByExpansionMember.h; sourceTree = "<group>"; };
+		BD8B42AF1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByExpansionMember.m; sourceTree = "<group>"; };
+		BD8B42B11EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByAllGroup.h; sourceTree = "<group>"; };
+		BD8B42B21EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByAllGroup.m; sourceTree = "<group>"; };
+		BD8B42B31EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByGroup.h; sourceTree = "<group>"; };
+		BD8B42B41EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByGroup.m; sourceTree = "<group>"; };
+		BD8B42B51EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByRollup.h; sourceTree = "<group>"; };
+		BD8B42B61EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByRollup.m; sourceTree = "<group>"; };
+		BD8B42B81EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByAllLevel.h; sourceTree = "<group>"; };
+		BD8B42B91EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByAllLevel.m; sourceTree = "<group>"; };
+		BD8B42BA1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryGroupByLevel.h; sourceTree = "<group>"; };
+		BD8B42BB1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryGroupByLevel.m; sourceTree = "<group>"; };
+		BD8B42BC1EC4BA8300BE2631 /* JSAdHocQueryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryModel.h; sourceTree = "<group>"; };
+		BD8B42BD1EC4BA8300BE2631 /* JSAdHocQueryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryModel.m; sourceTree = "<group>"; };
+		BD8B42BF1EC4BA8300BE2631 /* JSAdHocQueryOrderBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryOrderBy.h; sourceTree = "<group>"; };
+		BD8B42C01EC4BA8300BE2631 /* JSAdHocQueryOrderBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryOrderBy.m; sourceTree = "<group>"; };
+		BD8B42C21EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryOrderByBottomN.h; sourceTree = "<group>"; };
+		BD8B42C31EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryOrderByBottomN.m; sourceTree = "<group>"; };
+		BD8B42C51EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryOrderByLevel.h; sourceTree = "<group>"; };
+		BD8B42C61EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryOrderByLevel.m; sourceTree = "<group>"; };
+		BD8B42C81EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryOrderByMember.h; sourceTree = "<group>"; };
+		BD8B42C91EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryOrderByMember.m; sourceTree = "<group>"; };
+		BD8B42CB1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryOrderByTopN.h; sourceTree = "<group>"; };
+		BD8B42CC1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryOrderByTopN.m; sourceTree = "<group>"; };
+		BD8B42CE1EC4BA8300BE2631 /* JSAdHocQuerySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQuerySelect.h; sourceTree = "<group>"; };
+		BD8B42CF1EC4BA8300BE2631 /* JSAdHocQuerySelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQuerySelect.m; sourceTree = "<group>"; };
+		BD8B42D11EC4BA8300BE2631 /* JSAdHocQuerySelectField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQuerySelectField.h; sourceTree = "<group>"; };
+		BD8B42D21EC4BA8300BE2631 /* JSAdHocQuerySelectField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQuerySelectField.m; sourceTree = "<group>"; };
+		BD8B42D41EC4BA8300BE2631 /* JSAdHocQueryWhere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhere.h; sourceTree = "<group>"; };
+		BD8B42D51EC4BA8300BE2631 /* JSAdHocQueryWhere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhere.m; sourceTree = "<group>"; };
+		BD8B42D71EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereOperand.h; sourceTree = "<group>"; };
+		BD8B42D81EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereOperand.m; sourceTree = "<group>"; };
+		BD8B42DA1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereOperandFunction.h; sourceTree = "<group>"; };
+		BD8B42DB1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereOperandFunction.m; sourceTree = "<group>"; };
+		BD8B42DD1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereOperandOperation.h; sourceTree = "<group>"; };
+		BD8B42DE1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereOperandOperation.m; sourceTree = "<group>"; };
+		BD8B42E01EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameter.h; sourceTree = "<group>"; };
+		BD8B42E11EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameter.m; sourceTree = "<group>"; };
+		BD8B42E31EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterString.h; sourceTree = "<group>"; };
+		BD8B42E41EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterString.m; sourceTree = "<group>"; };
+		BD8B42E71EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterBooleanValue.h; sourceTree = "<group>"; };
+		BD8B42E81EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterBooleanValue.m; sourceTree = "<group>"; };
+		BD8B42EA1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterDateValue.h; sourceTree = "<group>"; };
+		BD8B42EB1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterDateValue.m; sourceTree = "<group>"; };
+		BD8B42ED1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterDecimalValue.h; sourceTree = "<group>"; };
+		BD8B42EE1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterDecimalValue.m; sourceTree = "<group>"; };
+		BD8B42F01EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterIntegerValue.h; sourceTree = "<group>"; };
+		BD8B42F11EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterIntegerValue.m; sourceTree = "<group>"; };
+		BD8B42F31EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterListValue.h; sourceTree = "<group>"; };
+		BD8B42F41EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterListValue.m; sourceTree = "<group>"; };
+		BD8B42F61EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterRangeValue.h; sourceTree = "<group>"; };
+		BD8B42F71EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterRangeValue.m; sourceTree = "<group>"; };
+		BD8B42F91EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterRelativeDateRangeValue.h; sourceTree = "<group>"; };
+		BD8B42FA1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterRelativeDateRangeValue.m; sourceTree = "<group>"; };
+		BD8B42FC1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterStringValue.h; sourceTree = "<group>"; };
+		BD8B42FD1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterStringValue.m; sourceTree = "<group>"; };
+		BD8B42FF1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterTimestampValue.h; sourceTree = "<group>"; };
+		BD8B43001EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterTimestampValue.m; sourceTree = "<group>"; };
+		BD8B43021EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterTimeValue.h; sourceTree = "<group>"; };
+		BD8B43031EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterTimeValue.m; sourceTree = "<group>"; };
+		BD8B43041EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterValue.h; sourceTree = "<group>"; };
+		BD8B43051EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterValue.m; sourceTree = "<group>"; };
+		BD8B43071EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocQueryWhereParameterVariableValue.h; sourceTree = "<group>"; };
+		BD8B43081EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAdHocQueryWhereParameterVariableValue.m; sourceTree = "<group>"; };
+		BD8B436F1EC4BD4C00BE2631 /* JSAdHocExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAdHocExtention.h; sourceTree = "<group>"; };
+		BD8B43711EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSRESTBase+JSRESTAdHoc.h"; sourceTree = "<group>"; };
+		BD8B43721EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSRESTBase+JSRESTAdHoc.m"; sourceTree = "<group>"; };
+		BD8B43751EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSRESTBase+JSRESTDashboard.h"; sourceTree = "<group>"; };
+		BD8B43761EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSRESTBase+JSRESTDashboard.m"; sourceTree = "<group>"; };
+		BD8B43791EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSRESTBase+JSRESTReport.h"; sourceTree = "<group>"; };
+		BD8B437A1EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSRESTBase+JSRESTReport.m"; sourceTree = "<group>"; };
 		BD991C581CF76B5B00859145 /* NSString+JSURLEncodings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JSURLEncodings.h"; sourceTree = "<group>"; };
 		BD991C591CF76B5B00859145 /* NSString+JSURLEncodings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JSURLEncodings.m"; sourceTree = "<group>"; };
 		CE241112233BFF779E325E40 /* Pods-JaspersoftSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JaspersoftSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-JaspersoftSDK/Pods-JaspersoftSDK.release.xcconfig"; sourceTree = "<group>"; };
@@ -616,6 +826,7 @@
 				0849FC311C2B0A91008F1064 /* JSObjectMappings */,
 				0849FC5F1C2B0A91008F1064 /* JSReportExtention */,
 				BD8AE8941D3569C0006B5595 /* JSDashboardExtention */,
+				BD8B42731EC4BA8200BE2631 /* JSAdHocExtention */,
 				0849FC6E1C2B0A91008F1064 /* JSRestClient */,
 				0849FC811C2B0A91008F1064 /* JSSecurity */,
 			);
@@ -707,6 +918,8 @@
 			isa = PBXGroup;
 			children = (
 				0849FC661C2B0A91008F1064 /* JSReportExtention.h */,
+				BD8B43791EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.h */,
+				BD8B437A1EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.m */,
 				0849FC601C2B0A91008F1064 /* JSReport.h */,
 				0849FC611C2B0A91008F1064 /* JSReport.m */,
 				0849FC621C2B0A91008F1064 /* JSReportExecutionConfiguration.h */,
@@ -749,14 +962,10 @@
 				0849FC7B1C2B0A91008F1064 /* JSRESTBase.m */,
 				0899C44B1C3170C300CFBD91 /* JSRESTBase+JSRESTContentResource.h */,
 				0899C44C1C3170C300CFBD91 /* JSRESTBase+JSRESTContentResource.m */,
-				0849FC741C2B0A91008F1064 /* JSRESTBase+JSRESTReport.h */,
-				0849FC751C2B0A91008F1064 /* JSRESTBase+JSRESTReport.m */,
 				0849FC761C2B0A91008F1064 /* JSRESTBase+JSRESTResource.h */,
 				0849FC771C2B0A91008F1064 /* JSRESTBase+JSRESTResource.m */,
 				0849FC781C2B0A91008F1064 /* JSRESTBase+JSRESTSession.h */,
 				0849FC791C2B0A91008F1064 /* JSRESTBase+JSRESTSession.m */,
-				A1478F16274972BB223D56F6 /* JSRESTBase+JSRESTDashboard.h */,
-				A1478FDBCBE0FE99F2512696 /* JSRESTBase+JSRESTDashboard.m */,
 				A14788C87487E6E38FAC413D /* JSRESTBase+JSSchedule.h */,
 				A147815111A4ADFCC724870F /* JSRESTBase+JSSchedule.m */,
 				BD5A50E01E1FE28D00B8A853 /* JSRESTBase+JSRESTServer.h */,
@@ -964,6 +1173,8 @@
 			isa = PBXGroup;
 			children = (
 				BD8AE89D1D357253006B5595 /* JSDashboardExtention.h */,
+				BD8B43751EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.h */,
+				BD8B43761EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.m */,
 				BD8AE8991D356C4F006B5595 /* JSDashboard.h */,
 				BD8AE89A1D356C4F006B5595 /* JSDashboard.m */,
 				BD8AE8951D3569E8006B5595 /* JSDashboardSaver.h */,
@@ -972,6 +1183,494 @@
 			name = JSDashboardExtention;
 			path = Sources/JSDashboardExtention;
 			sourceTree = SOURCE_ROOT;
+		};
+		BD8B42731EC4BA8200BE2631 /* JSAdHocExtention */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B436F1EC4BD4C00BE2631 /* JSAdHocExtention.h */,
+				BD8B43711EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.h */,
+				BD8B43721EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.m */,
+				BD8B42761EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters */,
+				BD8B42791EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest */,
+				BD8B427C1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse */,
+				BD8B42911EC4BA8300BE2631 /* JSAdHocQueryModel */,
+				BD8B42741EC4BA8200BE2631 /* JSAdhocDataViewMetadata.h */,
+				BD8B42751EC4BA8200BE2631 /* JSAdhocDataViewMetadata.m */,
+			);
+			path = JSAdHocExtention;
+			sourceTree = "<group>";
+		};
+		BD8B42761EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42771EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.h */,
+				BD8B42781EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.m */,
+			);
+			path = JSAdHocQueryExecutionParameters;
+			sourceTree = "<group>";
+		};
+		BD8B42791EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B427A1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.h */,
+				BD8B427B1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.m */,
+			);
+			path = JSAdHocQueryExecutionRequest;
+			sourceTree = "<group>";
+		};
+		BD8B427C1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B427F1EC4BA8300BE2631 /* JSDataSet */,
+				BD8B427D1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.h */,
+				BD8B427E1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.m */,
+			);
+			path = JSAdHocQueryExecutionResponse;
+			sourceTree = "<group>";
+		};
+		BD8B427F1EC4BA8300BE2631 /* JSDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42821EC4BA8300BE2631 /* JSFlatDataSet */,
+				BD8B428B1EC4BA8300BE2631 /* JSMultiAxesDataSet */,
+				BD8B428E1EC4BA8300BE2631 /* JSMultiLevelDataSet */,
+				BD8B42801EC4BA8300BE2631 /* JSDataSet.h */,
+				BD8B42811EC4BA8300BE2631 /* JSDataSet.m */,
+			);
+			path = JSDataSet;
+			sourceTree = "<group>";
+		};
+		BD8B42821EC4BA8300BE2631 /* JSFlatDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42851EC4BA8300BE2631 /* JSFlatDataSetField */,
+				BD8B42881EC4BA8300BE2631 /* JSFlatDataSetRow */,
+				BD8B42831EC4BA8300BE2631 /* JSFlatDataSet.h */,
+				BD8B42841EC4BA8300BE2631 /* JSFlatDataSet.m */,
+			);
+			path = JSFlatDataSet;
+			sourceTree = "<group>";
+		};
+		BD8B42851EC4BA8300BE2631 /* JSFlatDataSetField */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42861EC4BA8300BE2631 /* JSFlatDataSetField.h */,
+				BD8B42871EC4BA8300BE2631 /* JSFlatDataSetField.m */,
+			);
+			path = JSFlatDataSetField;
+			sourceTree = "<group>";
+		};
+		BD8B42881EC4BA8300BE2631 /* JSFlatDataSetRow */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42891EC4BA8300BE2631 /* JSFlatDataSetRow.h */,
+				BD8B428A1EC4BA8300BE2631 /* JSFlatDataSetRow.m */,
+			);
+			path = JSFlatDataSetRow;
+			sourceTree = "<group>";
+		};
+		BD8B428B1EC4BA8300BE2631 /* JSMultiAxesDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B428C1EC4BA8300BE2631 /* JSMultiAxesDataSet.h */,
+				BD8B428D1EC4BA8300BE2631 /* JSMultiAxesDataSet.m */,
+			);
+			path = JSMultiAxesDataSet;
+			sourceTree = "<group>";
+		};
+		BD8B428E1EC4BA8300BE2631 /* JSMultiLevelDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B428F1EC4BA8300BE2631 /* JSMultiLevelDataSet.h */,
+				BD8B42901EC4BA8300BE2631 /* JSMultiLevelDataSet.m */,
+			);
+			path = JSMultiLevelDataSet;
+			sourceTree = "<group>";
+		};
+		BD8B42911EC4BA8300BE2631 /* JSAdHocQueryModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42921EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel */,
+				BD8B42951EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel */,
+				BD8B42981EC4BA8300BE2631 /* JSAdHocQueryAggregation */,
+				BD8B429B1EC4BA8300BE2631 /* JSAdHocQueryFrom */,
+				BD8B429E1EC4BA8300BE2631 /* JSAdHocQueryGroupBy */,
+				BD8B42BE1EC4BA8300BE2631 /* JSAdHocQueryOrderBy */,
+				BD8B42CD1EC4BA8300BE2631 /* JSAdHocQuerySelect */,
+				BD8B42D31EC4BA8300BE2631 /* JSAdHocQueryWhere */,
+				BD8B42BC1EC4BA8300BE2631 /* JSAdHocQueryModel.h */,
+				BD8B42BD1EC4BA8300BE2631 /* JSAdHocQueryModel.m */,
+			);
+			path = JSAdHocQueryModel;
+			sourceTree = "<group>";
+		};
+		BD8B42921EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42931EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.h */,
+				BD8B42941EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.m */,
+			);
+			path = JSAdHocMultiAxesQueryModel;
+			sourceTree = "<group>";
+		};
+		BD8B42951EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42961EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.h */,
+				BD8B42971EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.m */,
+			);
+			path = JSAdHocMultiLevelQueryModel;
+			sourceTree = "<group>";
+		};
+		BD8B42981EC4BA8300BE2631 /* JSAdHocQueryAggregation */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42991EC4BA8300BE2631 /* JSAdHocQueryAggregation.h */,
+				BD8B429A1EC4BA8300BE2631 /* JSAdHocQueryAggregation.m */,
+			);
+			path = JSAdHocQueryAggregation;
+			sourceTree = "<group>";
+		};
+		BD8B429B1EC4BA8300BE2631 /* JSAdHocQueryFrom */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B429C1EC4BA8300BE2631 /* JSAdHocQueryFrom.h */,
+				BD8B429D1EC4BA8300BE2631 /* JSAdHocQueryFrom.m */,
+			);
+			path = JSAdHocQueryFrom;
+			sourceTree = "<group>";
+		};
+		BD8B429E1EC4BA8300BE2631 /* JSAdHocQueryGroupBy */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B429F1EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy */,
+				BD8B42A21EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy */,
+				BD8B42A71EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions */,
+				BD8B42AA1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel */,
+				BD8B42AD1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember */,
+				BD8B42B01EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup */,
+				BD8B42B71EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel */,
+				BD8B42A51EC4BA8300BE2631 /* JSAdHocQueryGroupBy.h */,
+				BD8B42A61EC4BA8300BE2631 /* JSAdHocQueryGroupBy.m */,
+			);
+			path = JSAdHocQueryGroupBy;
+			sourceTree = "<group>";
+		};
+		BD8B429F1EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42A01EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.h */,
+				BD8B42A11EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.m */,
+			);
+			path = JSAdHocMultiAxesQueryGroupBy;
+			sourceTree = "<group>";
+		};
+		BD8B42A21EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42A31EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.h */,
+				BD8B42A41EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.m */,
+			);
+			path = JSAdHocMultiLevelQueryGroupBy;
+			sourceTree = "<group>";
+		};
+		BD8B42A71EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42A81EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.h */,
+				BD8B42A91EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.m */,
+			);
+			path = JSAdHocQueryGroupByConditions;
+			sourceTree = "<group>";
+		};
+		BD8B42AA1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42AB1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.h */,
+				BD8B42AC1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.m */,
+			);
+			path = JSAdHocQueryGroupByExpansionLevel;
+			sourceTree = "<group>";
+		};
+		BD8B42AD1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42AE1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.h */,
+				BD8B42AF1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.m */,
+			);
+			path = JSAdHocQueryGroupByExpansionMember;
+			sourceTree = "<group>";
+		};
+		BD8B42B01EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42B11EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.h */,
+				BD8B42B21EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.m */,
+				BD8B42B31EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.h */,
+				BD8B42B41EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.m */,
+				BD8B42B51EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.h */,
+				BD8B42B61EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.m */,
+			);
+			path = JSAdHocQueryGroupByGroup;
+			sourceTree = "<group>";
+		};
+		BD8B42B71EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42B81EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.h */,
+				BD8B42B91EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.m */,
+				BD8B42BA1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.h */,
+				BD8B42BB1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.m */,
+			);
+			path = JSAdHocQueryGroupByLevel;
+			sourceTree = "<group>";
+		};
+		BD8B42BE1EC4BA8300BE2631 /* JSAdHocQueryOrderBy */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42C11EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN */,
+				BD8B42C41EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel */,
+				BD8B42C71EC4BA8300BE2631 /* JSAdHocQueryOrderByMember */,
+				BD8B42CA1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN */,
+				BD8B42BF1EC4BA8300BE2631 /* JSAdHocQueryOrderBy.h */,
+				BD8B42C01EC4BA8300BE2631 /* JSAdHocQueryOrderBy.m */,
+			);
+			path = JSAdHocQueryOrderBy;
+			sourceTree = "<group>";
+		};
+		BD8B42C11EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42C21EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.h */,
+				BD8B42C31EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.m */,
+			);
+			path = JSAdHocQueryOrderByBottomN;
+			sourceTree = "<group>";
+		};
+		BD8B42C41EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42C51EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.h */,
+				BD8B42C61EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.m */,
+			);
+			path = JSAdHocQueryOrderByLevel;
+			sourceTree = "<group>";
+		};
+		BD8B42C71EC4BA8300BE2631 /* JSAdHocQueryOrderByMember */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42C81EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.h */,
+				BD8B42C91EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.m */,
+			);
+			path = JSAdHocQueryOrderByMember;
+			sourceTree = "<group>";
+		};
+		BD8B42CA1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42CB1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.h */,
+				BD8B42CC1EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.m */,
+			);
+			path = JSAdHocQueryOrderByTopN;
+			sourceTree = "<group>";
+		};
+		BD8B42CD1EC4BA8300BE2631 /* JSAdHocQuerySelect */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42D01EC4BA8300BE2631 /* JSAdHocQuerySelectField */,
+				BD8B42CE1EC4BA8300BE2631 /* JSAdHocQuerySelect.h */,
+				BD8B42CF1EC4BA8300BE2631 /* JSAdHocQuerySelect.m */,
+			);
+			path = JSAdHocQuerySelect;
+			sourceTree = "<group>";
+		};
+		BD8B42D01EC4BA8300BE2631 /* JSAdHocQuerySelectField */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42D11EC4BA8300BE2631 /* JSAdHocQuerySelectField.h */,
+				BD8B42D21EC4BA8300BE2631 /* JSAdHocQuerySelectField.m */,
+			);
+			path = JSAdHocQuerySelectField;
+			sourceTree = "<group>";
+		};
+		BD8B42D31EC4BA8300BE2631 /* JSAdHocQueryWhere */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42D61EC4BA8300BE2631 /* JSAdHocQueryWhereOperand */,
+				BD8B42DF1EC4BA8300BE2631 /* JSAdHocQueryWhereParameter */,
+				BD8B42E21EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString */,
+				BD8B42E51EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue */,
+				BD8B42D41EC4BA8300BE2631 /* JSAdHocQueryWhere.h */,
+				BD8B42D51EC4BA8300BE2631 /* JSAdHocQueryWhere.m */,
+			);
+			path = JSAdHocQueryWhere;
+			sourceTree = "<group>";
+		};
+		BD8B42D61EC4BA8300BE2631 /* JSAdHocQueryWhereOperand */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42D91EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction */,
+				BD8B42DC1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation */,
+				BD8B42D71EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.h */,
+				BD8B42D81EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.m */,
+			);
+			path = JSAdHocQueryWhereOperand;
+			sourceTree = "<group>";
+		};
+		BD8B42D91EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42DA1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.h */,
+				BD8B42DB1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.m */,
+			);
+			path = JSAdHocQueryWhereOperandFunction;
+			sourceTree = "<group>";
+		};
+		BD8B42DC1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42DD1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.h */,
+				BD8B42DE1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.m */,
+			);
+			path = JSAdHocQueryWhereOperandOperation;
+			sourceTree = "<group>";
+		};
+		BD8B42DF1EC4BA8300BE2631 /* JSAdHocQueryWhereParameter */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42E01EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.h */,
+				BD8B42E11EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.m */,
+			);
+			path = JSAdHocQueryWhereParameter;
+			sourceTree = "<group>";
+		};
+		BD8B42E21EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42E31EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.h */,
+				BD8B42E41EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.m */,
+			);
+			path = JSAdHocQueryWhereParameterString;
+			sourceTree = "<group>";
+		};
+		BD8B42E51EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42E61EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue */,
+				BD8B42E91EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue */,
+				BD8B42EC1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue */,
+				BD8B42EF1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue */,
+				BD8B42F21EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue */,
+				BD8B42F51EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue */,
+				BD8B42F81EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue */,
+				BD8B42FB1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue */,
+				BD8B42FE1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue */,
+				BD8B43011EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue */,
+				BD8B43061EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue */,
+				BD8B43041EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.h */,
+				BD8B43051EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterValue;
+			sourceTree = "<group>";
+		};
+		BD8B42E61EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42E71EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.h */,
+				BD8B42E81EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterBooleanValue;
+			sourceTree = "<group>";
+		};
+		BD8B42E91EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42EA1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.h */,
+				BD8B42EB1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterDateValue;
+			sourceTree = "<group>";
+		};
+		BD8B42EC1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42ED1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.h */,
+				BD8B42EE1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterDecimalValue;
+			sourceTree = "<group>";
+		};
+		BD8B42EF1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42F01EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.h */,
+				BD8B42F11EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterIntegerValue;
+			sourceTree = "<group>";
+		};
+		BD8B42F21EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42F31EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.h */,
+				BD8B42F41EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterListValue;
+			sourceTree = "<group>";
+		};
+		BD8B42F51EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42F61EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.h */,
+				BD8B42F71EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterRangeValue;
+			sourceTree = "<group>";
+		};
+		BD8B42F81EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42F91EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.h */,
+				BD8B42FA1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterRelativeDateRangeValue;
+			sourceTree = "<group>";
+		};
+		BD8B42FB1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42FC1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.h */,
+				BD8B42FD1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterStringValue;
+			sourceTree = "<group>";
+		};
+		BD8B42FE1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B42FF1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.h */,
+				BD8B43001EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterTimestampValue;
+			sourceTree = "<group>";
+		};
+		BD8B43011EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B43021EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.h */,
+				BD8B43031EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterTimeValue;
+			sourceTree = "<group>";
+		};
+		BD8B43061EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue */ = {
+			isa = PBXGroup;
+			children = (
+				BD8B43071EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.h */,
+				BD8B43081EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.m */,
+			);
+			path = JSAdHocQueryWhereParameterVariableValue;
+			sourceTree = "<group>";
 		};
 		F59768B215E3C75E004165A7 = {
 			isa = PBXGroup;
@@ -1040,39 +1739,58 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8B43701EC4BD4C00BE2631 /* JSAdHocExtention.h in Headers */,
+				BD8B435B1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.h in Headers */,
+				BD8B431D1EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.h in Headers */,
 				0849FCC01C2B0A92008F1064 /* JSReportExtention.h in Headers */,
 				BD5A507B1E1FD45300B8A853 /* JSPAProfile.h in Headers */,
+				BD8B43311EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.h in Headers */,
+				BD8B43471EC4BA8300BE2631 /* JSAdHocQuerySelect.h in Headers */,
+				BD8B43291EC4BA8300BE2631 /* JSAdHocQueryGroupBy.h in Headers */,
+				BD8B43511EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.h in Headers */,
+				BD8B43391EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.h in Headers */,
 				0849FC931C2B0A91008F1064 /* JSExecutionStatus.h in Headers */,
 				0849FCC41C2B0A92008F1064 /* JSReportPagesRange.h in Headers */,
 				0849FCC31C2B0A92008F1064 /* JSReportLoaderProtocol.h in Headers */,
 				BD0A8F061C7F646A00C63F44 /* JSMapping.h in Headers */,
 				0849FCBE1C2B0A92008F1064 /* JSReportExecutor.h in Headers */,
+				BD8B43351EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.h in Headers */,
+				BD8B432B1EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.h in Headers */,
 				0849FC8F1C2B0A91008F1064 /* JSDateTimeFormatValidationRule.h in Headers */,
 				0849FCA11C2B0A91008F1064 /* JSObjectMappings.h in Headers */,
+				BD8B43371EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.h in Headers */,
 				0849FCBC1C2B0A92008F1064 /* JSReportExecutionConfiguration.h in Headers */,
 				0849FCAA1C2B0A91008F1064 /* JSReportOption.h in Headers */,
 				0849FC8D1C2B0A91008F1064 /* JSDataType.h in Headers */,
 				BD8AE8921D35670A006B5595 /* JSDashboardExportExecutionStatus.h in Headers */,
 				0849FCBA1C2B0A92008F1064 /* JSReport.h in Headers */,
 				0849FC9B1C2B0A91008F1064 /* JSInputControlOption.h in Headers */,
+				BD8B432F1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.h in Headers */,
 				0849FC971C2B0A91008F1064 /* JSExportExecutionResponse.h in Headers */,
+				BD8B434F1EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.h in Headers */,
 				0849FCB61C2B0A91008F1064 /* JSResourceReportUnit.h in Headers */,
+				BD8B43571EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.h in Headers */,
 				0849FCA21C2B0A91008F1064 /* JSOperationResult.h in Headers */,
 				BD194F891C75D50100C99DA9 /* JSObjectMappingsProtocol.h in Headers */,
 				0849FC991C2B0A91008F1064 /* JSInputControlDescriptor.h in Headers */,
 				08061B6C1C919187004F5E49 /* JSParameter.h in Headers */,
+				BD8B43691EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.h in Headers */,
 				0849FCD71C2B0A93008F1064 /* KeychainItemWrapper.h in Headers */,
+				BD8B43251EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.h in Headers */,
 				0849FCCF1C2B0A92008F1064 /* JSRESTBase+JSRESTResource.h in Headers */,
 				0849FC951C2B0A91008F1064 /* JSExportExecutionRequest.h in Headers */,
+				BD8B431B1EC4BA8300BE2631 /* JSMultiLevelDataSet.h in Headers */,
+				BD8B434D1EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.h in Headers */,
 				BD991C5A1CF76B5B00859145 /* NSString+JSURLEncodings.h in Headers */,
 				0899C4451C2D8FEE00CFBD91 /* JSErrorBuilder.h in Headers */,
 				0849FCAE1C2B0A91008F1064 /* JSReportParameter.h in Headers */,
 				0849FCDD1C2B0A93008F1064 /* JSSecurity.h in Headers */,
 				0849FCE91C2C1D7D008F1064 /* JaspersoftSDK.h in Headers */,
-				0849FCCD1C2B0A92008F1064 /* JSRESTBase+JSRESTReport.h in Headers */,
 				0849FCD91C2B0A93008F1064 /* BasicEncodingRules.h in Headers */,
+				BD8B43331EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.h in Headers */,
 				0899C44D1C3170C300CFBD91 /* JSRESTBase+JSRESTContentResource.h in Headers */,
 				0849FCD31C2B0A92008F1064 /* JSRESTBase.h in Headers */,
+				BD8B43611EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.h in Headers */,
 				0849FCEA1C2C1D7D008F1064 /* JSConstants.h in Headers */,
 				0849FCD51C2B0A92008F1064 /* JSRestClient.h in Headers */,
 				0849FCB41C2B0A91008F1064 /* JSResourcePatchRequest.h in Headers */,
@@ -1081,42 +1799,76 @@
 				0849FCD11C2B0A92008F1064 /* JSRESTBase+JSRESTSession.h in Headers */,
 				0849FCAC1C2B0A91008F1064 /* JSReportOutputResource.h in Headers */,
 				0849FC9D1C2B0A91008F1064 /* JSInputControlState.h in Headers */,
+				BD8B430F1EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.h in Headers */,
+				BD8B432D1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.h in Headers */,
+				BD8B43631EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.h in Headers */,
 				BD8AE8861D352886006B5595 /* JSDashboardExportExecutionResource.h in Headers */,
+				BD8B43451EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.h in Headers */,
+				BD8B43191EC4BA8300BE2631 /* JSMultiAxesDataSet.h in Headers */,
+				BD8B43651EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.h in Headers */,
 				BD5A50731E1E8F9400B8A853 /* JSUserProfile.h in Headers */,
 				0849FCC11C2B0A92008F1064 /* JSReportLoader.h in Headers */,
+				BD8B436B1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.h in Headers */,
 				0849FCB01C2B0A91008F1064 /* JSResourceLookup.h in Headers */,
 				0849FC911C2B0A91008F1064 /* JSErrorDescriptor.h in Headers */,
 				0849FCB81C2B0A91008F1064 /* JSServerInfo.h in Headers */,
+				BD8B437B1EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.h in Headers */,
+				BD8B43731EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.h in Headers */,
 				0817D9921C71CBD300111256 /* JSEncryptionData.h in Headers */,
 				0849FCA81C2B0A91008F1064 /* JSReportExecutionResponse.h in Headers */,
 				0849FCDB1C2B0A93008F1064 /* JSEncryptionManager.h in Headers */,
 				0849FCA61C2B0A91008F1064 /* JSReportExecutionRequest.h in Headers */,
+				BD8B43491EC4BA8300BE2631 /* JSAdHocQuerySelectField.h in Headers */,
+				BD8B43151EC4BA8300BE2631 /* JSFlatDataSetField.h in Headers */,
+				BD8B43411EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.h in Headers */,
 				0849FCCB1C2B0A92008F1064 /* JSRequest.h in Headers */,
+				BD8B433B1EC4BA8300BE2631 /* JSAdHocQueryModel.h in Headers */,
+				BD8B436D1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.h in Headers */,
+				BD8B43231EC4BA8300BE2631 /* JSAdHocQueryFrom.h in Headers */,
+				BD8B43771EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.h in Headers */,
 				BD8AE89B1D356C4F006B5595 /* JSDashboard.h in Headers */,
 				0899C4491C3170AC00CFBD91 /* JSContentResource.h in Headers */,
 				BD8AE88E1D356047006B5595 /* JSDashboardParameter.h in Headers */,
 				0849FCC91C2B0A92008F1064 /* JSProfile.h in Headers */,
 				0849FC9F1C2B0A91008F1064 /* JSMandatoryValidationRule.h in Headers */,
+				BD8B43131EC4BA8300BE2631 /* JSFlatDataSet.h in Headers */,
 				0849FCC61C2B0A92008F1064 /* JSReportSaver.h in Headers */,
-				A147800DD37B9AF78B86CEF8 /* JSRESTBase+JSRESTDashboard.h in Headers */,
+				BD8B43531EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.h in Headers */,
+				BD8B43431EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.h in Headers */,
+				BD8B43551EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.h in Headers */,
+				BD8B43271EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.h in Headers */,
+				BD8B435D1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.h in Headers */,
 				A1478B2366FD595E1D5184F7 /* JSDashboardComponent.h in Headers */,
+				BD8B431F1EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.h in Headers */,
+				BD8B434B1EC4BA8300BE2631 /* JSAdHocQueryWhere.h in Headers */,
 				A1478853DBB60C2FD9C3C7FB /* JSScheduleMetadata.h in Headers */,
 				A1478EF134484CF355BA4DF5 /* JSScheduleLookup.h in Headers */,
 				A1478FE74D5DDD802462C488 /* JSScheduleJobState.h in Headers */,
 				BD8AE88A1D355ED4006B5595 /* JSPatchResourceParameter.h in Headers */,
 				A147864DB8024087AD318145 /* JSScheduleTrigger.h in Headers */,
 				BD8AE89E1D357253006B5595 /* JSDashboardExtention.h in Headers */,
+				BD8B430B1EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.h in Headers */,
 				BD8AE8971D3569E8006B5595 /* JSDashboardSaver.h in Headers */,
 				BD3688F51D357AC5008837BE /* JSFileSaver.h in Headers */,
 				A1478449D2FAFA08F51A8C36 /* JSRESTBase+JSSchedule.h in Headers */,
+				BD8B433D1EC4BA8300BE2631 /* JSAdHocQueryOrderBy.h in Headers */,
 				A1478A75DCE4466F783BEEEB /* JSReportComponent.h in Headers */,
+				BD8B43211EC4BA8300BE2631 /* JSAdHocQueryAggregation.h in Headers */,
+				BD8B435F1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.h in Headers */,
 				A14789D7C67ED26B7DED7A09 /* JSDateFormatterFactory.h in Headers */,
 				A1478715161A334AAD4A0DFC /* JSReportBookmark.h in Headers */,
 				BD5A50831E1FD98900B8A853 /* JSOrganization.h in Headers */,
+				BD8B43171EC4BA8300BE2631 /* JSFlatDataSetRow.h in Headers */,
+				BD8B43091EC4BA8300BE2631 /* JSAdhocDataViewMetadata.h in Headers */,
+				BD8B43671EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.h in Headers */,
 				A14783AEA5266354993F7F4C /* JSReportPart.h in Headers */,
 				BD5A507F1E1FD88300B8A853 /* JSRole.h in Headers */,
 				A1478E5D0DBBAD45140B2161 /* JSReportDestination.h in Headers */,
 				BD5A50771E1EA43700B8A853 /* JSSSOProfile.h in Headers */,
+				BD8B43111EC4BA8300BE2631 /* JSDataSet.h in Headers */,
+				BD8B433F1EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.h in Headers */,
+				BD8B43591EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.h in Headers */,
+				BD8B430D1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1415,40 +2167,73 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8B430E1EC4BA8300BE2631 /* JSAdHocQueryExecutionRequest.m in Sources */,
 				BD5A50801E1FD88300B8A853 /* JSRole.m in Sources */,
+				BD8B43241EC4BA8300BE2631 /* JSAdHocQueryFrom.m in Sources */,
 				0849FCD21C2B0A92008F1064 /* JSRESTBase+JSRESTSession.m in Sources */,
+				BD8B435C1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDecimalValue.m in Sources */,
+				BD8B436E1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterVariableValue.m in Sources */,
 				0849FCD41C2B0A92008F1064 /* JSRESTBase.m in Sources */,
 				0849FC9C1C2B0A91008F1064 /* JSInputControlOption.m in Sources */,
+				BD8B43581EC4BA8300BE2631 /* JSAdHocQueryWhereParameterBooleanValue.m in Sources */,
+				BD8B431C1EC4BA8300BE2631 /* JSMultiLevelDataSet.m in Sources */,
 				0849FCCA1C2B0A92008F1064 /* JSProfile.m in Sources */,
+				BD8B43201EC4BA8300BE2631 /* JSAdHocMultiLevelQueryModel.m in Sources */,
 				0849FC901C2B0A91008F1064 /* JSDateTimeFormatValidationRule.m in Sources */,
+				BD8B435E1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterIntegerValue.m in Sources */,
 				0849FC9A1C2B0A91008F1064 /* JSInputControlDescriptor.m in Sources */,
 				BD8AE8981D3569E8006B5595 /* JSDashboardSaver.m in Sources */,
 				BD5A507C1E1FD45300B8A853 /* JSPAProfile.m in Sources */,
 				0849FC8E1C2B0A91008F1064 /* JSDataType.m in Sources */,
+				BD8B43341EC4BA8300BE2631 /* JSAdHocQueryGroupByGroup.m in Sources */,
 				0849FCBF1C2B0A92008F1064 /* JSReportExecutor.m in Sources */,
 				0849FCEE1C2C1D7D008F1064 /* JSUtils.m in Sources */,
 				0849FCCC1C2B0A92008F1064 /* JSRequest.m in Sources */,
 				0849FCA31C2B0A91008F1064 /* JSOperationResult.m in Sources */,
+				BD8B436A1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimeValue.m in Sources */,
+				BD8B43681EC4BA8300BE2631 /* JSAdHocQueryWhereParameterTimestampValue.m in Sources */,
+				BD8B43521EC4BA8300BE2631 /* JSAdHocQueryWhereOperandOperation.m in Sources */,
+				BD8B434E1EC4BA8300BE2631 /* JSAdHocQueryWhereOperand.m in Sources */,
 				BD991C5B1CF76B5B00859145 /* NSString+JSURLEncodings.m in Sources */,
+				BD8B437C1EC4CDDF00BE2631 /* JSRESTBase+JSRESTReport.m in Sources */,
+				BD8B43641EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRelativeDateRangeValue.m in Sources */,
+				BD8B436C1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterValue.m in Sources */,
+				BD8B43221EC4BA8300BE2631 /* JSAdHocQueryAggregation.m in Sources */,
 				0849FCB71C2B0A91008F1064 /* JSResourceReportUnit.m in Sources */,
+				BD8B432E1EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionLevel.m in Sources */,
 				0849FCAD1C2B0A91008F1064 /* JSReportOutputResource.m in Sources */,
+				BD8B43441EC4BA8300BE2631 /* JSAdHocQueryOrderByMember.m in Sources */,
 				0849FCAF1C2B0A91008F1064 /* JSReportParameter.m in Sources */,
+				BD8B433E1EC4BA8300BE2631 /* JSAdHocQueryOrderBy.m in Sources */,
+				BD8B43321EC4BA8300BE2631 /* JSAdHocQueryGroupByAllGroup.m in Sources */,
 				0849FCD81C2B0A93008F1064 /* KeychainItemWrapper.m in Sources */,
 				0849FC981C2B0A91008F1064 /* JSExportExecutionResponse.m in Sources */,
+				BD8B43181EC4BA8300BE2631 /* JSFlatDataSetRow.m in Sources */,
 				0849FCAB1C2B0A91008F1064 /* JSReportOption.m in Sources */,
 				0899C4461C2D8FEE00CFBD91 /* JSErrorBuilder.m in Sources */,
 				0849FCA91C2B0A91008F1064 /* JSReportExecutionResponse.m in Sources */,
+				BD8B43461EC4BA8300BE2631 /* JSAdHocQueryOrderByTopN.m in Sources */,
 				BD3688F61D357AC5008837BE /* JSFileSaver.m in Sources */,
+				BD8B433A1EC4BA8300BE2631 /* JSAdHocQueryGroupByLevel.m in Sources */,
+				BD8B430A1EC4BA8300BE2631 /* JSAdhocDataViewMetadata.m in Sources */,
+				BD8B434A1EC4BA8300BE2631 /* JSAdHocQuerySelectField.m in Sources */,
 				0849FCDC1C2B0A93008F1064 /* JSEncryptionManager.m in Sources */,
 				0849FC9E1C2B0A91008F1064 /* JSInputControlState.m in Sources */,
+				BD8B43501EC4BA8300BE2631 /* JSAdHocQueryWhereOperandFunction.m in Sources */,
 				0849FC961C2B0A91008F1064 /* JSExportExecutionRequest.m in Sources */,
 				0849FC921C2B0A91008F1064 /* JSErrorDescriptor.m in Sources */,
 				0849FCB51C2B0A91008F1064 /* JSResourcePatchRequest.m in Sources */,
 				0849FCB91C2B0A92008F1064 /* JSServerInfo.m in Sources */,
 				0849FCBD1C2B0A92008F1064 /* JSReportExecutionConfiguration.m in Sources */,
+				BD8B433C1EC4BA8300BE2631 /* JSAdHocQueryModel.m in Sources */,
+				BD8B43381EC4BA8300BE2631 /* JSAdHocQueryGroupByAllLevel.m in Sources */,
 				BD8AE88B1D355ED4006B5595 /* JSPatchResourceParameter.m in Sources */,
 				BD0A8F071C7F646A00C63F44 /* JSMapping.m in Sources */,
+				BD8B431A1EC4BA8300BE2631 /* JSMultiAxesDataSet.m in Sources */,
 				0849FCC51C2B0A92008F1064 /* JSReportPagesRange.m in Sources */,
+				BD8B43281EC4BA8300BE2631 /* JSAdHocMultiLevelQueryGroupBy.m in Sources */,
+				BD8B435A1EC4BA8300BE2631 /* JSAdHocQueryWhereParameterDateValue.m in Sources */,
+				BD8B43421EC4BA8300BE2631 /* JSAdHocQueryOrderByLevel.m in Sources */,
 				BD5A50781E1EA43700B8A853 /* JSSSOProfile.m in Sources */,
 				0849FCB11C2B0A91008F1064 /* JSResourceLookup.m in Sources */,
 				0849FCBB1C2B0A92008F1064 /* JSReport.m in Sources */,
@@ -1457,28 +2242,47 @@
 				08061B6D1C919187004F5E49 /* JSParameter.m in Sources */,
 				0849FCEB1C2C1D7D008F1064 /* JSConstants.m in Sources */,
 				0849FCDA1C2B0A93008F1064 /* BasicEncodingRules.m in Sources */,
+				BD8B43781EC4CDCD00BE2631 /* JSRESTBase+JSRESTDashboard.m in Sources */,
 				0849FCC21C2B0A92008F1064 /* JSReportLoader.m in Sources */,
 				0899C44A1C3170AC00CFBD91 /* JSContentResource.m in Sources */,
 				0849FCD01C2B0A92008F1064 /* JSRESTBase+JSRESTResource.m in Sources */,
+				BD8B432C1EC4BA8300BE2631 /* JSAdHocQueryGroupByConditions.m in Sources */,
 				0849FCC71C2B0A92008F1064 /* JSReportSaver.m in Sources */,
-				0849FCCE1C2B0A92008F1064 /* JSRESTBase+JSRESTReport.m in Sources */,
+				BD8B43661EC4BA8300BE2631 /* JSAdHocQueryWhereParameterStringValue.m in Sources */,
+				BD8B43261EC4BA8300BE2631 /* JSAdHocMultiAxesQueryGroupBy.m in Sources */,
 				BD8AE8871D352886006B5595 /* JSDashboardExportExecutionResource.m in Sources */,
 				0849FC941C2B0A91008F1064 /* JSExecutionStatus.m in Sources */,
+				BD8B43301EC4BA8300BE2631 /* JSAdHocQueryGroupByExpansionMember.m in Sources */,
+				BD8B43741EC4CDB400BE2631 /* JSRESTBase+JSRESTAdHoc.m in Sources */,
+				BD8B43401EC4BA8300BE2631 /* JSAdHocQueryOrderByBottomN.m in Sources */,
 				0849FCA71C2B0A91008F1064 /* JSReportExecutionRequest.m in Sources */,
 				BD8AE8931D35670A006B5595 /* JSDashboardExportExecutionStatus.m in Sources */,
 				0849FCA01C2B0A91008F1064 /* JSMandatoryValidationRule.m in Sources */,
-				A1478CA432B170CFEDB4D4E4 /* JSRESTBase+JSRESTDashboard.m in Sources */,
 				A147807F7FC01CA5D92C4C37 /* JSDashboardComponent.m in Sources */,
 				A1478671113039DEF1D30ABE /* JSScheduleMetadata.m in Sources */,
+				BD8B43121EC4BA8300BE2631 /* JSDataSet.m in Sources */,
+				BD8B432A1EC4BA8300BE2631 /* JSAdHocQueryGroupBy.m in Sources */,
 				A14789D7076E289DD1DBA342 /* JSScheduleLookup.m in Sources */,
 				BD8AE89C1D356C4F006B5595 /* JSDashboard.m in Sources */,
 				A1478CBCB217D3A4C19CDBE7 /* JSScheduleJobState.m in Sources */,
+				BD8B43161EC4BA8300BE2631 /* JSFlatDataSetField.m in Sources */,
+				BD8B43481EC4BA8300BE2631 /* JSAdHocQuerySelect.m in Sources */,
 				BD5A50841E1FD98900B8A853 /* JSOrganization.m in Sources */,
 				BD5A50741E1E8F9400B8A853 /* JSUserProfile.m in Sources */,
 				A147857A15CCC0EE16A3C2D3 /* JSScheduleTrigger.m in Sources */,
+				BD8B434C1EC4BA8300BE2631 /* JSAdHocQueryWhere.m in Sources */,
 				A1478FC814F76B3AD331F43B /* JSRESTBase+JSSchedule.m in Sources */,
+				BD8B43601EC4BA8300BE2631 /* JSAdHocQueryWhereParameterListValue.m in Sources */,
+				BD8B431E1EC4BA8300BE2631 /* JSAdHocMultiAxesQueryModel.m in Sources */,
+				BD8B43101EC4BA8300BE2631 /* JSAdHocQueryExecutionResponse.m in Sources */,
 				0817D9931C71CBD300111256 /* JSEncryptionData.m in Sources */,
+				BD8B43141EC4BA8300BE2631 /* JSFlatDataSet.m in Sources */,
 				A14786144C8D16D581ECA7D5 /* JSReportComponent.m in Sources */,
+				BD8B43361EC4BA8300BE2631 /* JSAdHocQueryGroupByRollup.m in Sources */,
+				BD8B43541EC4BA8300BE2631 /* JSAdHocQueryWhereParameter.m in Sources */,
+				BD8B43561EC4BA8300BE2631 /* JSAdHocQueryWhereParameterString.m in Sources */,
+				BD8B430C1EC4BA8300BE2631 /* JSAdHocQueryExecutionParameters.m in Sources */,
+				BD8B43621EC4BA8300BE2631 /* JSAdHocQueryWhereParameterRangeValue.m in Sources */,
 				A1478DD6E4A12B15D8ABDB78 /* JSDateFormatterFactory.m in Sources */,
 				A1478667B278BA5A9B1B05A6 /* JSReportBookmark.m in Sources */,
 				A147892CF5B36E93EF8C5778 /* JSReportPart.m in Sources */,

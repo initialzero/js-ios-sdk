@@ -126,6 +126,8 @@ NSString *const kJS_REST_DASHBOARD_EXECUTION_URI = @"/dashboardExecutions";
 NSString *const kJS_REST_DASHBOARD_EXECUTION_STATUS_URI = @"/status";
 
 NSString *const kJS_REST_EXPORT_EXECUTION_ATTACHMENTS_PREFIX_URI = @"/reportExecutions/{reportExecutionId}/exports/{exportExecutionId}/attachments/";
+NSString *const kJS_QUERY_EXECUTION_URI = @"/queryExecutions";
+
 /** @} */
 
 /**
@@ -137,3 +139,15 @@ NSTimeInterval const kJSExecutionStatusCheckingInterval = 1.f;
 
 NSString *const JSRestClientDidChangeCookies = @"JSRestClientDidChangeCookies";
 NSString *const JSReportLoaderDidSetReportNotification = @"JSReportLoaderDidSetReportNotification";
+
+/**
+ @name AdHoc Date Formats
+ @{
+ */
+NSString * const kJSAdHocQueryWhereParameterDateValueFormat = @"yyyy-MM-dd";
+NSString * const kJSAdHocQueryWhereParameterTimeValueFormat = @"HH:mm:ss";
+NSString * const kJSAdHocQueryWhereParameterTimestampValueFormat = @"yyyy-MM-dd HH:mm:ss";
+NSString * const kJSDataSetDateValueFormat = @"yyyy-MM-dd";
+NSString * const kJSDataSetDateTimeValueFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSSZ";
+/** @} */
+
